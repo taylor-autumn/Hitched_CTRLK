@@ -37,7 +37,7 @@ public class SwimMovement : MonoBehaviour
             // stop and start moving in that sense. so finding a way to always start on the middle y axis
             //of the idle position before bobbng up and down on the calculated spot is the goal.
             float newY = Mathf.Sin(Time.time * bobSpeed) * bobbingHeight + idlePosition.y; //up down
-            transform.position = new Vector3(idlePosition.x, newY); //transoformm
+            transform.position = new Vector3(idlePosition.x, newY, idlePosition.z); //transoformm
         }
     }
 
