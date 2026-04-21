@@ -23,7 +23,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 112}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 1
-  controlID: 99
+  controlID: 38
   draggingID: 0
 --- !u!114 &2
 MonoBehaviour:
@@ -153,7 +153,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 112}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 0
-  controlID: 100
+  controlID: 39
   draggingID: 0
 --- !u!114 &4
 MonoBehaviour:
@@ -226,6 +226,7 @@ MonoBehaviour:
       m_LastClickedID:
         m_Data: 0
       m_ExpandedIDs:
+      - m_Data: -2104
       - m_Data: -1362
       m_RenameOverlay:
         m_UserAcceptedRename: 0
@@ -277,7 +278,7 @@ MonoBehaviour:
   m_MinSize: {x: 100, y: 112}
   m_MaxSize: {x: 8096, y: 16192}
   vertical: 1
-  controlID: 51
+  controlID: 40
   draggingID: 0
 --- !u!114 &7
 MonoBehaviour:
@@ -862,9 +863,9 @@ MonoBehaviour:
   m_AudioPlay: 0
   m_DebugDrawModesUseInteractiveLightBakingData: 0
   m_Position:
-    m_Target: {x: -3.112191, y: -4.056295, z: 33.48876}
+    m_Target: {x: -1.0077486, y: -7.5816565, z: 82.36018}
     speed: 2
-    m_Value: {x: -3.112191, y: -4.056295, z: 33.48876}
+    m_Value: {x: -1.0077486, y: -7.5816565, z: 82.36018}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -911,13 +912,13 @@ MonoBehaviour:
     m_gridOpacity: 0.5
     m_NearestPlaneToHandleMode: 0
   m_Rotation:
-    m_Target: {x: -0.07586015, y: 0.057399157, z: -0.004374155, w: -0.99545604}
+    m_Target: {x: 0.05727417, y: -0.011985144, z: 0.00068758766, w: 0.99828744}
     speed: 2
-    m_Value: {x: -0.075860105, y: 0.057399124, z: -0.004374152, w: -0.99545544}
+    m_Value: {x: 0.05727411, y: -0.011985131, z: 0.0006875869, w: 0.99828637}
   m_Size:
-    m_Target: 18.770071
+    m_Target: 39.33179
     speed: 2
-    m_Value: 18.770071
+    m_Value: 39.33179
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -4708,7 +4709,7 @@ MonoBehaviour:
     m_SkipHidden: 1
     m_SearchArea: 0
     m_Folders:
-    - Assets
+    - Assets/shitsGigs/taylor/Materials
     m_Globs: []
     m_ProductIds: 
     m_AnyWithAssetOrigin: 0
@@ -4718,7 +4719,7 @@ MonoBehaviour:
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets
+  - Assets/shitsGigs/taylor/Materials
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Users\Owner\OneDrive\Documents\GitHub\Hitched_CTRLK\Hitched_CRTLK
   m_LockTracker:
@@ -4727,13 +4728,15 @@ MonoBehaviour:
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs:
-    - m_Data: 48336
+    - m_Data: 48728
     m_LastClickedID:
-      m_Data: 48336
+      m_Data: 48728
     m_ExpandedIDs:
     - m_Data: 0
-    - m_Data: 48336
-    - m_Data: 48668
+    - m_Data: 48222
+    - m_Data: 48548
+    - m_Data: 48552
+    - m_Data: 48724
     - m_Data: 1000000000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -4768,7 +4771,7 @@ MonoBehaviour:
       m_Data: 0
     m_ExpandedIDs:
     - m_Data: 0
-    - m_Data: 48336
+    - m_Data: 48222
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -4797,10 +4800,10 @@ MonoBehaviour:
       m_ResourceFile: 
   m_ListAreaState:
     m_SelectedInstanceIDs:
-    - m_Data: 47750
+    - m_Data: 48588
     m_LastClickedEntityId:
-      m_Data: 47750
-    m_HadKeyboardFocusLastEvent: 0
+      m_Data: 48588
+    m_HadKeyboardFocusLastEvent: 1
     m_ExpandedInstanceIDs:
     - m_Data: 46874
     - m_Data: 706
@@ -5039,7 +5042,7 @@ MonoBehaviour:
     m_ControlHash: -371814159
     m_PrefName: Preview_InspectorPreview
   m_LastInspectedObjectEntityId:
-    m_Data: 47750
+    m_Data: 48588
   m_LastVerticalScrollValue: 0
   m_GlobalObjectId: 
   m_InspectorMode: 0
