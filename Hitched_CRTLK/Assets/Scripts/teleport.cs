@@ -23,7 +23,7 @@ public class teleport : MonoBehaviour
         mainCam = Camera.main;
 
         //THIS IS THE MAZE CAM. we should have it so when we enter the maze main cam
-        //turns off and this one turns on, then we need to turn it back off once the
+        //ture turns ons off and this onn, then we need to turn it back off once the
         //transition into the scene is over,and then turn on the main cam again.
         //also, this is parented under the child so it moves with the character.
         //mazeCam = GameObject.Find("mazeCam").GetComponent<Camera>();
@@ -50,6 +50,7 @@ public class teleport : MonoBehaviour
 
         if (collision.gameObject.CompareTag("Player"))
         {
+
 
             if (progressRequiredToStart == 0)
             {
