@@ -9,13 +9,15 @@ public class SwimMovement : MonoBehaviour
 
     //bobbing up and down after sometime i suppose
     Vector3 idlePosition;
-    float bobbingHeight = 1f;
-    float bobSpeed = 1.5f;
+    private bool idleOnorOff; //toggle
+    private float bobbingStart = 0; //bobbing start is time replacement
+    public float bobbingHeight = 1f;
+    public float bobSpeed = 1.5f;
     //public Animator spriteSheet below when sprite comes for bob and swimming
 
     void Start()
     {
-        
+        idleOnorOff = false;
     }
 
     void Update()
@@ -28,16 +30,22 @@ public class SwimMovement : MonoBehaviour
         if (movement.x != 0 || movement.y != 0) //detects movement by detecing the vector 3 movement
         {
             idlePosition = transform.position; //tracks last pos FOR IDLE REF
+            idleOnorOff = true;
         }
         else
         {
-            //3am note im guessing something to do with Time.time because
-            // time is always going to be at a different moment and there isn't a set "start" area
-            //hence the height of the block is somewhat randomn based on when the player will 
-            // stop and start moving in that sense. so finding a way to always start on the middle y axis
-            //of the idle position before bobbng up and down on the calculated spot is the goal.
-            float newY = Mathf.Sin(Time.time * bobSpeed) * bobbingHeight + idlePosition.y; //up down
-            transform.position = new Vector3(idlePosition.x, newY, idlePosition.z); //transoformm
+            if (idleOnorOff == true)
+            {
+                bobbingStart = 0;
+                idleOnorOff = false;
+            }
+            bobbingStart += 0.0001f; 
+            //sorry for the bad variable names lol, but imagine bobbing start as
+            //a clock/t and on the graph it just restarts to the start of the graph
+            //in the (basically always the center of the player rather than random 
+            // starting times) if you want to change the speed bobSpeed is less confusing
+            float newY = Mathf.Sin(bobbingStart * bobSpeed) * bobbingHeight + idlePosition.y;
+            transform.position = new Vector3(idlePosition.x, newY, idlePosition.z); //transformm
         }
     }
 
