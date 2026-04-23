@@ -660,6 +660,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::SwimMovement
   speed: 10
   rb: {fileID: 1685536336}
+  bobbingHeight: 1
+  bobSpeed: 13
 --- !u!64 &1685536338
 MeshCollider:
   m_ObjectHideFlags: 0
