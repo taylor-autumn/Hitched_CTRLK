@@ -61,7 +61,6 @@ public class teleport : MonoBehaviour
 
                 //moves the player
                 player.transform.position = targetCharPosition;
-
                 //moves the cam
                 mainCam.transform.position = targetCamPosition;
 
@@ -73,8 +72,8 @@ public class teleport : MonoBehaviour
             {
                 print("level is open, moving player");
                 GameObject player = collision.gameObject;
-                player.transform.position = targetCharPosition;
 
+                player.transform.position = targetCharPosition;
                 mainCam.transform.position = targetCamPosition;
 
                 chooseAnimation(transition);
@@ -115,6 +114,7 @@ public class teleport : MonoBehaviour
         //this runs if none of those levels have been completed
 
     }
+
 
     public void chooseAnimation(string choice)
     {
