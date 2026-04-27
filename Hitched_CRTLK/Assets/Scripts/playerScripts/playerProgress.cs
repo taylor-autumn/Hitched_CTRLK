@@ -14,6 +14,9 @@ public class playerProgress : MonoBehaviour
     public Image insightObj;
     public Image awarenessObj;
     public Image passionObj;
+    public Image scissors;
+    public Image boltCutters;
+    public Image paintbrush;
     //bars
     public Image bars;
     public Sprite emptyBars;
@@ -93,16 +96,19 @@ public class playerProgress : MonoBehaviour
         if (hasInsight())
         {
             insightObj.color = Color.white;
+            scissors.gameObject.SetActive(true);
             bars.sprite = oneBar;
         }
         if (hasInsight() && hasAwareness())
         {
             awarenessObj.color = Color.white;
+            boltCutters.gameObject.SetActive(true);
             bars.sprite = twoBars;
         }
         if (hasInsight() && hasAwareness() && hasPassion())
         {
             passionObj.color = Color.white;
+            paintbrush.gameObject.SetActive(true);
             bars.sprite = fullBars;
         }
     }
