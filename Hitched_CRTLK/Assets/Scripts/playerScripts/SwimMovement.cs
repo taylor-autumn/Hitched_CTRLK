@@ -58,8 +58,8 @@ public class SwimMovement : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.CompareTag("Door"))
-        {
+        if (gameObject.GetComponent<playerProgress>().levelsCompleted == collision.gameObject.GetComponent<teleport>().progressRequiredToStart)
+        {   //ik its weird but because of how I wrote the idle position anim code it will look like this.
             tpTrigger = true;
             idlePosition = collision.gameObject.GetComponent<teleport>().targetCharPosition;
             print(idlePosition);
