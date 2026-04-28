@@ -4,20 +4,21 @@ public class SwimMovement : MonoBehaviour
 {
     //basic swim movement variables ONLY XY MOVEMENT
     public float speed = 10f; //self explanatory
-    public Rigidbody rb; //player rigiding it
-    Vector3 movement; //xy movement
+    public Rigidbody2D rb; //player rigiding it
+    Vector2 movement; //xy movement
 
     //bobbing up and down after sometime i suppose
     Vector3 idlePosition;
-    private bool idleOnorOff; //toggle
+    private bool isIdleOff; //toggle
     private float bobbingStart = 0; //bobbing start is time replacement
     public float bobbingHeight = 1f;
     public float bobSpeed = 1.5f;
     //public Animator spriteSheet below when sprite comes for bob and swimming
+    public Animator swimmingAnimations;
 
     void Start()
     {
-        idleOnorOff = false;
+        isIdleOff = false; //Is idle off? false (no), meaning idle is on, I know weird wording.
     }
 
     void Update()
@@ -26,24 +27,28 @@ public class SwimMovement : MonoBehaviour
         movement.x = Input.GetAxis("Horizontal") * speed;
         movement.y = Input.GetAxis("Vertical") * speed;
 
-        //animations
-        if (movement.x != 0 || movement.y != 0) //detects movement by detecing the vector 3 movement
+        if (Input.GetAxis("Horizontal") != 0 || Input.GetAxis("Vertical") != 0) //detects movement by detecing inputs
         {
+            swimmingAnimations.SetBool("isWalking",true);
+            swimmingAnimations.SetFloat("InputX",movement.x);//walkingAnims
+            swimmingAnimations.SetFloat("InputY",movement.y);
             idlePosition = transform.position; //tracks last pos FOR IDLE REF
-            idleOnorOff = true;
+            isIdleOff = true; //is not idle
         }
-        else
+        else//IDLE
         {
-            if (idleOnorOff == true)
+            if (isIdleOff == true)
             {
+                swimmingAnimations.SetBool("isWalking",false);
+                swimmingAnimations.SetFloat("LastInputX",movement.x);//go to idle
+                swimmingAnimations.SetFloat("LastInputY",movement.y);
                 bobbingStart = 0;
-                idleOnorOff = false;
+                isIdleOff = false;
             }
             bobbingStart += 0.0001f; 
             //sorry for the bad variable names lol, but imagine bobbing start as
             //a clock/t and on the graph it just restarts to the start of the graph
-            //in the (basically always the center of the player rather than random 
-            // starting times) if you want to change the speed bobSpeed is less confusing
+            //in the if you want to change the speed use bobSpeed
             float newY = Mathf.Sin(bobbingStart * bobSpeed) * bobbingHeight + idlePosition.y;
             transform.position = new Vector3(idlePosition.x, newY, idlePosition.z); //transformm
         }

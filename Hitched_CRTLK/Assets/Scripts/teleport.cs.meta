@@ -1,2 +1,13 @@
 fileFormatVersion: 2
 guid: a0b27af78369a5b44beff29dda2a69fa
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - mainCam: {fileID: 8532906096467751564, guid: 1054913450d9b428590cc614bb2a0e5e, type: 3}
+  - mazeCam: {instanceID: 0}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
