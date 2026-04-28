@@ -5,9 +5,9 @@ public class teleport : MonoBehaviour
 {
     //teleports the player
     public Vector2 targetCharPosition;
-
     //teleports the camera
     public Vector3 targetCamPosition;
+    
     [SerializeField] private GameObject mainCam;
     [SerializeField] private GameObject mazeCam;
     public bool toMaze;
@@ -49,10 +49,9 @@ public class teleport : MonoBehaviour
             if (progressRequiredToStart == levelsCompleted || progressRequiredToStart <= levelsCompleted)
             {
                 //only if the level is unlocked go through
-
+                StartCoroutine(EnableBoolRoutine());//coroutine for stopping tp glitch
                 GameObject player = collision.gameObject;
                 print("moving player");
-                StartCoroutine(EnableBoolRoutine());
                 player.transform.position = targetCharPosition; //tps the player
                 mainCam.transform.position = targetCamPosition; //tps the cam
                 
@@ -69,6 +68,8 @@ public class teleport : MonoBehaviour
                     mainCam.SetActive(true);
                     mazeCam.SetActive(false);
                 }
+
+                Invoke("stopTpBack", 1f);//closes door after entering
 
                 return;
             }
@@ -107,9 +108,14 @@ public class teleport : MonoBehaviour
 
     IEnumerator EnableBoolRoutine() 
     {
-        GameObject.FindWithTag("Player").GetComponent<SwimMovement>().enabled = false;
+        currentlyTping = true;
         yield return new WaitForSeconds(1f); //pause, tp debug
-        GameObject.FindWithTag("Player").GetComponent<SwimMovement>().enabled = true;
+        currentlyTping = false;
+    }
+
+    void stopTpBack()
+    {
+        GetComponent<BoxCollider2D>().enabled = false;
     }
 
 }

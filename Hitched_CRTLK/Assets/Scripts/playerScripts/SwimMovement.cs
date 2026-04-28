@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.Assemblies;
 
 public class SwimMovement : MonoBehaviour
 {
@@ -15,6 +16,7 @@ public class SwimMovement : MonoBehaviour
     public float bobSpeed = 1.5f;
     //public Animator spriteSheet below when sprite comes for bob and swimming
     public Animator swimmingAnimations;
+    public bool tpTrigger = false;
 
     void Start()
     {
@@ -37,7 +39,7 @@ public class SwimMovement : MonoBehaviour
         }
         else//IDLE
         {
-            if (isIdleOff == true)
+            if (isIdleOff == true && tpTrigger == false)
             {
                 swimmingAnimations.SetBool("isWalking",false);
                 swimmingAnimations.SetFloat("LastInputX",movement.x);//go to idle
@@ -54,8 +56,29 @@ public class SwimMovement : MonoBehaviour
         }
     }
 
+    void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("Door"))
+        {
+            tpTrigger = true;
+            idlePosition = collision.gameObject.GetComponent<teleport>().targetCharPosition;
+            print(idlePosition);
+            transform.position = idlePosition;
+            Invoke("triggerTpOff", 1f);
+        }
+    }
+    void OTriggerEnter2D(Collider2D collision)
+    {
+        
+    }
+
     void FixedUpdate() //PART OF BASIC MOVEMENT
     {
         rb.MovePosition(rb.position + movement * Time.fixedDeltaTime);
+    }
+
+    void triggerTpOff()
+    {
+        tpTrigger = false;
     }
 }
