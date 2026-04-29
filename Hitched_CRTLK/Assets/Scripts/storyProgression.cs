@@ -14,6 +14,7 @@ public class storyProgression : MonoBehaviour
     dialogueSystem dialogueSystem;
     dialogueInfo dialogueInfo;
     uiSprites uiSprites;
+    animationProgression animationProgression;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -22,6 +23,7 @@ public class storyProgression : MonoBehaviour
         dialogueSystem = GameObject.Find("dialogueManager").GetComponent<dialogueSystem>();
         dialogueInfo = GameObject.Find("dialogueManager").GetComponent<dialogueInfo>();
         uiSprites = gameObject.GetComponent<uiSprites>();
+        animationProgression = gameObject.GetComponent<animationProgression>();
 
     }
 
@@ -43,6 +45,16 @@ public class storyProgression : MonoBehaviour
             {
                 uiSprites.enabled = false;
             }
+        }
+
+        //placeholder to trigger rose change
+        if (Input.GetKeyDown(KeyCode.X))
+        {
+            animationProgression.roseChange();
+        }
+        if (Input.GetKeyDown(KeyCode.C))
+        {
+            animationProgression.muralChange();
         }
     }
 
