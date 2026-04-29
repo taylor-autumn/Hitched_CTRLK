@@ -17,10 +17,6 @@ public class uiSprites : MonoBehaviour
     void Start()
     {
         playerProgress = Object.FindAnyObjectByType<playerProgress>();
-        if (playerProgress == null)
-        {
-            print("player progress not found");
-        }
     }
 
     // Update is called once per frame
@@ -73,7 +69,6 @@ public class uiSprites : MonoBehaviour
                         continue;
                     }
                     int picChoice = Random.Range(0, 2);
-                    print("choice for " + img.name + "= " + picChoice);
                     switch (picChoice)
                     {
                         case 0:
