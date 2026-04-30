@@ -21,6 +21,7 @@ public class dialogueSystem : MonoBehaviour
 
     //reference
     storyProgression storyProgression;
+    bool continueNextDialogue = false;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -54,7 +55,7 @@ public class dialogueSystem : MonoBehaviour
 
     }
 
-    public void startDialogue(List<string> lines, string charName, Sprite charSprite)
+    public void startDialogue(List<string> lines, string charName, Sprite charSprite, bool endingDialogue)
     {
         //just a precaution so no glitches, also emptying the shit just in case
         StopAllCoroutines();
@@ -79,8 +80,15 @@ public class dialogueSystem : MonoBehaviour
             return;
         }
 
+        if (!endingDialogue)
+        {
+            continueNextDialogue = true;
+        }
+        else
+        {
+            continueNextDialogue = false;
+        }
         StartCoroutine(typeLine());
-
 
     }
 
@@ -116,7 +124,6 @@ public class dialogueSystem : MonoBehaviour
 
     public void endDialogue()
     {
-        storyProgression.mode = storyProgression.gameMode.normal;
         //resets all the shit
         StopAllCoroutines();
         listOfChoice = null;
@@ -126,6 +133,19 @@ public class dialogueSystem : MonoBehaviour
         nameText.text = string.Empty;
         inDialogue = false;
         dialogueBox.SetActive(false);
+        
+
+
+        if (!continueNextDialogue)
+        {
+            print("putting it back to normal");
+            storyProgression.mode = storyProgression.gameMode.normal;
+        }
+        else
+        {
+            print("continuing to next dialogue");
+        }
         enabled = false;
+
     }
 }

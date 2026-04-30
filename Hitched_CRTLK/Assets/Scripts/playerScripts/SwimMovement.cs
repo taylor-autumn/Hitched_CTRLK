@@ -1,10 +1,10 @@
 using UnityEngine;
-using UnityEngine.Assemblies;
+using UnityEngine.InputSystem;
 
 public class SwimMovement : MonoBehaviour
 {
     //basic swim movement variables ONLY XY MOVEMENT
-    public float speed = 10f; //self explanatory
+    public float speed; //self explanatory
     public Rigidbody2D rb; //player rigiding it
     Vector2 movement; //xy movement
 
@@ -17,23 +17,41 @@ public class SwimMovement : MonoBehaviour
     //public Animator spriteSheet below when sprite comes for bob and swimming
     public Animator swimmingAnimations;
     public bool tpTrigger = false;
+    storyProgression storyProgression;
 
     void Start()
     {
         isIdleOff = false; //Is idle off? false (no), meaning idle is on, I know weird wording.
+        storyProgression = GameObject.Find("gameManager").GetComponent<storyProgression>();
     }
 
     void Update()
     {
-        //basic movement
-        movement.x = Input.GetAxis("Horizontal") * speed;
-        movement.y = Input.GetAxis("Vertical") * speed;
-
-        if (Input.GetAxis("Horizontal") != 0 || Input.GetAxis("Vertical") != 0) //detects movement by detecing inputs
+        //CAN ONLY MOVE IN NORMAL MODE, NO MOVEMENT IN DIALOGUE OR MENU
+        if (storyProgression.mode == storyProgression.gameMode.normal)
         {
-            swimmingAnimations.SetBool("isWalking",true);
-            swimmingAnimations.SetFloat("InputX",movement.x);//walkingAnims
-            swimmingAnimations.SetFloat("InputY",movement.y);
+            GetComponent<Animator>().enabled = true;
+            swimmingAnimations.SetBool("stopWalkDebug", true);
+            //basic movement
+            movement.x = Input.GetAxis("Horizontal") * speed;
+            movement.y = Input.GetAxis("Vertical") * speed;
+        }
+        else
+        {
+            swimmingAnimations.SetBool("stopWalkDebug", false);
+            swimmingAnimations.SetBool("isWalking", false);
+            swimmingAnimations.SetFloat("InputX", 0);//walkingAnims
+            swimmingAnimations.SetFloat("InputY", 0);
+            swimmingAnimations.SetFloat("LastInputX", 0);//go to idle
+            swimmingAnimations.SetFloat("LastInputY", 0);
+        }
+
+
+            if (Input.GetAxis("Horizontal") != 0 || Input.GetAxis("Vertical") != 0) //detects movement by detecing inputs
+        {
+            swimmingAnimations.SetBool("isWalking", true);
+            swimmingAnimations.SetFloat("InputX", movement.x);//walkingAnims
+            swimmingAnimations.SetFloat("InputY", movement.y);
             idlePosition = transform.position; //tracks last pos FOR IDLE REF
             isIdleOff = true; //is not idle
         }
@@ -41,13 +59,13 @@ public class SwimMovement : MonoBehaviour
         {
             if (isIdleOff == true && tpTrigger == false)
             {
-                swimmingAnimations.SetBool("isWalking",false);
-                swimmingAnimations.SetFloat("LastInputX",movement.x);//go to idle
-                swimmingAnimations.SetFloat("LastInputY",movement.y);
+                swimmingAnimations.SetBool("isWalking", false);
+                swimmingAnimations.SetFloat("LastInputX", movement.x);//go to idle
+                swimmingAnimations.SetFloat("LastInputY", movement.y);
                 bobbingStart = 0;
                 isIdleOff = false;
             }
-            bobbingStart += 0.0001f; 
+            bobbingStart += 0.0001f;
             //sorry for the bad variable names lol, but imagine bobbing start as
             //a clock/t and on the graph it just restarts to the start of the graph
             //in the if you want to change the speed use bobSpeed
@@ -58,23 +76,22 @@ public class SwimMovement : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D collision)
     {
-        if (gameObject.GetComponent<playerProgress>().levelsCompleted == collision.gameObject.GetComponent<teleport>().progressRequiredToStart)
-        {   //ik its weird but because of how I wrote the idle position anim code it will look like this.
-            tpTrigger = true;
-            idlePosition = collision.gameObject.GetComponent<teleport>().targetCharPosition;
-            print(idlePosition);
-            transform.position = idlePosition;
-            Invoke("triggerTpOff", 1f);
-        }
-    }
-    void OTriggerEnter2D(Collider2D collision)
-    {
-        
+            if (gameObject.GetComponent<playerProgress>().levelsCompleted == collision.gameObject.GetComponent<teleport>().progressRequiredToStart)
+            {   //ik its weird but because of how I wrote the idle position anim code it will look like this.
+                tpTrigger = true;
+                idlePosition = collision.gameObject.GetComponent<teleport>().targetCharPosition;
+                print(idlePosition);
+                transform.position = idlePosition;
+                Invoke("triggerTpOff", 1f);
+            }
     }
 
     void FixedUpdate() //PART OF BASIC MOVEMENT
     {
-        rb.MovePosition(rb.position + movement * Time.fixedDeltaTime);
+        if (storyProgression.mode == storyProgression.gameMode.normal)
+        {
+            rb.MovePosition(rb.position + movement * Time.fixedDeltaTime);
+        }
     }
 
     void triggerTpOff()

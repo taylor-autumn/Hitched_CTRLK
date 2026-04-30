@@ -10,7 +10,6 @@ public class storyProgression : MonoBehaviour
         menu
     }
     public gameMode mode;
-
     dialogueSystem dialogueSystem;
     dialogueInfo dialogueInfo;
     uiSprites uiSprites;
@@ -24,7 +23,6 @@ public class storyProgression : MonoBehaviour
         dialogueInfo = GameObject.Find("dialogueManager").GetComponent<dialogueInfo>();
         uiSprites = gameObject.GetComponent<uiSprites>();
         animationProgression = gameObject.GetComponent<animationProgression>();
-
     }
 
     // Update is called once per frame
@@ -60,11 +58,12 @@ public class storyProgression : MonoBehaviour
 
     public void startDialogue(List<string> dialogueLines, string charName, Sprite charSprite)
     {
+
         print("calling dialogue");
         //sets it so the game mode is dialogue
         mode = gameMode.dialogue;
         dialogueSystem.enabled = true;
-        dialogueSystem.startDialogue(dialogueLines, charName, charSprite);
+        dialogueSystem.startDialogue(dialogueLines, charName, charSprite, true);
     }
 
 
