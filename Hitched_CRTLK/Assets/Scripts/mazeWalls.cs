@@ -6,21 +6,25 @@ public class mazeWalls : MonoBehaviour
     Color transparentVar;
     Color OpaqueVar;
     Color lerpedShown = Color.white;
-    Renderer renderering;
+    private SpriteRenderer spriteRenderer;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         transparentVar = new Color(1f,1f,1f,0f);
         OpaqueVar = new Color(1f,1f,1f,1f);
-        renderering = GetComponent<Renderer>();
+         GetComponent<SpriteRenderer>();
     }
 
     // Update is called once per frame
     void Update()
     {
+        if (fadeSpeed < 1)
+        {
+            fadeSpeed += Time.deltaTime;
+        }
+        Color lerpedShown = Color.Lerp(transparentVar, OpaqueVar, fadeSpeed);
         float wallTransparency = Mathf.Sin(fadeSpeed);
-        lerpedShown = Color.Lerp(transparentVar, OpaqueVar, 1/wallTransparency);
-        renderering.material.color = lerpedShown;
+        spriteRenderer.color = lerpedShown;
     }
 }
