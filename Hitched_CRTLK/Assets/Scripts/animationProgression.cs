@@ -4,7 +4,6 @@ public class animationProgression : MonoBehaviour
 {
     //rose stuff
     Animator wiltedRoseAnim;
-    Animator fullRoseAnim;
 
     //mural stuff
     Animator muralAnim;
@@ -13,7 +12,6 @@ public class animationProgression : MonoBehaviour
     void Start()
     {
         wiltedRoseAnim = GameObject.Find("wiltedRose").GetComponent<Animator>();
-        fullRoseAnim = GameObject.Find("fullRose").GetComponent<Animator>();
         muralAnim = GameObject.Find("mural").GetComponent<Animator>();
         
     }
@@ -34,11 +32,6 @@ public class animationProgression : MonoBehaviour
     {
         muralAnim.SetTrigger("paint");
         print("painting mural");
-    }
-
-    void triggerFullRose()
-    {
-        fullRoseAnim.SetTrigger("bloom");
     }
 
 }

@@ -942,6 +942,104 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 174498184}
   m_CullTransparentMesh: 1
+--- !u!1 &308482416
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 308482417}
+  - component: {fileID: 308482420}
+  - component: {fileID: 308482419}
+  - component: {fileID: 308482418}
+  m_Layer: 5
+  m_Name: fadeScreen
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &308482417
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 308482416}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1603439179}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0.000030518, y: 0}
+  m_SizeDelta: {x: 800, y: 450}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!95 &308482418
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 308482416}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 617c9dcbc4b588f46a8e31e5665f84ac, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &308482419
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 308482416}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
+  m_Material: {fileID: 0}
+  m_Color: {r: 0, g: 0, b: 0, a: 0}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 0}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &308482420
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 308482416}
+  m_CullTransparentMesh: 1
 --- !u!1 &330150303
 GameObject:
   m_ObjectHideFlags: 0
@@ -2037,16 +2135,37 @@ MonoBehaviour:
   teacherSprite: {fileID: 21300000, guid: 849d784e8a0260a48840818e1b0ad8c8, type: 3}
   npcSprite: {fileID: 21300000, guid: 47d3254be5bf5e04e9cf8d5ae57941dc, type: 3}
   voidSprite: {fileID: 21300000, guid: db0f97e31094b96499a1b217a79d0e82, type: 3}
-  startingMindscape:
-  - WOW THIS SPACE IS BIGGG
-  - I should prob look around and shit
-  - Hmm I wonder what these doors do
-  - I should prob go to the left one
-  adulthoodDoor:
-  - wowwww
-  - the toils of adulthood
-  - I guess I gotta confront it and shit
-  - Maybe ill find some part of myself or some shit.
+  startingHerDialogue:
+  - Huh? Where am I.....What happened?
+  - This place is dark......Hello???...................................Hellooooooooooooooooo???
+  - Am I all alone here?
+  voidFirstLines:
+  - Wow...Her...I never thought I'd see the day you came back here.
+  - It's been quite a while since you've given this place any thought...
+  - I thought you were long gone by now.
+  HerResponse:
+  - Huh? What is that supposed to mean? Where am I? And who are you?
+  voidSecondLines:
+  - Who I am is not important. And I'm surprised you don't recognize your own mind.
+  - But then again, you haven't been yourself for quite a while, who am I to expect
+    you to remember?
+  - But anyway, welcome back. I wish the place were in a better state for you, but
+    that's not necessarily under my control, you carry all the power now.
+  HerSecondResponse:
+  - Wait what? This is my mind? How did I get here....the last thing I remember I
+    was in my room in my dress and now...I'm here...
+  - But I can't seem to remember past that. What happened to me? Who am I, really?
+    Who was I even marrying?
+  - And why is it so dark and disheveled? How do I fix it? I don't want to live like
+    this...
+  voidThirdLines:
+  - Wow it really is worse than I thought huh...you can't remember ANYTHING?
+  - Must have been some kind of wake up call to bring you back into here...I guess
+    that would explain why you haven't been here in a long while.
+  - You've lost sight of who you are, but I'll help you out of this. This is your
+    last chance, otherwise I'm assuming this place will shut down for good.
+  - That would explain why the place has been falling apart at the seams. It's bound
+    to cave in soon.
   introAdulthood:
   - woah it empty in here
   - what i jump
@@ -2074,7 +2193,7 @@ MonoBehaviour:
   listOfChoice: []
   listIndex: 0
   textSpeed: 0.05
-  inDialogue: 0
+  dialogueFinished: 0
 --- !u!1 &763870593
 GameObject:
   m_ObjectHideFlags: 0
@@ -2599,7 +2718,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fa6400286d16e8f4f9afb4ce19ac6212, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::storyProgression
-  mode: 0
+  mode: 1
+  blinkAnim: {fileID: 1540344333}
+  fadeAnim: {fileID: 308482418}
 --- !u!33 &1052750001
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -3092,6 +3213,117 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1515073198}
   m_CullTransparentMesh: 1
+--- !u!1 &1540344331
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1540344332}
+  - component: {fileID: 1540344335}
+  - component: {fileID: 1540344334}
+  - component: {fileID: 1540344333}
+  - component: {fileID: 1540344336}
+  m_Layer: 5
+  m_Name: blinkScreen
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!224 &1540344332
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1540344331}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1603439179}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0.000030518, y: 0}
+  m_SizeDelta: {x: 800, y: 450}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!95 &1540344333
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1540344331}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: cc16dc4337879744b923e4833db8bea3, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &1540344334
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1540344331}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
+  m_Material: {fileID: 0}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 0}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1540344335
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1540344331}
+  m_CullTransparentMesh: 1
+--- !u!114 &1540344336
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1540344331}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cf0f1f4d2ddbdba439c10daa409f132a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::animationProgression
 --- !u!1 &1566436651
 GameObject:
   m_ObjectHideFlags: 0
@@ -3506,6 +3738,8 @@ RectTransform:
   - {fileID: 2132915920}
   - {fileID: 951960441}
   - {fileID: 1341231775}
+  - {fileID: 1540344332}
+  - {fileID: 308482417}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}

@@ -17,11 +17,13 @@ public class dialogueSystem : MonoBehaviour
     public int listIndex = 0;
     public float textSpeed = 0.05f;
     bool isTyping = false;
-    public bool inDialogue = false;
 
     //reference
     storyProgression storyProgression;
     bool continueNextDialogue = false;
+
+    [Header("Event Shit")]
+    public bool dialogueFinished = false;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -57,12 +59,13 @@ public class dialogueSystem : MonoBehaviour
 
     public void startDialogue(List<string> lines, string charName, Sprite charSprite, bool endingDialogue)
     {
+        //dialogue is starting, not finished
+        dialogueFinished = false;
+
+
         //just a precaution so no glitches, also emptying the shit just in case
         StopAllCoroutines();
         dialogueText.text=string.Empty;
-
-        //setting this bool just in case
-        inDialogue = true;
 
         //turn on dialogue stuff
         dialogueBox.SetActive(true);
@@ -131,21 +134,17 @@ public class dialogueSystem : MonoBehaviour
         spriteImage.sprite = null;
         dialogueText.text = string.Empty;
         nameText.text = string.Empty;
-        inDialogue = false;
         dialogueBox.SetActive(false);
-        
 
+        dialogueFinished = true;
 
         if (!continueNextDialogue)
         {
-            print("putting it back to normal");
+            print("end of dialogue");
             storyProgression.mode = storyProgression.gameMode.normal;
-        }
-        else
-        {
-            print("continuing to next dialogue");
         }
         enabled = false;
 
     }
+
 }

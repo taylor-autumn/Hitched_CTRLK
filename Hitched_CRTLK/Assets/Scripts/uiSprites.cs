@@ -72,8 +72,8 @@ public class uiSprites : MonoBehaviour
                     switch (picChoice)
                     {
                         case 0:
-                            imgAnim.SetInteger("type", 2);
-                            //roses
+                            imgAnim.SetInteger("type", 3);
+                            //clocks
                             break;
                         case 1:
                             imgAnim.SetInteger("type", 1);
