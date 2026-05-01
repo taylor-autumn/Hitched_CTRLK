@@ -12,17 +12,21 @@ public class dialogueInfo : MonoBehaviour
 
     [Header("Intro Lines")]
     [TextArea(3, 3)]
-    public List<string> startingHerDialogue;
+    public List<string> HerOpening1;
     [TextArea(3, 3)]
-    public List<string> voidFirstLines;
+    public List<string> VoidOpening1;
     [TextArea(3, 3)]
-    public List<string> HerResponse;
+    public List<string> HerOpening2;
     [TextArea(3, 3)]
-    public List<string> voidSecondLines;
+    public List<string> VoidOpening2;
     [TextArea(3, 3)]
-    public List<string> HerSecondResponse;
+    public List<string> HerOpening3;
     [TextArea(3, 3)]
-    public List<string> voidThirdLines;
+    public List<string> VoidOpening3;
+    [TextArea(3, 3)]
+    public List<string> HerOpening4;
+    [TextArea(3, 3)]
+    public List<string> VoidOpening4;
 
     [Header("Adulthood Lines")]
     [TextArea(3, 3)]

@@ -18,6 +18,7 @@ public class SwimMovement : MonoBehaviour
     public Animator swimmingAnimations;
     public bool tpTrigger = false;
     storyProgression storyProgression;
+    private Vector2 IdleDelay; 
 
     void Start()
     {
@@ -76,14 +77,14 @@ public class SwimMovement : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D collision)
     {
-            if (gameObject.GetComponent<playerProgress>().levelsCompleted == collision.gameObject.GetComponent<teleport>().progressRequiredToStart)
-            {   //ik its weird but because of how I wrote the idle position anim code it will look like this.
-                tpTrigger = true;
-                idlePosition = collision.gameObject.GetComponent<teleport>().targetCharPosition;
-                print(idlePosition);
-                transform.position = idlePosition;
-                Invoke("triggerTpOff", 1f);
-            }
+        if (gameObject.GetComponent<playerProgress>().levelsCompleted == collision.gameObject.GetComponent<teleport>().progressRequiredToStart)
+        {   //ik its weird but because of how I wrote the idle position anim code it will look like this.
+            IdleDelay = collision.gameObject.GetComponent<teleport>().targetCharPosition;
+            float delayTime = collision.gameObject.GetComponent<teleport>().delayTime;
+            print(delayTime);
+            Invoke("animationDelay", delayTime);
+        }
+            
     }
 
     void FixedUpdate() //PART OF BASIC MOVEMENT
@@ -94,6 +95,14 @@ public class SwimMovement : MonoBehaviour
         }
     }
 
+    void animationDelay()
+    {
+        tpTrigger = true;
+        idlePosition = IdleDelay;
+        print(idlePosition);
+        transform.position = idlePosition;
+        Invoke("triggerTpOff", 1f);
+    }
     void triggerTpOff()
     {
         tpTrigger = false;

@@ -942,6 +942,81 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 174498184}
   m_CullTransparentMesh: 1
+--- !u!1 &306713025
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 306713026}
+  - component: {fileID: 306713028}
+  - component: {fileID: 306713027}
+  m_Layer: 5
+  m_Name: uiSprite
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &306713026
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 306713025}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 951960441}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -239.8, y: 13}
+  m_SizeDelta: {x: 83.5893, y: 151.5106}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &306713027
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 306713025}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: 710a5473cd9724c5c941b487bdb82937, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &306713028
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 306713025}
+  m_CullTransparentMesh: 1
 --- !u!1 &308482416
 GameObject:
   m_ObjectHideFlags: 0
@@ -2135,37 +2210,46 @@ MonoBehaviour:
   teacherSprite: {fileID: 21300000, guid: 849d784e8a0260a48840818e1b0ad8c8, type: 3}
   npcSprite: {fileID: 21300000, guid: 47d3254be5bf5e04e9cf8d5ae57941dc, type: 3}
   voidSprite: {fileID: 21300000, guid: db0f97e31094b96499a1b217a79d0e82, type: 3}
-  startingHerDialogue:
+  HerOpening1:
   - Huh? Where am I.....What happened?
   - This place is dark......Hello???...................................Hellooooooooooooooooo???
   - Am I all alone here?
-  voidFirstLines:
-  - Wow...Her...I never thought I'd see the day you came back here.
-  - It's been quite a while since you've given this place any thought...
-  - I thought you were long gone by now.
-  HerResponse:
+  VoidOpening1:
+  - Wow...you really came...I never thought I'd see the day you finally came back
+    here.
+  - After all, it's been quite a while since you've given this place any thought...
+  HerOpening2:
   - Huh? What is that supposed to mean? Where am I? And who are you?
-  voidSecondLines:
-  - Who I am is not important. And I'm surprised you don't recognize your own mind.
+  VoidOpening2:
+  - If you've forgotten who I am then we really do have a problem. And I'm surprised
+    you don't even recognize your own mind.
   - But then again, you haven't been yourself for quite a while, who am I to expect
     you to remember?
   - But anyway, welcome back. I wish the place were in a better state for you, but
     that's not necessarily under my control, you carry all the power now.
-  HerSecondResponse:
+  HerOpening3:
   - Wait what? This is my mind? How did I get here....the last thing I remember I
-    was in my room in my dress and now...I'm here...
-  - But I can't seem to remember past that. What happened to me? Who am I, really?
-    Who was I even marrying?
-  - And why is it so dark and disheveled? How do I fix it? I don't want to live like
-    this...
-  voidThirdLines:
+    was in the church in my wedding dress and now...I'm here...
+  - But now that I think about it...I can't remember past that. Why was I getting
+    married? And to whom? How did I even get here?! I feel like I don't even know
+    myself anymore...
+  - And if this is my mind...why is it so dark and disheveled? I don't want to live
+    like this...How do I fix it?
+  VoidOpening3:
   - Wow it really is worse than I thought huh...you can't remember ANYTHING?
-  - Must have been some kind of wake up call to bring you back into here...I guess
-    that would explain why you haven't been here in a long while.
-  - You've lost sight of who you are, but I'll help you out of this. This is your
-    last chance, otherwise I'm assuming this place will shut down for good.
-  - That would explain why the place has been falling apart at the seams. It's bound
-    to cave in soon.
+  - This place has been falling apart at the seams for ages but recently it's been
+    dissapearing at a faster rate. The whole place is bound to cave in soon.
+  - It seems you've lost sight of who you are, and it seems this decision you are
+    making is the cause of it.
+  - 'There''s a way out of this, but to do that you need to remember who you are. '
+  - This is your last chance. Otherwise I'm assuming this place will shut down for
+    good, and you, me, and everything you have left here will go with it.
+  HerOpening4:
+  - Wait what? This is all happening so fast? How do I even start?
+  VoidOpening4:
+  - To remember who you are, we have to go backwards. Let's start with where you
+    are now. Your adulthood.
+  - Find the open door and enter it to start.
   introAdulthood:
   - woah it empty in here
   - what i jump
@@ -2468,6 +2552,7 @@ RectTransform:
   - {fileID: 453555236}
   - {fileID: 1726021974}
   - {fileID: 543289785}
+  - {fileID: 306713026}
   m_Father: {fileID: 1603439179}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
@@ -2721,6 +2806,7 @@ MonoBehaviour:
   mode: 1
   blinkAnim: {fileID: 1540344333}
   fadeAnim: {fileID: 308482418}
+  progressBar: {fileID: 951960440}
 --- !u!33 &1052750001
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -3735,9 +3821,9 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 2132915920}
   - {fileID: 951960441}
   - {fileID: 1341231775}
+  - {fileID: 2132915920}
   - {fileID: 1540344332}
   - {fileID: 308482417}
   m_Father: {fileID: 0}
@@ -4737,6 +4823,10 @@ PrefabInstance:
       propertyPath: mazeCam
       value: 
       objectReference: {fileID: 1857271732}
+    - target: {fileID: 281705545370729208, guid: 26bf37c99fe020142901e9800cd19c81, type: 3}
+      propertyPath: delayTime
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 432321178463843036, guid: 26bf37c99fe020142901e9800cd19c81, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.5228
@@ -4801,6 +4891,18 @@ PrefabInstance:
       propertyPath: mazeCam
       value: 
       objectReference: {fileID: 1857271732}
+    - target: {fileID: 5416748095120605038, guid: 26bf37c99fe020142901e9800cd19c81, type: 3}
+      propertyPath: m_Color.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5416748095120605038, guid: 26bf37c99fe020142901e9800cd19c81, type: 3}
+      propertyPath: m_Color.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5416748095120605038, guid: 26bf37c99fe020142901e9800cd19c81, type: 3}
+      propertyPath: m_Color.r
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6432141721311702115, guid: 26bf37c99fe020142901e9800cd19c81, type: 3}
       propertyPath: m_Name
       value: mindscape

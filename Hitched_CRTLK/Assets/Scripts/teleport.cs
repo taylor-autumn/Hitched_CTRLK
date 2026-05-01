@@ -17,12 +17,17 @@ public class teleport : MonoBehaviour
     public int progressRequiredToStart;
     public string transition;
 
+    storyProgression storyProgression;
+
+    public float delayTime;
+
     //effect?
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-
+        currentlyTping = false;
+        storyProgression = GameObject.Find("gameManager").GetComponent<storyProgression>();
     }
 
     // Update is called once per frame
@@ -44,32 +49,23 @@ public class teleport : MonoBehaviour
 
         if (collision.gameObject.CompareTag("Player"))
         {
-            GameObject playerObj = GameObject.FindWithTag("Player");
-            float levelsCompleted = playerObj.GetComponent<playerProgress>().levelsCompleted;
-            if (progressRequiredToStart == levelsCompleted || progressRequiredToStart <= levelsCompleted)
+            
+            float levelsCompleted = collision.gameObject.GetComponent<playerProgress>().levelsCompleted;
+            if (progressRequiredToStart == levelsCompleted)
             {
+                storyProgression.fadeScreen();
                 //only if the level is unlocked go through
                 StartCoroutine(EnableBoolRoutine());//coroutine for stopping tp glitch
-                GameObject player = collision.gameObject;
-                print("moving player");
-                player.transform.position = targetCharPosition; //tps the player
-                mainCam.transform.position = targetCamPosition; //tps the cam
-                
-                //choose if they want a transition or not
-                chooseAnimation(transition);
-                
-                if (toMaze == true)
-                {
-                    mainCam.SetActive(false);
-                    mazeCam.SetActive(true);
-                }
-                else
-                {
-                    mainCam.SetActive(true);
-                    mazeCam.SetActive(false);
-                }
 
-                Invoke("stopTpBack", 1f);//closes door after entering
+                //transition
+
+                //choose if they want a transition or not
+                //chooseAnimation(transition);
+                Invoke("movePlayerAndCam", delayTime);   //delay for transition, also tp debug
+                //GameObject player = collision.gameObject;
+                //player.transform.position = targetCharPosition; //tps the player
+                //mainCam.transform.position = targetCamPosition; //tps the cam
+                GetComponent<BoxCollider2D>().enabled = false; ;//closes door after entering
 
                 return;
             }
@@ -89,10 +85,7 @@ public class teleport : MonoBehaviour
         if (choice == "fade")
         {
             print("playing fade");
-            //reference scene transition script here 
-
-            //reference scene transition function to call on like
-            //ex: sceneTransitions.playFadeTransition();
+            storyProgression.fadeScreen();
         }
         if (choice == "dream")
         {
@@ -106,16 +99,30 @@ public class teleport : MonoBehaviour
         //and so on for however many transitions we have
     }
 
+    void movePlayerAndCam()
+    {
+        currentlyTping = true;
+        GameObject player = GameObject.FindGameObjectWithTag("Player");
+        player.transform.position = targetCharPosition; //tps the player
+        mainCam.transform.position = targetCamPosition; //tps the cam
+
+        if (toMaze == true)
+        {
+            mainCam.SetActive(false);
+            mazeCam.SetActive(true);
+        }
+        else
+        {
+            mainCam.SetActive(true);
+            mazeCam.SetActive(false);
+        }
+    }
+
     IEnumerator EnableBoolRoutine() 
     {
         currentlyTping = true;
         yield return new WaitForSeconds(1f); //pause, tp debug
         currentlyTping = false;
-    }
-
-    void stopTpBack()
-    {
-        GetComponent<BoxCollider2D>().enabled = false;
     }
 
 }
