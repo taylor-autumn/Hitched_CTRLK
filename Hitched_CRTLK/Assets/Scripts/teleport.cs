@@ -19,13 +19,14 @@ public class teleport : MonoBehaviour
 
     storyProgression storyProgression;
 
-    public float delayTime;
+    public float delayTime = 2f;
 
     //effect?
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        delayTime = 2f;
         currentlyTping = false;
         storyProgression = GameObject.Find("gameManager").GetComponent<storyProgression>();
     }
