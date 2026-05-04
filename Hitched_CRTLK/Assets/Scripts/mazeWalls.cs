@@ -2,29 +2,46 @@ using UnityEngine;
 
 public class mazeWalls : MonoBehaviour
 {
-    public float fadeSpeed;
-    Color transparentVar;
-    Color OpaqueVar;
-    Color lerpedShown = Color.white;
+    public float fadeSpeed = 0.25f;
+
+    private Color transparentVar;
+    private Color opaqueVar;
     private SpriteRenderer spriteRenderer;
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    private float t;
+    private bool fadingIn = true;
+
     void Start()
     {
-        transparentVar = new Color(1f,1f,1f,0f);
-        OpaqueVar = new Color(1f,1f,1f,1f);
-         GetComponent<SpriteRenderer>();
+        spriteRenderer = GetComponent<SpriteRenderer>();
+
+        transparentVar = new Color(1f, 1f, 1f, 0f);
+        opaqueVar = new Color(1f, 1f, 1f, 1f);
+
+        t = Random.Range(0f, 1f);
     }
 
-    // Update is called once per frame
     void Update()
     {
-        if (fadeSpeed < 1)
+        if (fadingIn)
+            t += Time.deltaTime * fadeSpeed;
+        else
+            t -= Time.deltaTime * fadeSpeed;
+
+        t = Mathf.Clamp01(t);
+
+        spriteRenderer.color = Color.Lerp(transparentVar, opaqueVar, t);
+
+        if (t >= 1f) fadingIn = false;
+        if (t <= 0f) fadingIn = true;
+        if (t <= 0.2f)
         {
-            fadeSpeed += Time.deltaTime;
+            GetComponent<BoxCollider2D>().enabled = false;
         }
-        Color lerpedShown = Color.Lerp(transparentVar, OpaqueVar, fadeSpeed);
-        float wallTransparency = Mathf.Sin(fadeSpeed);
-        spriteRenderer.color = lerpedShown;
+        else
+        {
+            GetComponent<BoxCollider2D>().enabled = true;
+        }
+
     }
 }
