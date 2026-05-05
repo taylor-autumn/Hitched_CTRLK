@@ -52,7 +52,7 @@ public class teleport : MonoBehaviour
         {
             
             float levelsCompleted = collision.gameObject.GetComponent<playerProgress>().levelsCompleted;
-            if (progressRequiredToStart == levelsCompleted)
+            if (progressRequiredToStart == levelsCompleted || progressRequiredToStart <= levelsCompleted)
             {
                 storyProgression.fadeScreen();
                 //only if the level is unlocked go through
