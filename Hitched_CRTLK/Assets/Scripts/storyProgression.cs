@@ -15,6 +15,7 @@ public class storyProgression : MonoBehaviour
     dialogueInfo dialogueInfo;
     uiSprites uiSprites;
     animationProgression animationProgression;
+    playerProgress playerProgress;
 
     public Animator blinkAnim;
     public Animator fadeAnim;
@@ -36,7 +37,8 @@ public class storyProgression : MonoBehaviour
         dialogueInfo = GameObject.Find("dialogueManager").GetComponent<dialogueInfo>();
         uiSprites = gameObject.GetComponent<uiSprites>();
         animationProgression = gameObject.GetComponent<animationProgression>();
-        
+        playerProgress=GameObject.FindAnyObjectByType<playerProgress>();
+
         //coroutine starting dialogue
         StartCoroutine(startOfScene());
 
@@ -101,6 +103,11 @@ public class storyProgression : MonoBehaviour
             {
                 uiSprites.enabled = false;
             }
+        }
+
+        if (Input.GetKeyDown(KeyCode.Q))
+        {
+            playerProgress.levelsCompleted += 1;
         }
 
         //placeholder to trigger rose change
