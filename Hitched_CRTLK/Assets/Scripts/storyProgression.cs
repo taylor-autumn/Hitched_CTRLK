@@ -23,6 +23,11 @@ public class storyProgression : MonoBehaviour
     [Header("Stuff in Scene")]
     public GameObject progressBar;
 
+    //reference to track going in memory doors
+    public bool enteredAdulthood = false;
+    public bool enteredTeenhood = false;
+    public bool enteredChildhood = false;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -44,52 +49,7 @@ public class storyProgression : MonoBehaviour
 
     }
 
-    IEnumerator startOfScene()
-    {
-        //starting blinking animation
-        blinkAnim.gameObject.SetActive(true);
-        blinkAnim.SetTrigger("go");
 
-        yield return new WaitForSeconds(6f);
-        //Her1 line
-        startDialogue(dialogueInfo.HerOpening1, "Her", dialogueInfo.herSprite, false);
-
-        yield return new WaitUntil(() => dialogueSystem.dialogueFinished);
-        //pause
-        yield return new WaitForSeconds(2f);
-
-        //Void1 line
-        startDialogue(dialogueInfo.VoidOpening1, "The Void", dialogueInfo.voidSprite, false);
-
-        yield return new WaitUntil(() => dialogueSystem.dialogueFinished);
-        //Her2 line
-        startDialogue(dialogueInfo.HerOpening2, "Her", dialogueInfo.herSprite, false);
-
-        yield return new WaitUntil(() => dialogueSystem.dialogueFinished);
-        //Void2 line
-        startDialogue(dialogueInfo.VoidOpening2, "The Void", dialogueInfo.voidSprite, false);
-
-        yield return new WaitUntil(() => dialogueSystem.dialogueFinished);
-        //Her3 line
-        startDialogue(dialogueInfo.HerOpening3, "Her", dialogueInfo.herSprite, false);
-
-        yield return new WaitUntil(() => dialogueSystem.dialogueFinished);
-        //Void3 line
-        startDialogue(dialogueInfo.VoidOpening3, "The Void", dialogueInfo.voidSprite, false);
-
-        yield return new WaitUntil(() => dialogueSystem.dialogueFinished);
-        //Her4 line
-        startDialogue(dialogueInfo.HerOpening4, "Her", dialogueInfo.herSprite, false);
-
-        yield return new WaitUntil(() => dialogueSystem.dialogueFinished);
-        //Void4 line
-        startDialogue(dialogueInfo.VoidOpening4, "The Void", dialogueInfo.voidSprite, true);
-
-        yield return new WaitUntil(() => dialogueSystem.dialogueFinished);
-        //set the progress bar active
-        progressBar.SetActive(true);
-
-    }
     // Update is called once per frame
     void Update()
     {
@@ -135,6 +95,62 @@ public class storyProgression : MonoBehaviour
     public void fadeScreen()
     {
         fadeAnim.SetTrigger("go");
+    }
+
+    //CO ROUTINES FOR DIALOGUE===================================
+
+    IEnumerator mazeIntro()
+    {
+        yield return new WaitForSeconds(2f);
+        //Her 1 line
+
+    }
+
+
+    IEnumerator startOfScene()
+    {
+        //starting blinking animation
+        blinkAnim.gameObject.SetActive(true);
+        blinkAnim.SetTrigger("go");
+
+        yield return new WaitForSeconds(6f);
+        //Her1 line
+        startDialogue(dialogueInfo.HerOpening1, "Her", dialogueInfo.herSprite, false);
+
+        yield return new WaitUntil(() => dialogueSystem.dialogueFinished);
+        //pause
+        yield return new WaitForSeconds(2f);
+
+        //Void1 line
+        startDialogue(dialogueInfo.VoidOpening1, "The Void", dialogueInfo.voidSprite, false);
+
+        yield return new WaitUntil(() => dialogueSystem.dialogueFinished);
+        //Her2 line
+        startDialogue(dialogueInfo.HerOpening2, "Her", dialogueInfo.herSprite, false);
+
+        yield return new WaitUntil(() => dialogueSystem.dialogueFinished);
+        //Void2 line
+        startDialogue(dialogueInfo.VoidOpening2, "The Void", dialogueInfo.voidSprite, false);
+
+        yield return new WaitUntil(() => dialogueSystem.dialogueFinished);
+        //Her3 line
+        startDialogue(dialogueInfo.HerOpening3, "Her", dialogueInfo.herSprite, false);
+
+        yield return new WaitUntil(() => dialogueSystem.dialogueFinished);
+        //Void3 line
+        startDialogue(dialogueInfo.VoidOpening3, "The Void", dialogueInfo.voidSprite, false);
+
+        yield return new WaitUntil(() => dialogueSystem.dialogueFinished);
+        //Her4 line
+        startDialogue(dialogueInfo.HerOpening4, "Her", dialogueInfo.herSprite, false);
+
+        yield return new WaitUntil(() => dialogueSystem.dialogueFinished);
+        //Void4 line
+        startDialogue(dialogueInfo.VoidOpening4, "The Void", dialogueInfo.voidSprite, true);
+
+        yield return new WaitUntil(() => dialogueSystem.dialogueFinished);
+        //set the progress bar active
+        progressBar.SetActive(true);
     }
 
 

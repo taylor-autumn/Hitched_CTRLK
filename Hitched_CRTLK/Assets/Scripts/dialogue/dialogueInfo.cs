@@ -28,6 +28,14 @@ public class dialogueInfo : MonoBehaviour
     [TextArea(3, 3)]
     public List<string> VoidOpening4;
 
+    [Header("Intro Lines")]
+    [TextArea(3, 3)]
+    public List<string> VoidMazeIntro1;
+    [TextArea(3, 3)]
+    public List<string> HerMazeIntro1;
+    [TextArea(3, 3)]
+    public List<string> VoidMazeIntro2;
+
     [Header("Adulthood Lines")]
     [TextArea(3, 3)]
     public List<string> introAdulthood;
