@@ -77,12 +77,14 @@ public class SwimMovement : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D collision)
     {
-        if (gameObject.GetComponent<playerProgress>().levelsCompleted == collision.gameObject.GetComponent<teleport>().progressRequiredToStart)
+        if (collision.gameObject.CompareTag("Door") && gameObject.GetComponent<playerProgress>().levelsCompleted == collision.gameObject.GetComponent<teleport>().progressRequiredToStart)
         {   //ik its weird but because of how I wrote the idle position anim code it will look like this.
             IdleDelay = collision.gameObject.GetComponent<teleport>().targetCharPosition;
+            print(IdleDelay);
             float delayTime = collision.gameObject.GetComponent<teleport>().delayTime;
-            print(delayTime);
+            print("Hit object: " + collision.gameObject.name);
             Invoke("animationDelay", delayTime);
+            print("go");
         }
             
     }

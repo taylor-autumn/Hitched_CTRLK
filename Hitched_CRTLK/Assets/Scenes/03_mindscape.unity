@@ -5005,6 +5005,10 @@ PrefabInstance:
       propertyPath: mazeCam
       value: 
       objectReference: {fileID: 1857271732}
+    - target: {fileID: 3671117488961623469, guid: 2fc5497018136994792ea0f303fc9978, type: 3}
+      propertyPath: progressRequiredToStart
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 7895052310433991250, guid: 2fc5497018136994792ea0f303fc9978, type: 3}
       propertyPath: m_Name
       value: childhood2
@@ -5312,6 +5316,10 @@ PrefabInstance:
       propertyPath: mazeCam
       value: 
       objectReference: {fileID: 1857271732}
+    - target: {fileID: 10647097151403637, guid: 8d2f493e127b6cf4dbe2564db8690724, type: 3}
+      propertyPath: progressRequiredToStart
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2515283704495137119, guid: 8d2f493e127b6cf4dbe2564db8690724, type: 3}
       propertyPath: m_LocalPosition.x
       value: -48
@@ -5457,6 +5465,10 @@ PrefabInstance:
       propertyPath: mazeCam
       value: 
       objectReference: {fileID: 1857271732}
+    - target: {fileID: 7514539294878815212, guid: 4da2cfc478575b540985c3fbb0ee8e97, type: 3}
+      propertyPath: progressRequiredToStart
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -5646,6 +5658,10 @@ PrefabInstance:
       propertyPath: mazeCam
       value: 
       objectReference: {fileID: 1857271732}
+    - target: {fileID: 7182797977394672076, guid: 9bbf373ba311fd34a81e3e425d935010, type: 3}
+      propertyPath: progressRequiredToStart
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -5681,6 +5697,10 @@ PrefabInstance:
       propertyPath: mazeCam
       value: 
       objectReference: {fileID: 1857271732}
+    - target: {fileID: 3386463581116871376, guid: 20ccc8f2045dde7419005b1deca904e6, type: 3}
+      propertyPath: progressRequiredToStart
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 3999005826763737653, guid: 20ccc8f2045dde7419005b1deca904e6, type: 3}
       propertyPath: m_LocalPosition.x
       value: -48
