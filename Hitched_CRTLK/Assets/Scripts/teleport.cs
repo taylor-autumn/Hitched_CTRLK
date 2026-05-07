@@ -54,6 +54,26 @@ public class teleport : MonoBehaviour
             float levelsCompleted = collision.gameObject.GetComponent<playerProgress>().levelsCompleted;
             if (progressRequiredToStart == levelsCompleted || progressRequiredToStart <= levelsCompleted)
             {
+                if (gameObject.name=="adulthoodDoor")
+                {
+                    print("ADULTHOOD UNLOCKED");
+                    storyProgression.enteredAdulthood = true;
+                }
+                if (gameObject.name == "teenhoodDoor")
+                {
+                    print("TEENHOOD UNLOCKED");
+                    storyProgression.enteredTeenhood = true;
+                }
+                if (gameObject.name == "childhoodDoor")
+                {
+                    print("CHILDHOOD UNLOCKED");
+                    storyProgression.enteredChildhood = true;
+                }
+                if (gameObject.name== "adulthoodDoorTeleport")
+                {
+                    storyProgression.enteredAdulthoodCutscene = true;
+                }
+
                 storyProgression.fadeScreen();
                 //only if the level is unlocked go through
                 StartCoroutine(EnableBoolRoutine());//coroutine for stopping tp glitch

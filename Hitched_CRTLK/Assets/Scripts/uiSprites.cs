@@ -85,7 +85,7 @@ public class uiSprites : MonoBehaviour
                             break;
                     }
                 }
-                break;
+            break;
         }
     }
 }

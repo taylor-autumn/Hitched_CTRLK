@@ -4,6 +4,7 @@ public class animationProgression : MonoBehaviour
 {
     //rose stuff
     Animator wiltedRoseAnim;
+    Animator fullRoseAnim;
 
     //mural stuff
     Animator muralAnim;
@@ -12,8 +13,8 @@ public class animationProgression : MonoBehaviour
     void Start()
     {
         wiltedRoseAnim = GameObject.Find("wiltedRose").GetComponent<Animator>();
+        fullRoseAnim = GameObject.Find("fullRose").GetComponent<Animator>();
         muralAnim = GameObject.Find("mural").GetComponent<Animator>();
-        
     }
 
     // Update is called once per frame
@@ -26,6 +27,11 @@ public class animationProgression : MonoBehaviour
     {
         wiltedRoseAnim.SetTrigger("bloom");
         print("changing rose");
+    }
+
+    public void bloom()
+    {
+        fullRoseAnim.SetTrigger("bloom");
     }
 
     public void muralChange()
