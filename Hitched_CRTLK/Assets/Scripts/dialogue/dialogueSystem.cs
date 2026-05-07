@@ -120,7 +120,7 @@ public class dialogueSystem : MonoBehaviour
         }
         else
         {
-            print("dialogue finished");
+            //print("dialogue finished");
             endDialogue();
         }
     }
@@ -140,7 +140,7 @@ public class dialogueSystem : MonoBehaviour
 
         if (!continueNextDialogue)
         {
-            print("end of dialogue");
+            //print("this is the last line of dialogue for this bit");
             storyProgression.mode = storyProgression.gameMode.normal;
         }
         enabled = false;

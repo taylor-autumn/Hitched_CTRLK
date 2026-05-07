@@ -5,6 +5,7 @@ public class dialogueInfo : MonoBehaviour
 {
     [Header("Sprites")]
     public Sprite herSprite;
+    public Sprite youngHerSprite;
     public Sprite himSprite;
     public Sprite teacherSprite;
     public Sprite npcSprite;
@@ -28,11 +29,67 @@ public class dialogueInfo : MonoBehaviour
     [TextArea(3, 3)]
     public List<string> VoidOpening4;
 
-    [Header("Adulthood Lines")]
+    [Header("Maze Lines")]
     [TextArea(3, 3)]
-    public List<string> introAdulthood;
+    public List<string> HerMazeIntro1;
     [TextArea(3, 3)]
-    public List<string> adulthoodEnd;
+    public List<string> VoidMazeIntro1;
+    [TextArea(3, 3)]
+    public List<string> HerMazeIntro2;
+    [TextArea(3, 3)]
+    public List<string> VoidMazeIntro2;
+    [TextArea(3, 3)]
+    public List<string> HerMazeIntro3;
+    [TextArea(3, 3)]
+    public List<string> VoidMazeIntro3;
+    [TextArea(3, 3)]
+    public List<string> HerMazeIntro4;
+    [TextArea(3, 3)]
+    public List<string> VoidMazeIntro4;
+
+    [Header("Adulthood Cutscene Lines")]
+    [TextArea(3, 3)]
+    public List<string> HerAdulthood1;
+    [TextArea(3, 3)]
+    public List<string> VoidAdulthood1;
+    [TextArea(3, 3)]
+    public List<string> HerAdulthood2;
+    [TextArea(3, 3)]
+    public List<string> VoidAdulthood2;
+    [TextArea(3, 3)]
+    public List<string> HerAdulthood3;
+    [TextArea(3, 3)]
+    public List<string> VoidAdulthood3;
+    [TextArea(3, 3)]
+    public List<string> HerAdulthood4;
+    [TextArea(3, 3)]
+    public List<string> VoidAdulthood4;
+    [TextArea(3, 3)]
+    public List<string> HerAdulthood5;
+    [TextArea(3, 3)]
+    public List<string> VoidAdulthood5;
+    [TextArea(3, 3)]
+    public List<string> HerAdulthood6;
+    [TextArea(3, 3)]
+    public List<string> VoidAdulthood6;
+    [TextArea(3, 3)]
+    public List<string> HerAdulthood7;
+    [TextArea(3, 3)]
+    public List<string> VoidAdulthood7;
+    [TextArea(3, 3)]
+    public List<string> VoidAdulthood7Pt2;
+    [TextArea(3, 3)]
+    public List<string> HerAdulthood8;
+    [TextArea(3, 3)]
+    public List<string> VoidAdulthood8;
+    [TextArea(3, 3)]
+    public List<string> HerAdulthood9;
+    [TextArea(3, 3)]
+    public List<string> VoidAdulthood9;
+    [TextArea(3, 3)]
+    public List<string> HimAdulthood1;
+    [TextArea(3, 3)]
+    public List<string> VoidAdulthood10;
 
 
 }
