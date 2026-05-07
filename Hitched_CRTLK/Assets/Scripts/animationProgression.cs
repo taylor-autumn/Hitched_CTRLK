@@ -15,7 +15,6 @@ public class animationProgression : MonoBehaviour
         wiltedRoseAnim = GameObject.Find("wiltedRose").GetComponent<Animator>();
         fullRoseAnim = GameObject.Find("fullRose").GetComponent<Animator>();
         muralAnim = GameObject.Find("mural").GetComponent<Animator>();
-        
     }
 
     // Update is called once per frame

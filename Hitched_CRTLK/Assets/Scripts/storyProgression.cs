@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class storyProgression : MonoBehaviour
@@ -11,6 +12,7 @@ public class storyProgression : MonoBehaviour
         menu
     }
     public gameMode mode;
+
     dialogueSystem dialogueSystem;
     dialogueInfo dialogueInfo;
     uiSprites uiSprites;
@@ -23,10 +25,30 @@ public class storyProgression : MonoBehaviour
     [Header("Stuff in Scene")]
     public GameObject progressBar;
 
+    [Header("Her Sprites")]
+    public GameObject her;
+    SpriteRenderer herSpriteRenderer;
+    Animator herAnimator;
+    //directions
+    public Sprite herLeft;
+    public Sprite herRight;
+    public Sprite herIdle;
+    public Sprite herUp;
+    public Sprite herRightMove;
+    public Sprite herDown;
+    public Sprite herLeftMove;
+
+    [Header("Cutscene Trigger Bools")]
     //reference to track going in memory doors
     public bool enteredAdulthood = false;
+    public bool enteredAdulthoodCutscene = false;
     public bool enteredTeenhood = false;
     public bool enteredChildhood = false;
+
+    [Header("Adulthood Stuff")]
+    public GameObject workHer;
+    public GameObject watchingHer;
+    public GameObject paperStack;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -36,6 +58,10 @@ public class storyProgression : MonoBehaviour
 
         //mode is dialogue
         mode = gameMode.dialogue;
+
+        //her shit
+        herAnimator = her.GetComponent<Animator>();
+        herSpriteRenderer = her.GetComponent<SpriteRenderer>();
 
         //getting all the shit
         dialogueSystem = GameObject.Find("dialogueManager").GetComponent<dialogueSystem>();
@@ -47,12 +73,29 @@ public class storyProgression : MonoBehaviour
         //coroutine starting dialogue
         StartCoroutine(startOfScene());
 
+        //adulthood shit
+        workHer.SetActive(false);
+        watchingHer.SetActive(false);
+        paperStack.SetActive(false);
     }
 
 
     // Update is called once per frame
     void Update()
     {
+        //calls the start of the maze dialogue
+        if (enteredAdulthood)
+        {
+            enteredAdulthood = false;
+            StartCoroutine(mazeIntro());
+        }
+        if (enteredAdulthoodCutscene)
+        {
+            enteredAdulthoodCutscene = false;
+            StartCoroutine(adulthoodCutscene());
+        }
+
+
         if (Input.GetKeyDown(KeyCode.Z))
         {
             if (uiSprites.enabled == false)
@@ -81,13 +124,20 @@ public class storyProgression : MonoBehaviour
         {
             animationProgression.muralChange();
         }
+
+        if (Input.GetKeyDown(KeyCode.KeypadEnter))
+        {
+            StartCoroutine(adulthoodCutscene());
+        }
     }
 
     public void startDialogue(List<string> dialogueLines, string charName, Sprite charSprite, bool endOfDialogue)
     {
-
-        //sets it so the game mode is dialogue
-        mode = gameMode.dialogue;
+        if (mode!=gameMode.dialogue)
+        {
+            //sets it so the game mode is dialogue
+            mode = gameMode.dialogue;
+        }
         dialogueSystem.enabled = true;
         dialogueSystem.startDialogue(dialogueLines, charName, charSprite, endOfDialogue);
     }
@@ -99,11 +149,132 @@ public class storyProgression : MonoBehaviour
 
     //CO ROUTINES FOR DIALOGUE===================================
 
+    IEnumerator adulthoodCutscene()
+    {
+        mode = gameMode.dialogue;
+        //set other cutscene stuff active
+        workHer.SetActive(true);
+        paperStack.SetActive(true);
+        
+        //set the progress bar inactive
+        progressBar.SetActive(false);
+        //wait for transition
+        yield return new WaitForSeconds(2f);
+        //making the real her in position and invisible for now
+        herAnimator.enabled = false;
+        herSpriteRenderer.sprite = herRight;
+        herSpriteRenderer.enabled = false;
+        watchingHer.SetActive(true);
+
+        yield return new WaitForSeconds(10f);
+        //her1 line
+        startDialogue(dialogueInfo.HerAdulthood1, "Her", dialogueInfo.herSprite, false);
+        yield return new WaitUntil(() => dialogueSystem.dialogueFinished);
+        //void1 line
+        startDialogue(dialogueInfo.VoidAdulthood1, "The Void", dialogueInfo.voidSprite, false);
+        yield return new WaitUntil(() => dialogueSystem.dialogueFinished);
+        //her2 line
+        startDialogue(dialogueInfo.HerAdulthood2, "Her", dialogueInfo.herSprite, false);
+        yield return new WaitUntil(() => dialogueSystem.dialogueFinished);
+        //pause
+        yield return new WaitForSeconds(4f);
+        //void 2 line
+        startDialogue(dialogueInfo.VoidAdulthood2, "The Void", dialogueInfo.voidSprite, false);
+        yield return new WaitUntil(() => dialogueSystem.dialogueFinished);
+        //her3 line
+        startDialogue(dialogueInfo.HerAdulthood3, "Her", dialogueInfo.herSprite, false);
+        yield return new WaitUntil(() => dialogueSystem.dialogueFinished);
+        //void3 line
+        startDialogue(dialogueInfo.VoidAdulthood3, "The Void", dialogueInfo.voidSprite, false);
+        yield return new WaitUntil(() => dialogueSystem.dialogueFinished);
+        //her4 line
+        startDialogue(dialogueInfo.HerAdulthood4, "Her", dialogueInfo.herSprite, false);
+        yield return new WaitUntil(() => dialogueSystem.dialogueFinished);
+        //void4 line
+        startDialogue(dialogueInfo.VoidAdulthood4, "The Void", dialogueInfo.voidSprite, false);
+        yield return new WaitUntil(() => dialogueSystem.dialogueFinished);
+        //her5 line
+        startDialogue(dialogueInfo.HerAdulthood5, "Her", dialogueInfo.herSprite, false);
+        yield return new WaitUntil(() => dialogueSystem.dialogueFinished);
+        //void5 line
+        startDialogue(dialogueInfo.VoidAdulthood5, "The Void", dialogueInfo.voidSprite, false);
+        yield return new WaitUntil(() => dialogueSystem.dialogueFinished);
+        //her6 line
+        startDialogue(dialogueInfo.HerAdulthood6, "Her", dialogueInfo.herSprite, false);
+        yield return new WaitUntil(() => dialogueSystem.dialogueFinished);
+        //void6 line
+        startDialogue(dialogueInfo.VoidAdulthood6, "The Void", dialogueInfo.voidSprite, false);
+        yield return new WaitUntil(() => dialogueSystem.dialogueFinished);
+        //pause
+        yield return new WaitForSeconds(5f);
+        //her7 line
+        startDialogue(dialogueInfo.HerAdulthood7, "Her", dialogueInfo.herSprite, false);
+        yield return new WaitUntil(() => dialogueSystem.dialogueFinished);
+        //void7 line
+        startDialogue(dialogueInfo.VoidAdulthood7, "The Void", dialogueInfo.voidSprite, false);
+        yield return new WaitUntil(() => dialogueSystem.dialogueFinished);
+        //pause
+        yield return new WaitForSeconds(2f);
+        //void 7 pt2 line
+        startDialogue(dialogueInfo.VoidAdulthood7Pt2, "The Void", dialogueInfo.voidSprite, false);
+        yield return new WaitUntil(() => dialogueSystem.dialogueFinished);
+        //her8 line
+        startDialogue(dialogueInfo.HerAdulthood8, "Her", dialogueInfo.herSprite, false);
+        yield return new WaitUntil(() => dialogueSystem.dialogueFinished);
+        //void8 line
+        startDialogue(dialogueInfo.VoidAdulthood8, "The Void", dialogueInfo.voidSprite, false);
+        yield return new WaitUntil(() => dialogueSystem.dialogueFinished);
+        //pause
+        yield return new WaitForSeconds(1f);
+        //her9 line
+        startDialogue(dialogueInfo.HerAdulthood9, "Her", dialogueInfo.herSprite, false);
+        yield return new WaitUntil(() => dialogueSystem.dialogueFinished);
+        //void9 line
+        startDialogue(dialogueInfo.VoidAdulthood9, "The Void", dialogueInfo.voidSprite, false);
+        yield return new WaitUntil(() => dialogueSystem.dialogueFinished);//////////////KNOCK SOUND HERE
+        //pause for KNOCK SOUND AND THEN HIM COMES IN
+        yield return new WaitForSeconds(3f);
+        print("PUT THE KNOCKING SOUND AND HER TURNING TO THE DOOR HERE");
+        //him1 line
+        startDialogue(dialogueInfo.HimAdulthood1, "Him", dialogueInfo.himSprite, false);
+        yield return new WaitUntil(() => dialogueSystem.dialogueFinished);
+        //ANIMATION OF HER LEAVING GOES HERE
+        print("HERE WOULD GO THE ANIMATION OF HER LEAVING AND DROPPING THE SCISSORS");
+        yield return new WaitForSeconds(5f);
+        //void10 line
+        startDialogue(dialogueInfo.VoidAdulthood10, "The Void", dialogueInfo.voidSprite, false);
+        yield return new WaitUntil(() => dialogueSystem.dialogueFinished);
+        print("ALRIGHT NOW YOU WOULD PUT THE ANIMATION OF HER GRABBING IT, THEN MORE LINES OF HER LEAVING AND THEN UR DONE");
+        //set the progress bar active
+        progressBar.SetActive(true);
+
+    }
     IEnumerator mazeIntro()
     {
+        //set the progress bar inactive
+        progressBar.SetActive(false);
         yield return new WaitForSeconds(2f);
         //Her 1 line
-
+        startDialogue(dialogueInfo.HerMazeIntro1, "Her", dialogueInfo.herSprite, false);
+        yield return new WaitUntil(() => dialogueSystem.dialogueFinished);
+        //Void 1 line
+        startDialogue(dialogueInfo.VoidMazeIntro1, "The Void", dialogueInfo.voidSprite, false);
+        yield return new WaitUntil(() => dialogueSystem.dialogueFinished);
+        //Her 2 line
+        startDialogue(dialogueInfo.HerMazeIntro2, "Her", dialogueInfo.herSprite, false);
+        //set the progress bar active
+        yield return new WaitUntil(() => dialogueSystem.dialogueFinished);
+        startDialogue(dialogueInfo.VoidMazeIntro2, "The Void", dialogueInfo.voidSprite, false);
+        yield return new WaitUntil(() => dialogueSystem.dialogueFinished);
+        startDialogue(dialogueInfo.HerMazeIntro3, "Her", dialogueInfo.herSprite, false);
+        yield return new WaitUntil(() => dialogueSystem.dialogueFinished);
+        startDialogue(dialogueInfo.VoidMazeIntro3, "The Void", dialogueInfo.voidSprite, false);
+        yield return new WaitUntil(() => dialogueSystem.dialogueFinished);
+        startDialogue(dialogueInfo.HerMazeIntro4, "Her", dialogueInfo.herSprite, false);
+        yield return new WaitUntil(() => dialogueSystem.dialogueFinished);
+        startDialogue(dialogueInfo.VoidMazeIntro4, "The Void", dialogueInfo.voidSprite, true);
+        yield return new WaitUntil(() => dialogueSystem.dialogueFinished);
+        progressBar.SetActive(true);
     }
 
 
@@ -118,13 +289,26 @@ public class storyProgression : MonoBehaviour
         startDialogue(dialogueInfo.HerOpening1, "Her", dialogueInfo.herSprite, false);
 
         yield return new WaitUntil(() => dialogueSystem.dialogueFinished);
-        //pause
-        yield return new WaitForSeconds(2f);
+        //pause, she looks left and right, also disables her animator system
+        herAnimator.enabled = false;
+        herSpriteRenderer.sprite = herIdle;
+        yield return new WaitForSeconds(0.5f);
+        herSpriteRenderer.sprite = herLeft;
+        yield return new WaitForSeconds(0.8f);
+        herSpriteRenderer.sprite = herRight;
+        yield return new WaitForSeconds(0.8f);
+        herSpriteRenderer.sprite = herLeft;
+        yield return new WaitForSeconds(0.8f);
+        herSpriteRenderer.sprite = herRight;
+        yield return new WaitForSeconds(0.8f);
 
         //Void1 line
         startDialogue(dialogueInfo.VoidOpening1, "The Void", dialogueInfo.voidSprite, false);
 
         yield return new WaitUntil(() => dialogueSystem.dialogueFinished);
+        herSpriteRenderer.sprite = herIdle;
+        herAnimator.enabled = true;
+        yield return new WaitForSeconds(1f);
         //Her2 line
         startDialogue(dialogueInfo.HerOpening2, "Her", dialogueInfo.herSprite, false);
 

@@ -69,6 +69,10 @@ public class teleport : MonoBehaviour
                     print("CHILDHOOD UNLOCKED");
                     storyProgression.enteredChildhood = true;
                 }
+                if (gameObject.name== "adulthoodDoorTeleport")
+                {
+                    storyProgression.enteredAdulthoodCutscene = true;
+                }
 
                 storyProgression.fadeScreen();
                 //only if the level is unlocked go through

@@ -22,6 +22,7 @@ public class SwimMovement : MonoBehaviour
 
     void Start()
     {
+        print(movement);
         isIdleOff = false; //Is idle off? false (no), meaning idle is on, I know weird wording.
         storyProgression = GameObject.Find("gameManager").GetComponent<storyProgression>();
     }
@@ -80,11 +81,8 @@ public class SwimMovement : MonoBehaviour
         if (collision.gameObject.CompareTag("Door") && gameObject.GetComponent<playerProgress>().levelsCompleted == collision.gameObject.GetComponent<teleport>().progressRequiredToStart)
         {   //ik its weird but because of how I wrote the idle position anim code it will look like this.
             IdleDelay = collision.gameObject.GetComponent<teleport>().targetCharPosition;
-            print(IdleDelay);
             float delayTime = collision.gameObject.GetComponent<teleport>().delayTime;
-            print("Hit object: " + collision.gameObject.name);
             Invoke("animationDelay", delayTime);
-            print("go");
         }
             
     }
