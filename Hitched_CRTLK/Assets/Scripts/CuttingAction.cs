@@ -6,10 +6,14 @@ public class CuttingAction : MonoBehaviour
     public bool MetalChain;
 
     private bool playerInRange;
+
+    storyProgression storyProgression;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        if(MetalChain == true)
+        storyProgression = GameObject.Find("gameManager").GetComponent<storyProgression>();
+
+        if (MetalChain == true)
         {
             CuttingAmount = Random.Range(2,5);
         } else
@@ -20,7 +24,7 @@ public class CuttingAction : MonoBehaviour
 
 void Update()
     {
-        if (playerInRange && Input.GetKeyDown(KeyCode.H))
+        if (playerInRange && storyProgression.mode == storyProgression.gameMode.normal && Input.GetKeyDown(KeyCode.KeypadEnter))
         {
             CuttingAmount -= 1;
 

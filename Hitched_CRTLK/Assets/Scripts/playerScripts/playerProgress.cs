@@ -64,6 +64,7 @@ public class playerProgress : MonoBehaviour
     public bool passedLevel1()
     {
         return levelsCompleted == 1;
+        //when she exits and also do ui sprites
     }
 
     public bool passedLevel2()

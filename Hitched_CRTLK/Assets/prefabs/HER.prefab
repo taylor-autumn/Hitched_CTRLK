@@ -44,7 +44,7 @@ GameObject:
   - component: {fileID: 2646239648100573755}
   - component: {fileID: 3568819678706719128}
   - component: {fileID: 1030215642931508067}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: mazeCam
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -60,8 +60,8 @@ Transform:
   m_GameObject: {fileID: 6408001356442840674}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.908915, y: 3.5932064, z: -101.05903}
-  m_LocalScale: {x: 11.228781, y: 11.228781, z: 11.228781}
+  m_LocalPosition: {x: 0, y: 0.43639112, z: -3.92752}
+  m_LocalScale: {x: 0.43639112, y: 0.43639112, z: 0.43639112}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2011369605424757709}
@@ -75,8 +75,8 @@ Camera:
   m_GameObject: {fileID: 6408001356442840674}
   m_Enabled: 1
   serializedVersion: 2
-  m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_ClearFlags: 2
+  m_BackGroundColor: {r: 0, g: 0, b: 0, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -99,7 +99,7 @@ Camera:
     height: 1
   near clip plane: 0.3
   far clip plane: 1000
-  field of view: 30
+  field of view: 60
   orthographic: 0
   orthographic size: 5
   m_Depth: 0
@@ -145,10 +145,10 @@ MonoBehaviour:
   m_RendererIndex: -1
   m_VolumeLayerMask:
     serializedVersion: 2
-    m_Bits: 1
+    m_Bits: 64
   m_VolumeTrigger: {fileID: 0}
   m_VolumeFrameworkUpdateModeOption: 2
-  m_RenderPostProcessing: 0
+  m_RenderPostProcessing: 1
   m_Antialiasing: 0
   m_AntialiasingQuality: 2
   m_StopNaN: 0
@@ -184,6 +184,7 @@ GameObject:
   - component: {fileID: 7792781951742813753}
   - component: {fileID: 2732996884212166394}
   - component: {fileID: 8524142049621648511}
+  - component: {fileID: 7126230279705413157}
   m_Layer: 0
   m_Name: HER
   m_TagString: Player
@@ -278,11 +279,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 43abe3d58af0f402aa787885b3a7a543, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SwimMovement
-  speed: 1
+  speed: 2
   rb: {fileID: 3695428428533769817}
-  bobbingHeight: 1
-  bobSpeed: 13
+  bobbingHeight: 0.3
+  bobSpeed: 30
   swimmingAnimations: {fileID: 8524142049621648511}
+  tpTrigger: 0
 --- !u!50 &3695428428533769817
 Rigidbody2D:
   serializedVersion: 5
@@ -329,11 +331,14 @@ MonoBehaviour:
   insightObj: {fileID: 0}
   awarenessObj: {fileID: 0}
   passionObj: {fileID: 0}
+  scissors: {fileID: 0}
+  boltCutters: {fileID: 0}
+  paintbrush: {fileID: 0}
   bars: {fileID: 0}
-  emptyBars: {fileID: 0}
-  oneBar: {fileID: 0}
-  twoBars: {fileID: 0}
-  fullBars: {fileID: 0}
+  emptyBars: {fileID: 21300000, guid: aa01916857e92f3419bf278f3c54cb4f, type: 3}
+  oneBar: {fileID: 21300000, guid: 81885c55a7162b64b884964471ce3a0a, type: 3}
+  twoBars: {fileID: 21300000, guid: 7268791fd237f524db696cdd1aaa5d46, type: 3}
+  fullBars: {fileID: 21300000, guid: 81c695db7b78297449752b11ffe4e846, type: 3}
 --- !u!61 &2732996884212166394
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -402,3 +407,15 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &7126230279705413157
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8040336561194615386}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7ac9b6864051ee24aaf0d037c1e94027, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::grabObjects
