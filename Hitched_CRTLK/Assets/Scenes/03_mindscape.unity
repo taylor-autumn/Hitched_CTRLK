@@ -4076,7 +4076,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1123928637}
         m_TargetAssemblyTypeName: mainMenuButtons, Assembly-CSharp
-        m_MethodName: LoadScenes
+        m_MethodName: LoadScenesBLAH
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -8669,7 +8669,17 @@ PrefabInstance:
       propertyPath: m_Name
       value: mazekid
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 2500388538270723711, guid: 33fbeb2fe900bb54ea21a95c6b20cf2a, type: 3}
+    - {fileID: 4331978599008951388, guid: 33fbeb2fe900bb54ea21a95c6b20cf2a, type: 3}
+    - {fileID: 7849194801463488054, guid: 33fbeb2fe900bb54ea21a95c6b20cf2a, type: 3}
+    - {fileID: 8711130182575617179, guid: 33fbeb2fe900bb54ea21a95c6b20cf2a, type: 3}
+    - {fileID: 8754059618831055213, guid: 33fbeb2fe900bb54ea21a95c6b20cf2a, type: 3}
+    - {fileID: 3266565143287367495, guid: 33fbeb2fe900bb54ea21a95c6b20cf2a, type: 3}
+    - {fileID: 7329774544622532821, guid: 33fbeb2fe900bb54ea21a95c6b20cf2a, type: 3}
+    - {fileID: 6963834896013395408, guid: 33fbeb2fe900bb54ea21a95c6b20cf2a, type: 3}
+    - {fileID: 6207273947346124068, guid: 33fbeb2fe900bb54ea21a95c6b20cf2a, type: 3}
+    - {fileID: 8056899314610306280, guid: 33fbeb2fe900bb54ea21a95c6b20cf2a, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -8731,7 +8741,22 @@ PrefabInstance:
       propertyPath: m_Name
       value: maze teen
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 3965440738026274362, guid: 1aee29a82f9c9d44ca41d22ed2edda24, type: 3}
+    - {fileID: 1491093785308093658, guid: 1aee29a82f9c9d44ca41d22ed2edda24, type: 3}
+    - {fileID: 1036971123147200990, guid: 1aee29a82f9c9d44ca41d22ed2edda24, type: 3}
+    - {fileID: 3897878099124883735, guid: 1aee29a82f9c9d44ca41d22ed2edda24, type: 3}
+    - {fileID: 7769540292636298843, guid: 1aee29a82f9c9d44ca41d22ed2edda24, type: 3}
+    - {fileID: 3957393920736660055, guid: 1aee29a82f9c9d44ca41d22ed2edda24, type: 3}
+    - {fileID: 3766580192610105635, guid: 1aee29a82f9c9d44ca41d22ed2edda24, type: 3}
+    - {fileID: 2171410806218311265, guid: 1aee29a82f9c9d44ca41d22ed2edda24, type: 3}
+    - {fileID: 6916856392394718929, guid: 1aee29a82f9c9d44ca41d22ed2edda24, type: 3}
+    - {fileID: 5259279841579697010, guid: 1aee29a82f9c9d44ca41d22ed2edda24, type: 3}
+    - {fileID: 2796040261311319306, guid: 1aee29a82f9c9d44ca41d22ed2edda24, type: 3}
+    - {fileID: 4556459380215304526, guid: 1aee29a82f9c9d44ca41d22ed2edda24, type: 3}
+    - {fileID: 8307600394011471233, guid: 1aee29a82f9c9d44ca41d22ed2edda24, type: 3}
+    - {fileID: 2472013803072310147, guid: 1aee29a82f9c9d44ca41d22ed2edda24, type: 3}
+    - {fileID: 8332046512217695372, guid: 1aee29a82f9c9d44ca41d22ed2edda24, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []

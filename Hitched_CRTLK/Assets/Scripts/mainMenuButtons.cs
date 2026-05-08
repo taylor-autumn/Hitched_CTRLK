@@ -8,7 +8,7 @@ public class mainMenuButtons : MonoBehaviour
     {
         //debugBlink.SetActive(false);
     }
-    public void LoadScenes()
+    public void LoadScenesBLAH()
     {
         modesHere.GetComponent<storyProgression>().mode = storyProgression.gameMode.normal;
         SceneManager.LoadScene("01_menu");
