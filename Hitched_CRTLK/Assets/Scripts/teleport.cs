@@ -18,6 +18,7 @@ public class teleport : MonoBehaviour
     public string transition;
 
     storyProgression storyProgression;
+    animationProgression animationProgression;
 
     public float delayTime = 2f;
 
@@ -29,6 +30,7 @@ public class teleport : MonoBehaviour
         delayTime = 2f;
         currentlyTping = false;
         storyProgression = GameObject.Find("gameManager").GetComponent<storyProgression>();
+        animationProgression = GameObject.Find("gameManager").GetComponent<animationProgression>();
     }
 
     // Update is called once per frame
@@ -72,6 +74,12 @@ public class teleport : MonoBehaviour
                 if (gameObject.name== "adulthoodDoorTeleport")
                 {
                     storyProgression.enteredAdulthoodCutscene = true;
+                }
+                if (gameObject.name == "doorOut")
+                {
+                    animationProgression.useAdulthoodDoor();
+                    storyProgression.memorySound.Play();
+                    storyProgression.returnedFromAdulthood = true;
                 }
 
                 storyProgression.fadeScreen();

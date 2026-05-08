@@ -8,11 +8,6 @@ public class uiSprites : MonoBehaviour
     public List<Image> uiImages;
     playerProgress playerProgress;
 
-    private void OnEnable()
-    {
-        uiType("adulthood");
-    }
-
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -23,7 +18,6 @@ public class uiSprites : MonoBehaviour
     void Update()
     {
         moveImgs();
-
     }
 
     public void moveImgs()
@@ -86,6 +80,34 @@ public class uiSprites : MonoBehaviour
                     }
                 }
             break;
+            case ("teenhood"):
+                foreach (Image img in uiImages)
+                {
+                    Animator imgAnim = img.GetComponent<Animator>();
+
+                    if (imgAnim == null)
+                    {
+                        Debug.LogWarning("No Animator on " + img.name);
+                        continue;
+                    }
+                    int picChoice = Random.Range(0, 2);
+                    switch (picChoice)
+                    {
+                        case 0:
+                            imgAnim.SetInteger("type", 3);
+                            //clocks
+                            break;
+                        case 1:
+                            imgAnim.SetInteger("type", 2);
+                            //rose1
+                            break;
+                        default:
+                            imgAnim.SetInteger("type", 0);
+                            //nothing
+                            break;
+                    }
+                }
+                break;
         }
     }
 }

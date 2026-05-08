@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class storyProgression : MonoBehaviour
 {
@@ -13,17 +13,23 @@ public class storyProgression : MonoBehaviour
     }
     public gameMode mode;
 
+    //script references
     dialogueSystem dialogueSystem;
     dialogueInfo dialogueInfo;
     uiSprites uiSprites;
     animationProgression animationProgression;
     playerProgress playerProgress;
 
+    //animators for the ui fade screens
     public Animator blinkAnim;
     public Animator fadeAnim;
 
     [Header("Stuff in Scene")]
     public GameObject progressBar;
+    public GameObject vignetteMain;
+
+    [Header("Audio Sources")]
+    public AudioSource memorySound;
 
     [Header("Her Sprites")]
     public GameObject her;
@@ -44,15 +50,18 @@ public class storyProgression : MonoBehaviour
     public bool enteredAdulthoodCutscene = false;
     public bool enteredTeenhood = false;
     public bool enteredChildhood = false;
+    public bool returnedFromAdulthood = false;
 
     [Header("Adulthood Stuff")]
     public GameObject workHer;
     public GameObject watchingHer;
     public GameObject paperStack;
+    public AudioSource knockingSound;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+
         //unset the progress bar for now
         progressBar.SetActive(false);
 
@@ -69,6 +78,9 @@ public class storyProgression : MonoBehaviour
         uiSprites = gameObject.GetComponent<uiSprites>();
         animationProgression = gameObject.GetComponent<animationProgression>();
         playerProgress=GameObject.FindAnyObjectByType<playerProgress>();
+
+        //sets ui to starting look
+        uiSprites.uiType("adulthood");
 
         //coroutine starting dialogue
         StartCoroutine(startOfScene());
@@ -93,6 +105,11 @@ public class storyProgression : MonoBehaviour
         {
             enteredAdulthoodCutscene = false;
             StartCoroutine(adulthoodCutscene());
+        }
+        if (returnedFromAdulthood)
+        {
+            returnedFromAdulthood = false;
+            StartCoroutine(endOfDemo());
         }
 
 
@@ -125,9 +142,9 @@ public class storyProgression : MonoBehaviour
             animationProgression.muralChange();
         }
 
-        if (Input.GetKeyDown(KeyCode.KeypadEnter))
+        if (Input.GetKey(KeyCode.LeftShift) && Input.GetKeyDown(KeyCode.R))
         {
-            StartCoroutine(adulthoodCutscene());
+            SceneManager.LoadScene("01_menu");
         }
     }
 
@@ -149,13 +166,54 @@ public class storyProgression : MonoBehaviour
 
     //CO ROUTINES FOR DIALOGUE===================================
 
+    IEnumerator endOfDemo()
+    {
+        yield return new WaitForSeconds(2f);
+        //sets vignette active
+        vignetteMain.SetActive(true);
+        mode = gameMode.dialogue;
+        //void1 line
+        startDialogue(dialogueInfo.VoidDemoLines, "The Void", dialogueInfo.voidSprite, false);
+        yield return new WaitUntil(() => dialogueSystem.dialogueFinished);
+    }
+    public IEnumerator endAdulthood()
+    {
+        mode = gameMode.dialogue;
+        //making the real her in position and invisible for now
+        herAnimator.enabled = false;
+        herSpriteRenderer.sprite = herRight;
+
+        yield return new WaitForSeconds(1f);
+        herSpriteRenderer.sprite = herIdle;
+        yield return new WaitForSeconds(2f);
+        //void1 line
+        startDialogue(dialogueInfo.VoidEndAdulthood1, "The Void", dialogueInfo.voidSprite, false);
+        yield return new WaitUntil(() => dialogueSystem.dialogueFinished);
+        //her1 line
+        startDialogue(dialogueInfo.HerEndAdulthood1, "Her", dialogueInfo.herSprite, false);
+        yield return new WaitUntil(() => dialogueSystem.dialogueFinished);
+        //void2 line
+        startDialogue(dialogueInfo.VoidEndAdulthood2, "The Void", dialogueInfo.voidSprite, false);
+        yield return new WaitUntil(() => dialogueSystem.dialogueFinished);
+        //her2 line
+        startDialogue(dialogueInfo.HerEndAdulthood2, "Her", dialogueInfo.herSprite, false);
+        yield return new WaitUntil(() => dialogueSystem.dialogueFinished);
+        //void3 line
+        startDialogue(dialogueInfo.VoidEndAdulthood3, "The Void", dialogueInfo.voidSprite, true);
+        yield return new WaitUntil(() => dialogueSystem.dialogueFinished);
+        herAnimator.enabled = true;
+
+    }
     IEnumerator adulthoodCutscene()
     {
         mode = gameMode.dialogue;
+        //sets vignette inactive
+        vignetteMain.SetActive(false);
         //set other cutscene stuff active
         workHer.SetActive(true);
         paperStack.SetActive(true);
-        
+        //play the memory sound
+        memorySound.Play();
         //set the progress bar inactive
         progressBar.SetActive(false);
         //wait for transition
@@ -231,23 +289,29 @@ public class storyProgression : MonoBehaviour
         yield return new WaitUntil(() => dialogueSystem.dialogueFinished);
         //void9 line
         startDialogue(dialogueInfo.VoidAdulthood9, "The Void", dialogueInfo.voidSprite, false);
-        yield return new WaitUntil(() => dialogueSystem.dialogueFinished);//////////////KNOCK SOUND HERE
-        //pause for KNOCK SOUND AND THEN HIM COMES IN
-        yield return new WaitForSeconds(3f);
-        print("PUT THE KNOCKING SOUND AND HER TURNING TO THE DOOR HERE");
+        yield return new WaitUntil(() => dialogueSystem.dialogueFinished);
+        Animator herWorkAnim = workHer.GetComponent<Animator>();
+        herWorkAnim.SetTrigger("look");
+        knockingSound.Play();
+        yield return new WaitForSeconds(4f);
         //him1 line
         startDialogue(dialogueInfo.HimAdulthood1, "Him", dialogueInfo.himSprite, false);
         yield return new WaitUntil(() => dialogueSystem.dialogueFinished);
+        yield return new WaitForSeconds(1.5f);
         //ANIMATION OF HER LEAVING GOES HERE
-        print("HERE WOULD GO THE ANIMATION OF HER LEAVING AND DROPPING THE SCISSORS");
-        yield return new WaitForSeconds(5f);
+        herWorkAnim.SetTrigger("leave");
+        yield return new WaitForSeconds(12f);
         //void10 line
-        startDialogue(dialogueInfo.VoidAdulthood10, "The Void", dialogueInfo.voidSprite, false);
+        startDialogue(dialogueInfo.VoidAdulthood10, "The Void", dialogueInfo.voidSprite, true);
         yield return new WaitUntil(() => dialogueSystem.dialogueFinished);
-        print("ALRIGHT NOW YOU WOULD PUT THE ANIMATION OF HER GRABBING IT, THEN MORE LINES OF HER LEAVING AND THEN UR DONE");
         //set the progress bar active
         progressBar.SetActive(true);
 
+        //making the real her in position and invisible for now
+        workHer.SetActive(false);
+        watchingHer.SetActive(false);
+        herAnimator.enabled = true;
+        herSpriteRenderer.enabled = true;
     }
     IEnumerator mazeIntro()
     {
@@ -276,8 +340,6 @@ public class storyProgression : MonoBehaviour
         yield return new WaitUntil(() => dialogueSystem.dialogueFinished);
         progressBar.SetActive(true);
     }
-
-
     IEnumerator startOfScene()
     {
         //starting blinking animation

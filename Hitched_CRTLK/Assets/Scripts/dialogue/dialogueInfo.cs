@@ -91,5 +91,20 @@ public class dialogueInfo : MonoBehaviour
     [TextArea(3, 3)]
     public List<string> VoidAdulthood10;
 
+    [Header("End Adulthood Lines")]
+    [TextArea(3, 3)]
+    public List<string> VoidEndAdulthood1;
+    [TextArea(3, 3)]
+    public List<string> HerEndAdulthood1;
+    [TextArea(3, 3)]
+    public List<string> VoidEndAdulthood2;
+    [TextArea(3, 3)]
+    public List<string> HerEndAdulthood2;
+    [TextArea(3, 3)]
+    public List<string> VoidEndAdulthood3;
+
+    [Header("Demo Lines")]
+    [TextArea(3, 3)]
+    public List<string> VoidDemoLines;
 
 }
