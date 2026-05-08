@@ -7710,13 +7710,25 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1709542290813018492, guid: d898322e6cdaed840bd91f9fb23b860f, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5980561664938959076, guid: d898322e6cdaed840bd91f9fb23b860f, type: 3}
       propertyPath: m_Name
       value: maze adult
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 6266057999743263408, guid: d898322e6cdaed840bd91f9fb23b860f, type: 3}
+    - {fileID: 1283134392961518741, guid: d898322e6cdaed840bd91f9fb23b860f, type: 3}
+    - {fileID: 2752841121059985686, guid: d898322e6cdaed840bd91f9fb23b860f, type: 3}
+    - {fileID: 3034279632283707107, guid: d898322e6cdaed840bd91f9fb23b860f, type: 3}
+    - {fileID: 58437268129868837, guid: d898322e6cdaed840bd91f9fb23b860f, type: 3}
+    - {fileID: 7239420529128090159, guid: d898322e6cdaed840bd91f9fb23b860f, type: 3}
+    - {fileID: 1362499589490171148, guid: d898322e6cdaed840bd91f9fb23b860f, type: 3}
+    - {fileID: 457545314583853953, guid: d898322e6cdaed840bd91f9fb23b860f, type: 3}
+    - {fileID: 2165326491223895452, guid: d898322e6cdaed840bd91f9fb23b860f, type: 3}
+    - {fileID: 8024752219878673663, guid: d898322e6cdaed840bd91f9fb23b860f, type: 3}
+    - {fileID: 1183965980277318901, guid: d898322e6cdaed840bd91f9fb23b860f, type: 3}
+    - {fileID: 4067530084303355267, guid: d898322e6cdaed840bd91f9fb23b860f, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
