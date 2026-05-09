@@ -1493,11 +1493,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 308482416}
   m_CullTransparentMesh: 1
---- !u!82 &317641619 stripped
-AudioSource:
-  m_CorrespondingSourceObject: {fileID: 6043484101809521060, guid: 0875f2e9085805f4783993c5e7afef72, type: 3}
-  m_PrefabInstance: {fileID: 5921737220119870451}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &330150303
 GameObject:
   m_ObjectHideFlags: 0
@@ -3312,21 +3307,13 @@ MonoBehaviour:
     see.
   VoidEndAdulthood1:
   - 'Ooooooooh it''s a pair of scissors! '
-  - And would you look at that, it seems you've gained your insight back!
+  - And would you look at that, it seems you've gained your insight back. That means
+    you will be able to think faster and move quicker!
   HerEndAdulthood1:
-  - Gained my insight back? What does that mean? How do you know for sure?
-  - And what am I even supposed to do with these scissors?
+  - Okay nice...but how are scissors gonna help me in my endless mindscape...
   VoidEndAdulthood2:
-  - Well, you see that nifty, difty monitor up there in the top left? You've got
-    your scissors and a light bulb there now, which symbolize your possessions and
-    traits!
-  - And gaining your insight back means you will be able to think faster and move
-    quicker!
-  - It's a sign that you are beginning to see more clearly. But this is just the
-    start, we still have a while to go to save this place from destruction.
-  - And, I'm no genius, but I imagine scissors can cut through ropes...
-  - Maybe you could, and I'm just spit balling here, use it to cut some rope barriers
-    and get to places you couldn't before...
+  - Well, I'm no genius but scissors can cut through things...so you could probably
+    get to places you couldn't before!
   HerEndAdulthood2:
   - Ha. Ha. Ha. Touche. I'll keep it in mind.
   - Where to now?
@@ -3334,9 +3321,6 @@ MonoBehaviour:
   - Haha! There's that sense of humor starting to come back!
   - Well, your past self so kindly left us an exit back to your main mindscape, so
     let's follow it out and go backwards in your memories some more...
-  - The next stage is your DREADED TEENS. DUN. DUN. DUNNNNNN.
-  - ....
-  - What. Was that one not to your tastes?
   VoidDemoLines:
   - Hello there, kind player! I am The Void (but who am I truly? We don't quite know
     yet...)
@@ -4732,6 +4716,9 @@ MonoBehaviour:
   canvasMenu: {fileID: 738085437}
   blinkAnim: {fileID: 1540344333}
   fadeAnim: {fileID: 308482418}
+  adulthoodDoorAnim: {fileID: 329382895800035379}
+  teenhoodDoorAnim: {fileID: 329382895800035378}
+  childhoodDoorAnim: {fileID: 0}
   progressBar: {fileID: 951960440}
   vignetteMain: {fileID: 1655437017}
   memorySound: {fileID: 1138839827}
@@ -7691,10 +7678,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 156096203190222721, guid: 26bf37c99fe020142901e9800cd19c81, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: 9813b00368270224694043112e08e70f, type: 3}
     - target: {fileID: 281705545370729208, guid: 26bf37c99fe020142901e9800cd19c81, type: 3}
       propertyPath: mainCam
       value: 
@@ -7703,42 +7686,6 @@ PrefabInstance:
       propertyPath: mazeCam
       value: 
       objectReference: {fileID: 1857271732}
-    - target: {fileID: 281705545370729208, guid: 26bf37c99fe020142901e9800cd19c81, type: 3}
-      propertyPath: delayTime
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 281705545370729208, guid: 26bf37c99fe020142901e9800cd19c81, type: 3}
-      propertyPath: targetCharPosition.x
-      value: 49.3
-      objectReference: {fileID: 0}
-    - target: {fileID: 281705545370729208, guid: 26bf37c99fe020142901e9800cd19c81, type: 3}
-      propertyPath: targetCharPosition.y
-      value: 40.4
-      objectReference: {fileID: 0}
-    - target: {fileID: 432321178463843036, guid: 26bf37c99fe020142901e9800cd19c81, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0.5228
-      objectReference: {fileID: 0}
-    - target: {fileID: 738943196403685957, guid: 26bf37c99fe020142901e9800cd19c81, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 0.10441555
-      objectReference: {fileID: 0}
-    - target: {fileID: 738943196403685957, guid: 26bf37c99fe020142901e9800cd19c81, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0.20064202
-      objectReference: {fileID: 0}
-    - target: {fileID: 738943196403685957, guid: 26bf37c99fe020142901e9800cd19c81, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -0.20075
-      objectReference: {fileID: 0}
-    - target: {fileID: 738943196403685957, guid: 26bf37c99fe020142901e9800cd19c81, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0.05564
-      objectReference: {fileID: 0}
-    - target: {fileID: 850873033271541107, guid: 26bf37c99fe020142901e9800cd19c81, type: 3}
-      propertyPath: doorSource
-      value: 
-      objectReference: {fileID: 317641619}
     - target: {fileID: 2147032647327894683, guid: 26bf37c99fe020142901e9800cd19c81, type: 3}
       propertyPath: mainCam
       value: 
@@ -7747,14 +7694,6 @@ PrefabInstance:
       propertyPath: mazeCam
       value: 
       objectReference: {fileID: 1857271732}
-    - target: {fileID: 2147032647327894683, guid: 26bf37c99fe020142901e9800cd19c81, type: 3}
-      propertyPath: targetCharPosition.x
-      value: 69.47
-      objectReference: {fileID: 0}
-    - target: {fileID: 2147032647327894683, guid: 26bf37c99fe020142901e9800cd19c81, type: 3}
-      propertyPath: targetCharPosition.y
-      value: 15.22
-      objectReference: {fileID: 0}
     - target: {fileID: 2186545100974942619, guid: 26bf37c99fe020142901e9800cd19c81, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.09444
@@ -7795,10 +7734,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2982743541664777837, guid: 26bf37c99fe020142901e9800cd19c81, type: 3}
-      propertyPath: m_Color.a
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 5407682214103027239, guid: 26bf37c99fe020142901e9800cd19c81, type: 3}
       propertyPath: mainCam
       value: 
@@ -7807,59 +7742,25 @@ PrefabInstance:
       propertyPath: mazeCam
       value: 
       objectReference: {fileID: 1857271732}
-    - target: {fileID: 5407682214103027239, guid: 26bf37c99fe020142901e9800cd19c81, type: 3}
-      propertyPath: targetCharPosition.x
-      value: 30.7
-      objectReference: {fileID: 0}
-    - target: {fileID: 5407682214103027239, guid: 26bf37c99fe020142901e9800cd19c81, type: 3}
-      propertyPath: targetCharPosition.y
-      value: 15
-      objectReference: {fileID: 0}
-    - target: {fileID: 5416748095120605038, guid: 26bf37c99fe020142901e9800cd19c81, type: 3}
-      propertyPath: m_Color.b
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5416748095120605038, guid: 26bf37c99fe020142901e9800cd19c81, type: 3}
-      propertyPath: m_Color.g
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5416748095120605038, guid: 26bf37c99fe020142901e9800cd19c81, type: 3}
-      propertyPath: m_Color.r
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 6432141721311702115, guid: 26bf37c99fe020142901e9800cd19c81, type: 3}
       propertyPath: m_Name
       value: mindscape
-      objectReference: {fileID: 0}
-    - target: {fileID: 8482204390450637938, guid: 26bf37c99fe020142901e9800cd19c81, type: 3}
-      propertyPath: m_Size.x
-      value: 0.6626882
-      objectReference: {fileID: 0}
-    - target: {fileID: 8482204390450637938, guid: 26bf37c99fe020142901e9800cd19c81, type: 3}
-      propertyPath: m_Size.y
-      value: 0.8065046
-      objectReference: {fileID: 0}
-    - target: {fileID: 8482204390450637938, guid: 26bf37c99fe020142901e9800cd19c81, type: 3}
-      propertyPath: m_Offset.x
-      value: 0.011624247
-      objectReference: {fileID: 0}
-    - target: {fileID: 8482204390450637938, guid: 26bf37c99fe020142901e9800cd19c81, type: 3}
-      propertyPath: m_Offset.y
-      value: 0.09674768
-      objectReference: {fileID: 0}
-    - target: {fileID: 8482204390450637938, guid: 26bf37c99fe020142901e9800cd19c81, type: 3}
-      propertyPath: m_SpriteTilingProperty.oldSize.x
-      value: 1.28
-      objectReference: {fileID: 0}
-    - target: {fileID: 8482204390450637938, guid: 26bf37c99fe020142901e9800cd19c81, type: 3}
-      propertyPath: m_SpriteTilingProperty.oldSize.y
-      value: 1.51
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 26bf37c99fe020142901e9800cd19c81, type: 3}
+--- !u!95 &329382895800035378 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 5179983622488550094, guid: 26bf37c99fe020142901e9800cd19c81, type: 3}
+  m_PrefabInstance: {fileID: 329382895800035375}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &329382895800035379 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 8033680893404820887, guid: 26bf37c99fe020142901e9800cd19c81, type: 3}
+  m_PrefabInstance: {fileID: 329382895800035375}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &357853940166214910 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7648596260233584822, guid: 402068feff8b93f40b1b26943cd6718c, type: 3}
