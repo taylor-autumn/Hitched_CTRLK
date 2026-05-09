@@ -64,7 +64,9 @@ public class teleport : MonoBehaviour
                 if (gameObject.name == "teenhoodDoor")
                 {
                     print("TEENHOOD UNLOCKED");
+                    storyProgression.teenhoodDoorAnim.SetTrigger("cut");
                     storyProgression.enteredTeenhood = true;
+                    //play scissor sound
                 }
                 if (gameObject.name == "childhoodDoor")
                 {

@@ -26,6 +26,11 @@ public class storyProgression : MonoBehaviour
     public Animator blinkAnim;
     public Animator fadeAnim;
 
+    [Header("Animators")]
+    public Animator adulthoodDoorAnim;
+    public Animator teenhoodDoorAnim;
+    public Animator childhoodDoorAnim;
+
     [Header("Stuff in Scene")]
     public GameObject progressBar;
     public GameObject vignetteMain;
@@ -204,6 +209,8 @@ public class storyProgression : MonoBehaviour
     public IEnumerator endAdulthood()
     {
         mode = gameMode.dialogue;
+        //close adulthood door
+        adulthoodDoorAnim.SetTrigger("close");
         //making the real her in position and invisible for now
         herAnimator.enabled = false;
         herSpriteRenderer.sprite = herRight;
