@@ -18,7 +18,11 @@ public class mazeWalls : MonoBehaviour
         transparentVar = new Color(1f, 1f, 1f, 0f);
         opaqueVar = new Color(1f, 1f, 1f, 1f);
 
-        t = Random.Range(0f, 1f);
+        t = Random.Range(0.5f, 1.5f);
+
+        fadingIn = Random.value > 0.5f;
+
+        spriteRenderer.color = Color.Lerp(transparentVar, opaqueVar, t);
     }
 
     void Update()
@@ -34,14 +38,5 @@ public class mazeWalls : MonoBehaviour
 
         if (t >= 1f) fadingIn = false;
         if (t <= 0f) fadingIn = true;
-        if (t <= 0.2f)
-        {
-            GetComponent<BoxCollider2D>().enabled = false;
-        }
-        else
-        {
-            GetComponent<BoxCollider2D>().enabled = true;
-        }
-
     }
 }

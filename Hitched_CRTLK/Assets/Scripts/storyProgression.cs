@@ -13,6 +13,8 @@ public class storyProgression : MonoBehaviour
     }
     public gameMode mode;
 
+    public GameObject canvasMenu;
+
     //script references
     dialogueSystem dialogueSystem;
     dialogueInfo dialogueInfo;
@@ -145,6 +147,29 @@ public class storyProgression : MonoBehaviour
         if (Input.GetKey(KeyCode.LeftShift) && Input.GetKeyDown(KeyCode.R))
         {
             SceneManager.LoadScene("01_menu");
+        }
+
+        if (Input.GetKeyDown(KeyCode.M) && (mode == gameMode.normal || mode == gameMode.menu))
+        {
+            mode = gameMode.menu;
+            ToggleMenu();
+        }
+    }
+
+    public void ToggleMenu()
+    {
+        bool isActive = canvasMenu.activeSelf;
+        canvasMenu.SetActive(!isActive);
+
+        if (isActive)
+        {
+            mode = gameMode.normal;
+            Time.timeScale = 1f;
+        }
+        else
+        {
+            mode = gameMode.menu;
+            Time.timeScale = 0f;
         }
     }
 
