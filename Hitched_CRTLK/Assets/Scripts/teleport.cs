@@ -95,6 +95,10 @@ public class teleport : MonoBehaviour
                 if (!noTransition)
                 {
                     storyProgression.fadeScreen();
+                    GetComponent<BoxCollider2D>().enabled = false; ;//closes door after entering
+                } else
+                {
+                    delayTime = 0f;
                 }
                 //only if the level is unlocked go through
                 StartCoroutine(EnableBoolRoutine());//coroutine for stopping tp glitch
@@ -106,7 +110,6 @@ public class teleport : MonoBehaviour
                 //GameObject player = collision.gameObject;
                 //player.transform.position = targetCharPosition; //tps the player
                 //mainCam.transform.position = targetCamPosition; //tps the cam
-                GetComponent<BoxCollider2D>().enabled = false; ;//closes door after entering
 
                 return;
             }
