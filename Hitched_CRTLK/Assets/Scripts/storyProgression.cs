@@ -37,6 +37,7 @@ public class storyProgression : MonoBehaviour
 
     [Header("Audio Sources")]
     public AudioSource memorySound;
+    public AudioSource scissorSound;
 
     [Header("Her Sprites")]
     public GameObject her;
@@ -55,9 +56,9 @@ public class storyProgression : MonoBehaviour
     //reference to track going in memory doors
     public bool enteredAdulthood = false;
     public bool enteredAdulthoodCutscene = false;
+    public bool enteredTeenhoodMaze = false;
     public bool enteredTeenhood = false;
     public bool enteredChildhood = false;
-    public bool returnedFromAdulthood = false;
 
     [Header("Adulthood Stuff")]
     public GameObject workHer;
@@ -113,10 +114,15 @@ public class storyProgression : MonoBehaviour
             enteredAdulthoodCutscene = false;
             StartCoroutine(adulthoodCutscene());
         }
-        if (returnedFromAdulthood)
+        if (enteredTeenhoodMaze)
         {
-            returnedFromAdulthood = false;
-            StartCoroutine(endOfDemo());
+            enteredTeenhoodMaze = false;
+            StartCoroutine(teenMaze());
+        }
+        if (enteredTeenhood)
+        {
+            enteredTeenhood = false;
+            StartCoroutine(teenScene1());
         }
 
 
@@ -144,7 +150,7 @@ public class storyProgression : MonoBehaviour
         }
 
         //placeholder to trigger mural change
-        if (Input.GetKeyDown(KeyCode.C))
+        if (Input.GetKeyDown(KeyCode.M))
         {
             animationProgression.muralChange();
         }
@@ -196,15 +202,35 @@ public class storyProgression : MonoBehaviour
 
     //CO ROUTINES FOR DIALOGUE===================================
 
-    IEnumerator endOfDemo()
+    IEnumerator teenScene1()
+    {
+        //sets vignette inactive
+        vignetteMain.SetActive(false);
+        yield return new WaitForSeconds(2f);
+        mode = gameMode.dialogue;
+        print("in teen scene");
+        //animator stuff for her
+        herAnimator.enabled = false;
+        herSpriteRenderer.sprite = herIdle;
+        //progress bar inactive
+        progressBar.SetActive(false);
+
+    }
+
+    IEnumerator teenMaze()
     {
         yield return new WaitForSeconds(2f);
-        //sets vignette active
-        vignetteMain.SetActive(true);
         mode = gameMode.dialogue;
-        //void1 line
-        startDialogue(dialogueInfo.VoidDemoLines, "The Void", dialogueInfo.voidSprite, false);
+        //her1 line
+        startDialogue(dialogueInfo.HerTeenMaze1, "Her", dialogueInfo.herSprite, false);
         yield return new WaitUntil(() => dialogueSystem.dialogueFinished);
+        //void1 line
+        startDialogue(dialogueInfo.VoidTeenMaze1, "The Void", dialogueInfo.voidSprite, false);
+        yield return new WaitUntil(() => dialogueSystem.dialogueFinished);
+        //her2 line
+        startDialogue(dialogueInfo.HerTeenMaze2, "Her", dialogueInfo.herSprite, true);
+        yield return new WaitUntil(() => dialogueSystem.dialogueFinished);
+
     }
     public IEnumerator endAdulthood()
     {
@@ -238,7 +264,6 @@ public class storyProgression : MonoBehaviour
     }
     IEnumerator adulthoodCutscene()
     {
-        mode = gameMode.dialogue;
         //sets vignette inactive
         vignetteMain.SetActive(false);
         //set other cutscene stuff active
@@ -250,6 +275,7 @@ public class storyProgression : MonoBehaviour
         progressBar.SetActive(false);
         //wait for transition
         yield return new WaitForSeconds(2f);
+        mode = gameMode.dialogue;
         //making the real her in position and invisible for now
         herAnimator.enabled = false;
         herSpriteRenderer.sprite = herRight;

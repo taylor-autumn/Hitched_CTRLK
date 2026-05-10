@@ -24,7 +24,7 @@ public class CuttingAction : MonoBehaviour
 
 void Update()
     {
-        if (playerInRange && storyProgression.mode == storyProgression.gameMode.normal && Input.GetKeyDown(KeyCode.KeypadEnter))
+        if (playerInRange && storyProgression.mode == storyProgression.gameMode.normal && Input.GetKeyDown(KeyCode.C))
         {
             CuttingAmount -= 1;
 
@@ -32,6 +32,12 @@ void Update()
             {
                 Destroy(gameObject);
             }
+
+            if (gameObject.name == "rope")
+            {
+                storyProgression.scissorSound.Play();
+            }
+
         }
     }
 

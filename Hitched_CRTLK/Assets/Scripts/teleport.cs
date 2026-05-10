@@ -12,6 +12,7 @@ public class teleport : MonoBehaviour
     [SerializeField] private GameObject mazeCam;
     public bool toMaze;
     public bool currentlyTping = false;
+    public bool noTransition = false;
 
     [Header("CUSTOMIZE")]
     public int progressRequiredToStart;
@@ -65,12 +66,12 @@ public class teleport : MonoBehaviour
                 {
                     print("TEENHOOD UNLOCKED");
                     storyProgression.teenhoodDoorAnim.SetTrigger("cut");
-                    storyProgression.enteredTeenhood = true;
+                    storyProgression.enteredTeenhoodMaze = true;
                     //play scissor sound
+                    storyProgression.scissorSound.Play();
                 }
                 if (gameObject.name == "childhoodDoor")
                 {
-                    print("CHILDHOOD UNLOCKED");
                     storyProgression.enteredChildhood = true;
                 }
                 if (gameObject.name== "adulthoodDoorTeleport")
@@ -81,17 +82,26 @@ public class teleport : MonoBehaviour
                 {
                     animationProgression.useAdulthoodDoor();
                     storyProgression.memorySound.Play();
-                    storyProgression.returnedFromAdulthood = true;
+                }
+                if (gameObject.name == "teenhoodDoorTeleport")
+                {
+                    print("called this");
+                    storyProgression.enteredTeenhood = true;
+                    storyProgression.teenhoodDoorAnim.SetTrigger("close");
                 }
 
-                storyProgression.fadeScreen();
+
+
+                if (!noTransition)
+                {
+                    storyProgression.fadeScreen();
+                }
                 //only if the level is unlocked go through
                 StartCoroutine(EnableBoolRoutine());//coroutine for stopping tp glitch
 
-                //transition
-
                 //choose if they want a transition or not
                 //chooseAnimation(transition);
+
                 Invoke("movePlayerAndCam", delayTime);   //delay for transition, also tp debug
                 //GameObject player = collision.gameObject;
                 //player.transform.position = targetCharPosition; //tps the player
