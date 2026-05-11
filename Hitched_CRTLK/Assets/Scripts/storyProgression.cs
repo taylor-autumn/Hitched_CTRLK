@@ -38,6 +38,7 @@ public class storyProgression : MonoBehaviour
     [Header("Audio Sources")]
     public AudioSource memorySound;
     public AudioSource scissorSound;
+    public AudioSource openDoorSound;
 
     [Header("Her Sprites")]
     public GameObject her;
@@ -58,6 +59,7 @@ public class storyProgression : MonoBehaviour
     public bool enteredAdulthoodCutscene = false;
     public bool enteredTeenhoodMaze = false;
     public bool enteredTeenhood = false;
+    public bool enteredTeenhood2 = false;
     public bool enteredChildhood = false;
 
     [Header("Adulthood Stuff")]
@@ -65,6 +67,15 @@ public class storyProgression : MonoBehaviour
     public GameObject watchingHer;
     public GameObject paperStack;
     public AudioSource knockingSound;
+    public AudioSource bgAdultMusic;
+
+    [Header("Teenhood Stuff")]
+    public AudioSource schoolBell;
+    public AudioSource romanticMusic;
+    public AudioSource hsBGSound;
+    public GameObject followHer;
+    public Animator himDoorAnim;
+    public Animator firstDoorAnim;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -106,21 +117,30 @@ public class storyProgression : MonoBehaviour
         //calls the start of the maze dialogue
         if (enteredAdulthood)
         {
+            //play maze music here==================
+            openDoorSound.Play();
             enteredAdulthood = false;
             StartCoroutine(mazeIntro());
         }
         if (enteredAdulthoodCutscene)
         {
+            //placeholder for swap function===========
+            bgAdultMusic.Play();
             enteredAdulthoodCutscene = false;
             StartCoroutine(adulthoodCutscene());
         }
         if (enteredTeenhoodMaze)
         {
+            //play maze music here=================
             enteredTeenhoodMaze = false;
+            openDoorSound.Play();
             StartCoroutine(teenMaze());
         }
         if (enteredTeenhood)
         {
+            //placeholder to swap maze music with the teen music===========================
+             schoolBell.Play();
+             hsBGSound.Play();
             enteredTeenhood = false;
             StartCoroutine(teenScene1());
         }
@@ -184,6 +204,32 @@ public class storyProgression : MonoBehaviour
         }
     }
 
+    public IEnumerator SwapAudio(AudioSource oldSound, AudioSource newSound, float fadeTime)
+    {
+        // Fade out old sound
+        float startVolume = oldSound.volume;
+
+        while (oldSound.volume > 0)
+        {
+            oldSound.volume -= startVolume * Time.deltaTime / fadeTime;
+            yield return null;
+        }
+
+        oldSound.Stop();
+
+        //fade in new sound
+        newSound.volume = 0;
+        newSound.Play();
+
+        while (newSound.volume < 1)
+        {
+            newSound.volume += Time.deltaTime / fadeTime;
+            yield return null;
+        }
+
+        newSound.volume = 1;
+    }
+
     public void startDialogue(List<string> dialogueLines, string charName, Sprite charSprite, bool endOfDialogue)
     {
         if (mode!=gameMode.dialogue)
@@ -211,9 +257,36 @@ public class storyProgression : MonoBehaviour
         print("in teen scene");
         //animator stuff for her
         herAnimator.enabled = false;
-        herSpriteRenderer.sprite = herIdle;
+        herSpriteRenderer.sprite = herRight;
         //progress bar inactive
         progressBar.SetActive(false);
+
+        //her1 line
+        startDialogue(dialogueInfo.HerTeenCut1, "Her", dialogueInfo.herSprite, false);
+        yield return new WaitUntil(() => dialogueSystem.dialogueFinished);
+        //SHE APPEARS
+        followHer.SetActive(true);
+        firstDoorAnim.SetTrigger("openClassDoor");
+        //void1 line
+        startDialogue(dialogueInfo.VoidTeenCut1,"The Void",dialogueInfo.voidSprite, false);
+        yield return new WaitUntil(() => dialogueSystem.dialogueFinished);
+        //her2 line
+        startDialogue(dialogueInfo.HerTeenCut2, "Her", dialogueInfo.herSprite, false);
+        yield return new WaitUntil(() => dialogueSystem.dialogueFinished);
+        //void2 line
+        startDialogue(dialogueInfo.VoidTeenCut2, "The Void", dialogueInfo.voidSprite, false);
+        yield return new WaitUntil(() => dialogueSystem.dialogueFinished);
+        //move her
+        Animator followHerAnim = followHer.GetComponent<Animator>();
+        followHerAnim.SetTrigger("go");
+        yield return new WaitForSeconds(14f);
+        //void3 line
+        startDialogue(dialogueInfo.VoidTeenCut3, "The Void", dialogueInfo.voidSprite, true);
+        yield return new WaitUntil(() => dialogueSystem.dialogueFinished);
+        //progress bar re-activate
+        progressBar.SetActive(true);
+        //re-enable her animator
+        herAnimator.enabled = true;
 
     }
 

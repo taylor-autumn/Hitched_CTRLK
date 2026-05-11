@@ -8,7 +8,7 @@ public class dialogueInfo : MonoBehaviour
     public Sprite youngHerSprite;
     public Sprite himSprite;
     public Sprite teacherSprite;
-    public Sprite npcSprite;
+    public Sprite teenHerSprite;
     public Sprite voidSprite;
 
     [Header("Intro Lines")]
@@ -110,5 +110,29 @@ public class dialogueInfo : MonoBehaviour
     public List<string> VoidTeenMaze1;
     [TextArea(3, 3)]
     public List<string> HerTeenMaze2;
+
+    [Header("Teen Cutscene1 Lines")]
+    [TextArea(3, 3)]
+    public List<string> HerTeenCut1;
+    [TextArea(3, 3)]
+    public List<string> VoidTeenCut1;
+    [TextArea(3, 3)]
+    public List<string> HerTeenCut2;
+    [TextArea(3, 3)]
+    public List<string> VoidTeenCut2;
+    [TextArea(3, 3)]
+    public List<string> VoidTeenCut3;
+
+    [Header("Teen Cutscene2 Lines")]
+    [TextArea(3, 3)]
+    public List<string> HerTeen2Cut1;
+    [TextArea(3, 3)]
+    public List<string> VoidTeen2Cut1;
+    [TextArea(3, 3)]
+    public List<string> TeenHerTeen2Cut2;
+    [TextArea(3, 3)]
+    public List<string> HimTeen2Cut2;
+    [TextArea(3, 3)]
+    public List<string> TeenHerTeen2Cut3;
 
 }
