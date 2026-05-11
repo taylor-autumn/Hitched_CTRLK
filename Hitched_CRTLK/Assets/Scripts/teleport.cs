@@ -60,6 +60,7 @@ public class teleport : MonoBehaviour
                 if (gameObject.name=="adulthoodDoor")
                 {
                     print("ADULTHOOD UNLOCKED");
+                    storyProgression.openDoorSound.Play();
                     storyProgression.enteredAdulthood = true;
                 }
                 if (gameObject.name == "teenhoodDoor")
@@ -67,30 +68,37 @@ public class teleport : MonoBehaviour
                     print("TEENHOOD UNLOCKED");
                     storyProgression.teenhoodDoorAnim.SetTrigger("cut");
                     storyProgression.enteredTeenhoodMaze = true;
+                    storyProgression.openDoorSound.Play();
                     //play scissor sound
                     storyProgression.scissorSound.Play();
                 }
                 if (gameObject.name == "childhoodDoor")
                 {
                     storyProgression.enteredChildhood = true;
+                    storyProgression.openDoorSound.Play();
                 }
                 if (gameObject.name== "adulthoodDoorTeleport")
                 {
                     storyProgression.enteredAdulthoodCutscene = true;
+                    storyProgression.memorySound.Play();
                 }
                 if (gameObject.name == "doorOut")
                 {
                     animationProgression.useAdulthoodDoor();
+                    storyProgression.bgAdultMusic.Stop(); //fade into mindscape music here
                     storyProgression.memorySound.Play();
+
                 }
                 if (gameObject.name == "teenhoodDoorTeleport")
                 {
-                    print("called this");
                     storyProgression.enteredTeenhood = true;
                     storyProgression.teenhoodDoorAnim.SetTrigger("close");
+                    storyProgression.memorySound.Play();
                 }
-
-
+                if (gameObject.name == "toHimDoor")
+                {
+                    storyProgression.enteredTeenhood2 = true;
+                }
 
                 if (!noTransition)
                 {

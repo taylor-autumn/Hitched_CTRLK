@@ -38,6 +38,7 @@ public class storyProgression : MonoBehaviour
     [Header("Audio Sources")]
     public AudioSource memorySound;
     public AudioSource scissorSound;
+    public AudioSource openDoorSound;
 
     [Header("Her Sprites")]
     public GameObject her;
@@ -58,6 +59,7 @@ public class storyProgression : MonoBehaviour
     public bool enteredAdulthoodCutscene = false;
     public bool enteredTeenhoodMaze = false;
     public bool enteredTeenhood = false;
+    public bool enteredTeenhood2 = false;
     public bool enteredChildhood = false;
 
     [Header("Adulthood Stuff")]
@@ -65,6 +67,20 @@ public class storyProgression : MonoBehaviour
     public GameObject watchingHer;
     public GameObject paperStack;
     public AudioSource knockingSound;
+    public AudioSource bgAdultMusic;
+
+    [Header("Teenhood Stuff")]
+    public AudioSource schoolBell;
+    public AudioSource romanticMusic;
+    public AudioSource hsBGSound;
+    public AudioSource bufferSound;
+    public GameObject followHer;
+    public Animator himDoorAnim;
+    public Animator firstDoorAnim;
+    public Animator teenHerAnim;
+    public Animator himAnim;
+    public Animator sunMoonAnim;
+    public Animator sketchbook;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -97,6 +113,9 @@ public class storyProgression : MonoBehaviour
         workHer.SetActive(false);
         watchingHer.SetActive(false);
         paperStack.SetActive(false);
+
+        //teenhood shit
+        sketchbook.gameObject.SetActive(false);
     }
 
 
@@ -106,23 +125,37 @@ public class storyProgression : MonoBehaviour
         //calls the start of the maze dialogue
         if (enteredAdulthood)
         {
+            //play maze music here==================
+            openDoorSound.Play();
             enteredAdulthood = false;
             StartCoroutine(mazeIntro());
         }
         if (enteredAdulthoodCutscene)
         {
+            //placeholder for swap function===========
+            bgAdultMusic.Play();
             enteredAdulthoodCutscene = false;
             StartCoroutine(adulthoodCutscene());
         }
         if (enteredTeenhoodMaze)
         {
+            //play maze music here=================
             enteredTeenhoodMaze = false;
+            openDoorSound.Play();
             StartCoroutine(teenMaze());
         }
         if (enteredTeenhood)
         {
+            //placeholder to swap maze music with the teen music===========================
+             hsBGSound.Play();
             enteredTeenhood = false;
             StartCoroutine(teenScene1());
+        }
+        if (enteredTeenhood2)
+        {
+            enteredTeenhood2 = false;
+            hsBGSound.Stop();
+            StartCoroutine(teenScene2());
         }
 
 
@@ -184,6 +217,32 @@ public class storyProgression : MonoBehaviour
         }
     }
 
+    public IEnumerator SwapAudio(AudioSource oldSound, AudioSource newSound, float fadeTime)
+    {
+        // Fade out old sound
+        float startVolume = oldSound.volume;
+
+        while (oldSound.volume > 0)
+        {
+            oldSound.volume -= startVolume * Time.deltaTime / fadeTime;
+            yield return null;
+        }
+
+        oldSound.Stop();
+
+        //fade in new sound
+        newSound.volume = 0;
+        newSound.Play();
+
+        while (newSound.volume < 1)
+        {
+            newSound.volume += Time.deltaTime / fadeTime;
+            yield return null;
+        }
+
+        newSound.volume = 1;
+    }
+
     public void startDialogue(List<string> dialogueLines, string charName, Sprite charSprite, bool endOfDialogue)
     {
         if (mode!=gameMode.dialogue)
@@ -202,18 +261,270 @@ public class storyProgression : MonoBehaviour
 
     //CO ROUTINES FOR DIALOGUE===================================
 
+    IEnumerator teenScene2()
+    {
+
+        yield return new WaitForSeconds(2f);
+        mode = gameMode.dialogue;
+        //animator stuff for her
+        herAnimator.enabled = false;
+        herSpriteRenderer.sprite = herRight;
+        //progress bar inactive
+        progressBar.SetActive(false);
+        //she appears
+        teenHerAnim.gameObject.SetActive(true);
+
+        //scene starts================
+        //her1 line
+        startDialogue(dialogueInfo.HerTeen2Cut1, "Her", dialogueInfo.herSprite, false);
+        yield return new WaitUntil(() => dialogueSystem.dialogueFinished);
+        //void1 line
+        startDialogue(dialogueInfo.VoidTeen2Cut1, "The Void", dialogueInfo.voidSprite, false);
+        yield return new WaitUntil(() => dialogueSystem.dialogueFinished);
+
+        //day1========================
+        romanticMusic.Play();
+        romanticMusic.volume = 0.8f;
+        yield return new WaitForSeconds(1f);
+        //teenHer0 line
+        startDialogue(dialogueInfo.TeenHerTeen2Cut0, "Teen Her", dialogueInfo.teenHerSprite, false);
+        yield return new WaitUntil(() => dialogueSystem.dialogueFinished);
+        //him0 line
+        startDialogue(dialogueInfo.HimTeen2Cut0, "Teen Him", dialogueInfo.himSprite, false);
+        yield return new WaitUntil(() => dialogueSystem.dialogueFinished);
+        //teenHer1 line
+        startDialogue(dialogueInfo.TeenHerTeen2Cut1, "Teen Her", dialogueInfo.teenHerSprite, false);
+        yield return new WaitUntil(() => dialogueSystem.dialogueFinished);
+        //teenHim1 line
+        startDialogue(dialogueInfo.HimTeen2Cut1, "Teen Him", dialogueInfo.himSprite, false);
+        yield return new WaitUntil(() => dialogueSystem.dialogueFinished);
+        //she moves
+        teenHerAnim.SetTrigger("go");
+        yield return new WaitForSeconds(7f);
+        //teenHer2 line
+        startDialogue(dialogueInfo.TeenHerTeen2Cut2, "Teen Her", dialogueInfo.teenHerSprite, false);
+        yield return new WaitUntil(() => dialogueSystem.dialogueFinished);
+        //teenHim2 line
+        startDialogue(dialogueInfo.HimTeen2Cut2, "Teen Him", dialogueInfo.himSprite, false);
+        yield return new WaitUntil(() => dialogueSystem.dialogueFinished);
+        //teenHer3 line
+        startDialogue(dialogueInfo.TeenHerTeen2Cut3, "Teen Her", dialogueInfo.teenHerSprite, false);
+        yield return new WaitUntil(() => dialogueSystem.dialogueFinished);
+        //teenHim3 line
+        startDialogue(dialogueInfo.HimTeen2Cut3, "Teen Him", dialogueInfo.himSprite, false);
+        yield return new WaitUntil(() => dialogueSystem.dialogueFinished);
+        //teenHer4 line
+        startDialogue(dialogueInfo.TeenHerTeen2Cut4, "Teen Her", dialogueInfo.teenHerSprite, false);
+        yield return new WaitUntil(() => dialogueSystem.dialogueFinished);
+        //teenHim4 line
+        startDialogue(dialogueInfo.HimTeen2Cut4, "Teen Him", dialogueInfo.himSprite, false);
+        yield return new WaitUntil(() => dialogueSystem.dialogueFinished);
+        //teenHer5 line
+        startDialogue(dialogueInfo.TeenHerTeen2Cut5, "Teen Her", dialogueInfo.teenHerSprite, false);
+        yield return new WaitUntil(() => dialogueSystem.dialogueFinished);
+        //teenHim4 line
+        startDialogue(dialogueInfo.HimTeen2Cut5, "Teen Him", dialogueInfo.himSprite, false);
+        yield return new WaitUntil(() => dialogueSystem.dialogueFinished);
+        //stop music
+        romanticMusic.Stop();
+        bufferSound.Play();
+        yield return new WaitForSeconds(1f);
+        //her1 line
+        startDialogue(dialogueInfo.HerTeen2Cut2, "Her", dialogueInfo.herSprite, false);
+        yield return new WaitUntil(() => dialogueSystem.dialogueFinished);
+        //void1 line
+        startDialogue(dialogueInfo.VoidTeen2Cut2, "The Void", dialogueInfo.voidSprite, false);
+        yield return new WaitUntil(() => dialogueSystem.dialogueFinished);
+
+        //day2==================
+        //day change
+        sunMoonAnim.SetTrigger("change"); //day change
+        teenHerAnim.SetTrigger("go"); //she leaves, he changes back to idle via event in her anim
+        //music change
+        romanticMusic.Play();
+        romanticMusic.volume = 0.8f;
+        romanticMusic.pitch = 0.7f;
+        //Him
+        startDialogue(dialogueInfo.HimTeen2Cut5Pt2, "Teen Him", dialogueInfo.himSprite, false);
+        yield return new WaitUntil(() => dialogueSystem.dialogueFinished);
+        //Teen Her
+        startDialogue(dialogueInfo.TeenHerTeen2Cut6, "Teen Her", dialogueInfo.teenHerSprite, false);
+        yield return new WaitUntil(() => dialogueSystem.dialogueFinished);
+        //she moves
+        teenHerAnim.SetTrigger("go");
+        yield return new WaitForSeconds(7f);
+        //Him
+        startDialogue(dialogueInfo.HimTeen2Cut6, "Teen Him", dialogueInfo.himSprite, false);
+        yield return new WaitUntil(() => dialogueSystem.dialogueFinished);
+        //Teen Her
+        startDialogue(dialogueInfo.TeenHerTeen2Cut7, "Teen Her", dialogueInfo.teenHerSprite, false);
+        yield return new WaitUntil(() => dialogueSystem.dialogueFinished);
+        //Him
+        startDialogue(dialogueInfo.HimTeen2Cut7, "Teen Him", dialogueInfo.himSprite, false);
+        yield return new WaitUntil(() => dialogueSystem.dialogueFinished);
+        //Teen Her
+        startDialogue(dialogueInfo.TeenHerTeen2Cut8, "Teen Her", dialogueInfo.teenHerSprite, false);
+        yield return new WaitUntil(() => dialogueSystem.dialogueFinished);
+        //Him
+        startDialogue(dialogueInfo.HimTeen2Cut8, "Teen Him", dialogueInfo.himSprite, false);
+        yield return new WaitUntil(() => dialogueSystem.dialogueFinished);
+        //Teen Her
+        startDialogue(dialogueInfo.TeenHerTeen2Cut9, "Teen Her", dialogueInfo.teenHerSprite, false);
+        yield return new WaitUntil(() => dialogueSystem.dialogueFinished);
+        //Him
+        startDialogue(dialogueInfo.HimTeen2Cut9, "Teen Him", dialogueInfo.himSprite, false);
+        yield return new WaitUntil(() => dialogueSystem.dialogueFinished);
+        sketchbook.gameObject.SetActive(true);
+        yield return new WaitForSeconds(2f);
+        sketchbook.gameObject.SetActive(false);
+        //Teen Her
+        startDialogue(dialogueInfo.TeenHerTeen2Cut10, "Teen Her", dialogueInfo.teenHerSprite, false);
+        yield return new WaitUntil(() => dialogueSystem.dialogueFinished);
+        //Him
+        startDialogue(dialogueInfo.HimTeen2Cut10, "Teen Him", dialogueInfo.himSprite, false);
+        yield return new WaitUntil(() => dialogueSystem.dialogueFinished);
+        //Teen Her
+        startDialogue(dialogueInfo.TeenHerTeen2Cut11, "Teen Her", dialogueInfo.teenHerSprite, false);
+        yield return new WaitUntil(() => dialogueSystem.dialogueFinished);
+        //Him
+        startDialogue(dialogueInfo.HimTeen2Cut11, "Teen Him", dialogueInfo.himSprite, false);
+        yield return new WaitUntil(() => dialogueSystem.dialogueFinished);
+        //stop music
+        romanticMusic.Stop();
+        bufferSound.Play();
+        yield return new WaitForSeconds(1f);
+        //her line
+        startDialogue(dialogueInfo.HerTeen2Cut3, "Her", dialogueInfo.herSprite, false);
+        yield return new WaitUntil(() => dialogueSystem.dialogueFinished);
+        //void line
+        startDialogue(dialogueInfo.VoidTeen2Cut3, "The Void", dialogueInfo.voidSprite, false);
+        yield return new WaitUntil(() => dialogueSystem.dialogueFinished);
+        //her line
+        startDialogue(dialogueInfo.HerTeen2Cut4, "Her", dialogueInfo.herSprite, false);
+        yield return new WaitUntil(() => dialogueSystem.dialogueFinished);
+        yield return new WaitForSeconds(1.5f);
+        StartCoroutine(teenScene2Pt2());
+    }
+
+    IEnumerator teenScene2Pt2()
+    {
+         //day3==================
+        //day change
+        sunMoonAnim.SetTrigger("change"); //day change
+        teenHerAnim.SetTrigger("go"); //she leaves, he changes back to idle via event in her anim
+        //music change
+        romanticMusic.Play();
+        romanticMusic.volume = 0.6f;
+        romanticMusic.pitch = 0.5f;
+        //Teen Her
+        startDialogue(dialogueInfo.TeenHerScene3Line1, "Teen Her", dialogueInfo.teenHerSprite, false);
+        yield return new WaitUntil(() => dialogueSystem.dialogueFinished);
+        //she moves
+        teenHerAnim.SetTrigger("go");
+        yield return new WaitForSeconds(7f);
+        //Him
+        startDialogue(dialogueInfo.HimScene3Line1, "Teen Him", dialogueInfo.himSprite, false);
+        yield return new WaitUntil(() => dialogueSystem.dialogueFinished);
+        //Teen Her
+        startDialogue(dialogueInfo.TeenHerScene3Line2, "Teen Her", dialogueInfo.teenHerSprite, false);
+        yield return new WaitUntil(() => dialogueSystem.dialogueFinished);
+        //Teen Her
+        startDialogue(dialogueInfo.TeenHerScene3Line2, "Teen Her", dialogueInfo.teenHerSprite, false);
+        yield return new WaitUntil(() => dialogueSystem.dialogueFinished);
+        //Him
+        startDialogue(dialogueInfo.HimScene3Line3, "Teen Him", dialogueInfo.himSprite, false);
+        yield return new WaitUntil(() => dialogueSystem.dialogueFinished);
+        //Teen Her
+        startDialogue(dialogueInfo.TeenHerScene3Line3, "Teen Her", dialogueInfo.teenHerSprite, false);
+        yield return new WaitUntil(() => dialogueSystem.dialogueFinished);
+        //Him
+        startDialogue(dialogueInfo.HimScene3Line4, "Teen Him", dialogueInfo.himSprite, false);
+        yield return new WaitUntil(() => dialogueSystem.dialogueFinished);
+        //Teen Her
+        startDialogue(dialogueInfo.TeenHerScene3Line4, "Teen Her", dialogueInfo.teenHerSprite, false);
+        yield return new WaitUntil(() => dialogueSystem.dialogueFinished);
+        //Him
+        startDialogue(dialogueInfo.HimScene3Line5, "Teen Him", dialogueInfo.himSprite, false);
+        yield return new WaitUntil(() => dialogueSystem.dialogueFinished);
+        //Teen Her
+        startDialogue(dialogueInfo.TeenHerScene3Line5, "Teen Her", dialogueInfo.teenHerSprite, false);
+        yield return new WaitUntil(() => dialogueSystem.dialogueFinished);
+        //Him
+        startDialogue(dialogueInfo.HimScene3Line6, "Teen Him", dialogueInfo.himSprite, false);
+        yield return new WaitUntil(() => dialogueSystem.dialogueFinished);
+        //Teen Her
+        startDialogue(dialogueInfo.TeenHerScene3Line6, "Teen Her", dialogueInfo.teenHerSprite, false);
+        yield return new WaitUntil(() => dialogueSystem.dialogueFinished);
+        //stop music
+        romanticMusic.Stop();
+        bufferSound.Play();
+        yield return new WaitForSeconds(1f);
+        //her line
+        startDialogue(dialogueInfo.HerTeen2Cut5, "Her", dialogueInfo.herSprite, false);
+        yield return new WaitUntil(() => dialogueSystem.dialogueFinished);
+        //void line
+        startDialogue(dialogueInfo.VoidTeen2Cut4, "The Void", dialogueInfo.voidSprite, false);
+        yield return new WaitUntil(() => dialogueSystem.dialogueFinished);
+        //her line
+        startDialogue(dialogueInfo.HerTeen2Cut6, "Her", dialogueInfo.herSprite, false);
+        yield return new WaitUntil(() => dialogueSystem.dialogueFinished);
+
+        //day4==================
+        //day change
+        sunMoonAnim.SetTrigger("change"); //day change
+        teenHerAnim.SetTrigger("go"); //she leaves, he changes back to idle via event in her anim
+        //her line
+        startDialogue(dialogueInfo.VoidTeen2Cut5, "The Void", dialogueInfo.voidSprite, false);
+        yield return new WaitUntil(() => dialogueSystem.dialogueFinished);
+        //music change
+        romanticMusic.Play();
+        romanticMusic.volume = 0.6f;
+        romanticMusic.pitch = 0.3f;
+        //she moves
+        //teenHerAnim.SetTrigger("go");
+        //yield return new WaitForSeconds(7f);
+        print("STARTING LAST ONE");
+    }
+
     IEnumerator teenScene1()
     {
         //sets vignette inactive
         vignetteMain.SetActive(false);
         yield return new WaitForSeconds(2f);
+        schoolBell.Play();
         mode = gameMode.dialogue;
-        print("in teen scene");
         //animator stuff for her
         herAnimator.enabled = false;
-        herSpriteRenderer.sprite = herIdle;
+        herSpriteRenderer.sprite = herRight;
         //progress bar inactive
         progressBar.SetActive(false);
+
+        //her1 line
+        startDialogue(dialogueInfo.HerTeenCut1, "Her", dialogueInfo.herSprite, false);
+        yield return new WaitUntil(() => dialogueSystem.dialogueFinished);
+        //SHE APPEARS
+        followHer.SetActive(true);
+        firstDoorAnim.SetTrigger("openClassDoor");
+        //void1 line
+        startDialogue(dialogueInfo.VoidTeenCut1,"The Void",dialogueInfo.voidSprite, false);
+        yield return new WaitUntil(() => dialogueSystem.dialogueFinished);
+        //her2 line
+        startDialogue(dialogueInfo.HerTeenCut2, "Her", dialogueInfo.herSprite, false);
+        yield return new WaitUntil(() => dialogueSystem.dialogueFinished);
+        //void2 line
+        startDialogue(dialogueInfo.VoidTeenCut2, "The Void", dialogueInfo.voidSprite, false);
+        yield return new WaitUntil(() => dialogueSystem.dialogueFinished);
+        //move her
+        Animator followHerAnim = followHer.GetComponent<Animator>();
+        followHerAnim.SetTrigger("go");
+        yield return new WaitForSeconds(14f);
+        //void3 line
+        startDialogue(dialogueInfo.VoidTeenCut3, "The Void", dialogueInfo.voidSprite, true);
+        yield return new WaitUntil(() => dialogueSystem.dialogueFinished);
+        //progress bar re-activate
+        progressBar.SetActive(true);
+        //re-enable her animator
+        herAnimator.enabled = true;
 
     }
 

@@ -15,9 +15,19 @@ public class animationProgression : MonoBehaviour
     AudioSource doorSource;
     Animator adulthoodDoorAnim;
 
+    //teenhood stuff
+    Animator teenDoorAnim;
+    Animator himAnim;
+    Animator teenDoorOutAnim;
+
+    //story progression stuff
+    storyProgression storyProgression;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        storyProgression = GameObject.Find("gameManager").GetComponent<storyProgression>();
+
         wiltedRoseAnim = GameObject.Find("wiltedRose").GetComponent<Animator>();
         fullRoseAnim = GameObject.Find("fullRose").GetComponent<Animator>();
         muralAnim = GameObject.Find("mural").GetComponent<Animator>();
@@ -33,12 +43,11 @@ public class animationProgression : MonoBehaviour
         soundsParent = GameObject.Find("sounds");
         doorSource = soundsParent.transform.Find("adulthood/doorSound").GetComponent<AudioSource>();
 
-    }
+        teenDoorAnim = mapsParent.transform.Find("teenhoodMaps/teenhood1/toHimDoor").GetComponent<Animator>();
+        himAnim = mapsParent.transform.Find("teenhoodMaps/teenhood2/cutSceneStuff/Him").GetComponent<Animator>();
+        teenDoorOutAnim = mapsParent.transform.Find("teenhoodMaps/teenhood2/teenDoorOut").GetComponent<Animator>();
+        teenDoorAnim.gameObject.SetActive(false);
 
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 
     public void roseChange()
@@ -76,5 +85,32 @@ public class animationProgression : MonoBehaviour
     public void useAdulthoodDoor()
     {
         adulthoodDoorAnim.SetTrigger("use");
+    }
+
+    public void openTeenDoor()
+    {
+        teenDoorAnim.SetTrigger("open");
+        storyProgression.openDoorSound.Play();
+
+    }
+
+    public void HimTurnToHer()
+    {
+        himAnim.SetTrigger("toHer");
+    }
+
+    public void HimBackIdle()
+    {
+        himAnim.SetTrigger("idle");
+    }
+
+    public void activateTeenDoorOut()
+    {
+        teenDoorAnim.gameObject.SetActive(true);
+    }
+
+    public void openTeenDoorOut()
+    {
+        teenDoorAnim.SetTrigger("open");
     }
 }
