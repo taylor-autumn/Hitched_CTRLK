@@ -344,18 +344,19 @@ public class storyProgression : MonoBehaviour
         romanticMusic.Play();
         romanticMusic.volume = 0.8f;
         romanticMusic.pitch = 0.7f;
+        yield return new WaitForSeconds(3f);
         //Him
         startDialogue(dialogueInfo.HimTeen2Cut5Pt2, "Teen Him", dialogueInfo.himSprite, false);
         yield return new WaitUntil(() => dialogueSystem.dialogueFinished);
         //Teen Her
         startDialogue(dialogueInfo.TeenHerTeen2Cut6, "Teen Her", dialogueInfo.teenHerSprite, false);
         yield return new WaitUntil(() => dialogueSystem.dialogueFinished);
-        //she moves
-        teenHerAnim.SetTrigger("go");
-        yield return new WaitForSeconds(7f);
         //Him
         startDialogue(dialogueInfo.HimTeen2Cut6, "Teen Him", dialogueInfo.himSprite, false);
         yield return new WaitUntil(() => dialogueSystem.dialogueFinished);
+        //she moves
+        teenHerAnim.SetTrigger("go");
+        yield return new WaitForSeconds(1.5f);
         //Teen Her
         startDialogue(dialogueInfo.TeenHerTeen2Cut7, "Teen Her", dialogueInfo.teenHerSprite, false);
         yield return new WaitUntil(() => dialogueSystem.dialogueFinished);
@@ -402,7 +403,6 @@ public class storyProgression : MonoBehaviour
         //her line
         startDialogue(dialogueInfo.HerTeen2Cut4, "Her", dialogueInfo.herSprite, false);
         yield return new WaitUntil(() => dialogueSystem.dialogueFinished);
-        yield return new WaitForSeconds(1.5f);
         StartCoroutine(teenScene2Pt2());
     }
 
@@ -416,12 +416,13 @@ public class storyProgression : MonoBehaviour
         romanticMusic.Play();
         romanticMusic.volume = 0.6f;
         romanticMusic.pitch = 0.5f;
+        yield return new WaitForSeconds(3f);
         //Teen Her
         startDialogue(dialogueInfo.TeenHerScene3Line1, "Teen Her", dialogueInfo.teenHerSprite, false);
         yield return new WaitUntil(() => dialogueSystem.dialogueFinished);
         //she moves
         teenHerAnim.SetTrigger("go");
-        yield return new WaitForSeconds(7f);
+        yield return new WaitForSeconds(2f);
         //Him
         startDialogue(dialogueInfo.HimScene3Line1, "Teen Him", dialogueInfo.himSprite, false);
         yield return new WaitUntil(() => dialogueSystem.dialogueFinished);
@@ -480,6 +481,7 @@ public class storyProgression : MonoBehaviour
         romanticMusic.Play();
         romanticMusic.volume = 0.6f;
         romanticMusic.pitch = 0.3f;
+        yield return new WaitForSeconds(3f);
         //she moves
         //teenHerAnim.SetTrigger("go");
         //yield return new WaitForSeconds(7f);
