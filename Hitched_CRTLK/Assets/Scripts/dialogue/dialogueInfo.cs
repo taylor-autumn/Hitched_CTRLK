@@ -124,15 +124,146 @@ public class dialogueInfo : MonoBehaviour
     public List<string> VoidTeenCut3;
 
     [Header("Teen Cutscene2 Lines")]
+    [Header("Narrate")]
+    //day1
     [TextArea(3, 3)]
     public List<string> HerTeen2Cut1;
     [TextArea(3, 3)]
     public List<string> VoidTeen2Cut1;
+    [Header("Confession")]
+    [TextArea(3, 3)]
+    public List<string> TeenHerTeen2Cut0;
+    [TextArea(3, 3)]
+    public List<string> HimTeen2Cut0;
+    [TextArea(3, 3)]
+    public List<string> TeenHerTeen2Cut1;
+    [TextArea(3, 3)]
+    public List<string> HimTeen2Cut1;
     [TextArea(3, 3)]
     public List<string> TeenHerTeen2Cut2;
     [TextArea(3, 3)]
     public List<string> HimTeen2Cut2;
     [TextArea(3, 3)]
     public List<string> TeenHerTeen2Cut3;
+    [TextArea(3, 3)]
+    public List<string> HimTeen2Cut3;
+    [TextArea(3, 3)]
+    public List<string> TeenHerTeen2Cut4;
+    [TextArea(3, 3)]
+    public List<string> HimTeen2Cut4;
+    [TextArea(3, 3)]
+    public List<string> TeenHerTeen2Cut5;
+    [TextArea(3, 3)]
+    public List<string> HimTeen2Cut5;
+    [Header("Back to Narrate")]
+    [TextArea(3, 3)]
+    public List<string> HerTeen2Cut2;
+    [TextArea(3, 3)]
+    public List<string> VoidTeen2Cut2;
+
+    [Header("Scene2")]
+    [TextArea(3, 3)]
+    public List<string> HimTeen2Cut5Pt2;
+    [TextArea(3, 3)]
+    public List<string> TeenHerTeen2Cut6;
+    [TextArea(3, 3)]
+    public List<string> HimTeen2Cut6;
+    [TextArea(3, 3)]
+    public List<string> TeenHerTeen2Cut7;
+    [TextArea(3, 3)]
+    public List<string> HimTeen2Cut7;
+    [TextArea(3, 3)]
+    public List<string> TeenHerTeen2Cut8;
+    [TextArea(3, 3)]
+    public List<string> HimTeen2Cut8;
+    [TextArea(3, 3)]
+    public List<string> TeenHerTeen2Cut9;
+    [TextArea(3, 3)]
+    public List<string> HimTeen2Cut9;
+    [TextArea(3, 3)]
+    public List<string> TeenHerTeen2Cut10;
+    [TextArea(3, 3)]
+    public List<string> HimTeen2Cut10;
+    [TextArea(3, 3)]
+    public List<string> TeenHerTeen2Cut11;
+    [TextArea(3, 3)]
+    public List<string> HimTeen2Cut11;
+    [Header("Narrators")]
+    [TextArea(3, 3)]
+    public List<string> HerTeen2Cut3;
+    [TextArea(3, 3)]
+    public List<string> VoidTeen2Cut3;
+    [TextArea(3, 3)]
+    public List<string> HerTeen2Cut4;
+
+    [Header("Scene 3")]
+    [TextArea(3, 3)]
+    public List<string> TeenHerScene3Line1;
+    [TextArea(3, 3)]
+    public List<string> HimScene3Line1;
+    [TextArea(3, 3)]
+    public List<string> TeenHerScene3Line2;
+    [TextArea(3, 3)]
+    public List<string> HimScene3Line2;
+    [TextArea(3, 3)]
+    public List<string> TeenHerScene3Line3;
+    [TextArea(3, 3)]
+    public List<string> HimScene3Line3;
+    [TextArea(3, 3)]
+    public List<string> TeenHerScene3Line4;
+    [TextArea(3, 3)]
+    public List<string> HimScene3Line4;
+    [TextArea(3, 3)]
+    public List<string> TeenHerScene3Line5;
+    [TextArea(3, 3)]
+    public List<string> HimScene3Line5;
+    [TextArea(3, 3)]
+    public List<string> TeenHerScene3Line6;
+    [TextArea(3, 3)]
+    public List<string> HimScene3Line6;
+    [Header("Narrators")]
+    [TextArea(3, 3)]
+    public List<string> HerTeen2Cut5;
+    [TextArea(3, 3)]
+    public List<string> VoidTeen2Cut4;
+    [TextArea(3, 3)]
+    public List<string> HerTeen2Cut6;
+
+    [Header("Scene 4")]
+    [TextArea(3, 3)]
+    public List<string> VoidTeen2Cut5;
+    [TextArea(3, 3)]
+    public List<string> TeenHerScene4Line1;
+    [TextArea(3, 3)]
+    public List<string> HimScene4Line1;
+    [TextArea(3, 3)]
+    public List<string> TeenHerScene4Line2;
+    [TextArea(3, 3)]
+    public List<string> HimScene4Line2;
+    [TextArea(3, 3)]
+    public List<string> TeenHerScene4Line3;
+    [TextArea(3, 3)]
+    public List<string> HimScene4Line3;
+    [TextArea(3, 3)]
+    public List<string> TeenHerScene4Line4;
+    [TextArea(3, 3)]
+    public List<string> HimScene4Line4;
+    [TextArea(3, 3)]
+    public List<string> TeenHerScene4Line5;
+    [TextArea(3, 3)]
+    public List<string> HimScene4Line5;
+    [TextArea(3, 3)]
+    public List<string> TeenHerScene4Line6;
+    [TextArea(3, 3)]
+    public List<string> HimScene4Line6;
+    [Header("Narrators")]
+    [TextArea(3, 3)]
+    public List<string> HerTeen2Cut7;
+    [TextArea(3, 3)]
+    public List<string> VoidTeen2Cut6;
+    [TextArea(3, 3)]
+    public List<string> HerTeen2Cut8;
+    [TextArea(3, 3)]
+    public List<string> VoidTeen2Cut7;
 
 }

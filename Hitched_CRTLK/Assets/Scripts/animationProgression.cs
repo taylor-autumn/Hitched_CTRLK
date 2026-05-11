@@ -17,6 +17,8 @@ public class animationProgression : MonoBehaviour
 
     //teenhood stuff
     Animator teenDoorAnim;
+    Animator himAnim;
+    Animator teenDoorOutAnim;
 
     //story progression stuff
     storyProgression storyProgression;
@@ -42,6 +44,10 @@ public class animationProgression : MonoBehaviour
         doorSource = soundsParent.transform.Find("adulthood/doorSound").GetComponent<AudioSource>();
 
         teenDoorAnim = mapsParent.transform.Find("teenhoodMaps/teenhood1/toHimDoor").GetComponent<Animator>();
+        himAnim = mapsParent.transform.Find("teenhoodMaps/teenhood2/cutSceneStuff/Him").GetComponent<Animator>();
+        teenDoorOutAnim = mapsParent.transform.Find("teenhoodMaps/teenhood2/teenDoorOut").GetComponent<Animator>();
+        teenDoorAnim.gameObject.SetActive(false);
+
     }
 
     public void roseChange()
@@ -88,5 +94,23 @@ public class animationProgression : MonoBehaviour
 
     }
 
+    public void HimTurnToHer()
+    {
+        himAnim.SetTrigger("toHer");
+    }
 
+    public void HimBackIdle()
+    {
+        himAnim.SetTrigger("idle");
+    }
+
+    public void activateTeenDoorOut()
+    {
+        teenDoorAnim.gameObject.SetActive(true);
+    }
+
+    public void openTeenDoorOut()
+    {
+        teenDoorAnim.SetTrigger("open");
+    }
 }

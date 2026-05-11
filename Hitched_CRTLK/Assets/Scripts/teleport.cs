@@ -85,6 +85,7 @@ public class teleport : MonoBehaviour
                 if (gameObject.name == "doorOut")
                 {
                     animationProgression.useAdulthoodDoor();
+                    storyProgression.bgAdultMusic.Stop(); //fade into mindscape music here
                     storyProgression.memorySound.Play();
 
                 }

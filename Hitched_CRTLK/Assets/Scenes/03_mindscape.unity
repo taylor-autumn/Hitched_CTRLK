@@ -119,112 +119,6 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!1 &8938264
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 8938265}
-  - component: {fileID: 8938266}
-  - component: {fileID: 8938267}
-  m_Layer: 0
-  m_Name: chair/desk
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &8938265
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8938264}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0.07753314, w: -0.9969898}
-  m_LocalPosition: {x: 71.04, y: 0.97, z: 0}
-  m_LocalScale: {x: -0.5641306, y: 0.53226274, z: 0.10107374}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1114991320}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 8.894}
---- !u!212 &8938266
-SpriteRenderer:
-  serializedVersion: 2
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8938264}
-  m_Enabled: 1
-  m_CastShadows: 0
-  m_ReceiveShadows: 0
-  m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 0
-  m_RayTraceProcedural: 0
-  m_RayTracingAccelStructBuildFlagsOverride: 0
-  m_RayTracingAccelStructBuildFlags: 1
-  m_SmallMeshCulling: 1
-  m_ForceMeshLod: -1
-  m_MeshLodSelectionBias: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 2100000, guid: 9dfc825aed78fcd4ba02077103263b40, type: 2}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 0
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_GlobalIlluminationMeshLod: 0
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 2
-  m_MaskInteraction: 0
-  m_Sprite: {fileID: -1995549082, guid: f9e42f28a60d5224f8f3997fb599b062, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 0
-  m_FlipY: 0
-  m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
-  m_AdaptiveModeThreshold: 0.5
-  m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
-  m_SpriteSortPoint: 0
---- !u!114 &8938267
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8938264}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa3a1c888502fce4faf88357508b3a87, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::chairFloating
-  floatSpeed: 1
-  floatHeight: 0.5
 --- !u!1 &19019404
 GameObject:
   m_ObjectHideFlags: 0
@@ -1453,112 +1347,6 @@ Animator:
   m_CorrespondingSourceObject: {fileID: 7756611625992296809, guid: 8d2f493e127b6cf4dbe2564db8690724, type: 3}
   m_PrefabInstance: {fileID: 4820858378915040042}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &268150417
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 268150418}
-  - component: {fileID: 268150419}
-  - component: {fileID: 268150420}
-  m_Layer: 0
-  m_Name: chair/desk
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &268150418
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 268150417}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: 0.15841731, w: 0.9873723}
-  m_LocalPosition: {x: 72.04, y: -1.65, z: 0}
-  m_LocalScale: {x: 0.6366987, y: 0.51825106, z: 0.098413}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1114991320}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 18.23}
---- !u!212 &268150419
-SpriteRenderer:
-  serializedVersion: 2
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 268150417}
-  m_Enabled: 1
-  m_CastShadows: 0
-  m_ReceiveShadows: 0
-  m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 0
-  m_RayTraceProcedural: 0
-  m_RayTracingAccelStructBuildFlagsOverride: 0
-  m_RayTracingAccelStructBuildFlags: 1
-  m_SmallMeshCulling: 1
-  m_ForceMeshLod: -1
-  m_MeshLodSelectionBias: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 2100000, guid: 9dfc825aed78fcd4ba02077103263b40, type: 2}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 0
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_GlobalIlluminationMeshLod: 0
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 2
-  m_MaskInteraction: 0
-  m_Sprite: {fileID: -1011239021, guid: f9e42f28a60d5224f8f3997fb599b062, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 0
-  m_FlipY: 0
-  m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
-  m_AdaptiveModeThreshold: 0.5
-  m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
-  m_SpriteSortPoint: 0
---- !u!114 &268150420
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 268150417}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa3a1c888502fce4faf88357508b3a87, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::chairFloating
-  floatSpeed: 1
-  floatHeight: 0.5
 --- !u!1 &278598598 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8040336561194615386, guid: ad05c19f139ee404d923a11c638db18d, type: 3}
@@ -1949,6 +1737,28 @@ MonoBehaviour:
     m_VarianceClampScale: 0.9
     m_ContrastAdaptiveSharpening: 0
   m_Version: 2
+--- !u!1 &332683473 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4006346508736056306, guid: 60e306dd2e82aeb45ad1f353a44a5ee8, type: 3}
+  m_PrefabInstance: {fileID: 802971966370260023}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &332683475 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 588579177444955770, guid: 60e306dd2e82aeb45ad1f353a44a5ee8, type: 3}
+  m_PrefabInstance: {fileID: 802971966370260023}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &332683477
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 332683473}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cf0f1f4d2ddbdba439c10daa409f132a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::animationProgression
 --- !u!1 &399482809
 GameObject:
   m_ObjectHideFlags: 0
@@ -3003,6 +2813,7 @@ Transform:
   m_Children:
   - {fileID: 1700763063740887313}
   - {fileID: 7574160076258632735}
+  - {fileID: 1232690825}
   m_Father: {fileID: 611044035}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &611044034
@@ -3261,7 +3072,7 @@ MonoBehaviour:
   youngHerSprite: {fileID: 21300000, guid: d37118f979532b34ebf9111c40798c2d, type: 3}
   himSprite: {fileID: 21300000, guid: 4cca0f018c3646245b697d0dcdd9617c, type: 3}
   teacherSprite: {fileID: 21300000, guid: 9ae587bedf9ea1641a7f76b5f7d85a22, type: 3}
-  teenHerSprite: {fileID: 21300000, guid: 59da7d2cfad6901448c27367b13bfa9d, type: 3}
+  teenHerSprite: {fileID: 21300000, guid: 6a4ed3fae644c0f479bfc565753329e0, type: 3}
   voidSprite: {fileID: 21300000, guid: 9d31e64feccd9974d9a3ce2300ef31f1, type: 3}
   HerOpening1:
   - Owwww...My head....
@@ -3501,15 +3312,193 @@ MonoBehaviour:
   - Just kidding!
   VoidTeenCut3:
   - Well, what are you waiting for?
-  - FOLLOW HER. I'm nosy I wanna see what you're  up to hehe.
+  - FOLLOW HER. I'm nosy.
   HerTeen2Cut1:
-  - Oh my gosh is that Hi-
+  - Woah...this place is interesting. Wait, is that Hi-
   VoidTeen2Cut1:
-  - Shhh!! My show is on. Just watch...
+  - SHHH- Pay attention. My show is on.
+  TeenHerTeen2Cut0:
+  - Ahhh...so the mysterious note was from you?
+  HimTeen2Cut0:
+  - Her! Ya know, I was starting to think you weren't going to come.
+  TeenHerTeen2Cut1:
+  - You wrote "come alone" like a serial killer. Forgive me if I hesistated for a
+    moment before being coaxed to come here by my friends.
+  HimTeen2Cut1:
+  - Meh, it sounded more romantic in my head.
   TeenHerTeen2Cut2:
-  - Um...hi Him!
-  HimTeen2Cut2: []
-  TeenHerTeen2Cut3: []
+  - Haha...Alright then...flowers on my desk, an anonymous love note, compliments
+    during art class...let's cut to the chase. Why me?
+  HimTeen2Cut2:
+  - Well...because you're kind...and pretty...and crazy talented with a paint brush...
+  - But you're also full of passion. You make things come to life, Her. And everyone
+    gravitates towards you because of it.
+  TeenHerTeen2Cut3:
+  - Ha! That sounds like something straight of a movie. You're flattering me too
+    much.
+  HimTeen2Cut3:
+  - Maybe...but it's true. People notice when you walk into a room, at least...I
+    do.
+  - And honestly, I think I could learn a thing or two from you.
+  TeenHerTeen2Cut4:
+  - Now what could you possibly want to learn from me?
+  HimTeen2Cut4:
+  - You're the best artist in the school...when you explain things, art actually
+    makes sense.
+  - I always try with my works but they just feel..I don't know. Out of touch. I
+    think being with you could give me the passion to get better too...
+  TeenHerTeen2Cut5:
+  - How do you know? You barely know me.
+  HimTeen2Cut5:
+  - Then let me learn more.
+  HerTeen2Cut2:
+  - I mean...he doesn't look so bad here. He's kind of charming.
+  VoidTeen2Cut2:
+  - Let's not jump on the bandwagon just yet, you just met.
+  - Not long after this you guys started officially dating and you hung out with
+    him practically every day, spending every hour you could in the art studio with
+    him, teaching him, knowing only him.
+  HimTeen2Cut5Pt2:
+  - Ahh, there you are. A little later than usual today, you have another secret
+    boyfriend I don't know about?
+  TeenHerTeen2Cut6:
+  - Aha very funny. And no, I'd be lucky to have a FRIEND to hang out with. All my
+    friends have been ignoring me lately.
+  HimTeen2Cut6:
+  - What? Why?
+  TeenHerTeen2Cut7:
+  - They say that I'm here too much, spending too much time with you, being too busy.
+  - I mean, I've had to turn down a couple of their invitations, but I didn't think
+    they would just...give up on me like that.
+  HimTeen2Cut7:
+  - Hey, that's not fair of them to get mad just because you're in a relationship.
+    We should be able to spend all the time in the world together if we want to.
+  - Maybe they just aren't using to not having your full, undivided attention anymore.
+  - Think about it like this. Do they support you when it matters?
+  TeenHerTeen2Cut8:
+  - ...
+  HimTeen2Cut8:
+  - Exactly. Who needs them when you've got me?
+  TeenHerTeen2Cut9:
+  - Alright, alright...let me see what sketches you're cooking up over there.
+  HimTeen2Cut9:
+  - Alright...but don't get your hopes too high yet I'm still not as good as you.
+  TeenHerTeen2Cut10:
+  - Him...these are fantastic. Seriously, they have some real promise.
+  HimTeen2Cut10:
+  - Yeah...well that's cause I have an incredible teacher.
+  - Give yourself some credit, someday the world will see all the passion and talent
+    that I see in you, no matter how hidden it is.
+  TeenHerTeen2Cut11:
+  - Really? You think so?
+  HimTeen2Cut11:
+  - Of course...but for now, I like this. Just us.
+  - I like having this side of you all to myself, my little artist.
+  HerTeen2Cut3:
+  - ...
+  - Alright fine, I'll admit that may not have been the best reaction on his part.
+    But maybe he genuinely just wanted to be there for me, to be the only one there
+    for me...
+  VoidTeen2Cut3:
+  - Being in a relationship is not about having control over the other person, Her,
+    you're not his "little artist" to hide away.
+  - And meanwhile, you were training him everything about art, basically paving the
+    way for his successful future while repressing your own.
+  HerTeen2Cut4:
+  - Alright alright, enough, just show me the next scene.
+  TeenHerScene3Line1:
+  - Well you're certainly looking chipper today. What happened?
+  HimScene3Line1:
+  - I was scouted today...by an executive at a popular gallery! They're going to
+    feature my work at a showcase!
+  - 'And if all goes well...they''re going to start me off with a small investment
+    backing, maybe some commisions after that, and we will see where it goes... '
+  TeenHerScene3Line2:
+  - Oh my gosh that's amazing! Congrats Him! I knew you could do it. This is huge.
+  HimScene3Line2:
+  - I told you things were going to start working out, people are just late to recognizing
+    great potential sometimes.
+  - This will be great for us. Something more stable, less risky. You won't have
+    to worry about applying, you can just relax.
+  TeenHerScene3Line3:
+  - Well...about that...I don't know. My teacher's have been encouraging me to start
+    posting my work more, they say I've been keeping it all cooped up for too long.
+  HimScene3Line3:
+  - Well....I mean that sounds great but...
+  TeenHerScene3Line4:
+  - But....?
+  HimScene3Line4:
+  - I don't know...I just feel like they are trying to rush you out of your artistic
+    flow. You do your best work when you don't worry about other people's opinions.
+  - Remember when you applied to that art exhbit and worked for weeks, and when you
+    didn't make it you completely shut down? You didn't talk to anyone for days,
+    including me.
+  TeenHerScene3Line5:
+  - Yes...I guess I was just...bummed. I let it get to me. Maybe what I need is to
+    challenge myself to get out there more though.
+  HimScene3Line5:
+  - 'I think you shouldn''t have to rush. You''re still refining you voice. '
+  - Besides...who do you trust more. Some random fancy pance executives. Or me?
+  TeenHerScene3Line6:
+  - Well...you.
+  HimScene3Line6:
+  - That's what I thought.
+  HerTeen2Cut5:
+  - ...
+  - ...
+  VoidTeen2Cut4:
+  - What? Nothing good to say about that memory? You had a lot to say about our favorite
+    guy earlier.
+  HerTeen2Cut6:
+  - Just...show me the next clip. It has to get better in the last clip.
+  VoidTeen2Cut5:
+  - Alright then...here's you guys 2 years later in your senior year, making a...big
+    choice to say the least.
+  TeenHerScene4Line1:
+  - Sooo...I wanted to surprise you...
+  - But I applied for an artists residency just for kicks to see if I could get it...
+  - And I got in! They're going to provide me funding, housing, everything. isn't
+    it great?
+  HimScene4Line1:
+  - ...
+  - You...you applied for a residency and you didn't tell me? That's a big deal Her.
+  TeenHerScene4Line2:
+  - Well...I- I figured it would be a fun surprise...and I didn't know if I was going
+    to get it or not so I didn't want to dissapoint you.
+  HimScene4Line2:
+  - That's besides the point. It's a big deal, so congrats, but...
+  TeenHerScene4Line3:
+  - Oh no...another but.
+  HimScene4Line3:
+  - All I'm saying is that...this is a big deal. A residency is going to push extensive
+    deadlines and expectations on you. Do you really want that?
+  TeenHerScene4Line4:
+  - As opposed to...what? Just staying here and doing nothing.
+  HimScene4Line4:
+  - No...As opposed to taking what we have here and making something of it.
+  - My work has been doing great lately, and people are investing in what I'm building.
+  - 'I was thinking we could start establishing a business for ourselves, start laying
+    the groundwork for our future. '
+  TeenHerScene4Line5:
+  - But it's your work. None of it is mine. What do I do?
+  HimScene4Line5:
+  - Of course you can still create, but now you'll have no pressure to deliver to
+    deadlines, fancy executives, or anyone. Anything we make we can push to our company.
+  - Of course you would probably need to help with some of the secretarial duties
+    for a little bit...but once we get settled we're smooth sailing.
+  - This could be the foundation of the rest of our lives. All I'm saying is don't
+    confuse a momentary chance for a solid plan.
+  - Come on. It's time to start settling and you know it. You can't always live on
+    the edge.
+  TeenHerScene4Line6:
+  - 'And...And what if you''re wrong? '
+  HimScene4Line6:
+  - I think we both know whose plan really stands here.
+  - Now come on, you know what's best for you.
+  HerTeen2Cut7: []
+  VoidTeen2Cut6: []
+  HerTeen2Cut8: []
+  VoidTeen2Cut7: []
 --- !u!114 &697990568
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3530,112 +3519,6 @@ MonoBehaviour:
   listIndex: 0
   textSpeed: 0.05
   dialogueFinished: 0
---- !u!1 &718490425
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 718490426}
-  - component: {fileID: 718490427}
-  - component: {fileID: 718490428}
-  m_Layer: 0
-  m_Name: chair/desk
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &718490426
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 718490425}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0.16342294, w: 0.9865562}
-  m_LocalPosition: {x: 89.17, y: -4.45, z: 0}
-  m_LocalScale: {x: 0.5006068, y: 0.44940647, z: 0.08533979}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1114991320}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -18.811}
---- !u!212 &718490427
-SpriteRenderer:
-  serializedVersion: 2
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 718490425}
-  m_Enabled: 1
-  m_CastShadows: 0
-  m_ReceiveShadows: 0
-  m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 0
-  m_RayTraceProcedural: 0
-  m_RayTracingAccelStructBuildFlagsOverride: 0
-  m_RayTracingAccelStructBuildFlags: 1
-  m_SmallMeshCulling: 1
-  m_ForceMeshLod: -1
-  m_MeshLodSelectionBias: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 2100000, guid: 9dfc825aed78fcd4ba02077103263b40, type: 2}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 0
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_GlobalIlluminationMeshLod: 0
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 2
-  m_MaskInteraction: 0
-  m_Sprite: {fileID: -1011239021, guid: f9e42f28a60d5224f8f3997fb599b062, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 0
-  m_FlipY: 0
-  m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
-  m_AdaptiveModeThreshold: 0.5
-  m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
-  m_SpriteSortPoint: 0
---- !u!114 &718490428
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 718490425}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa3a1c888502fce4faf88357508b3a87, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::chairFloating
-  floatSpeed: 2.5
-  floatHeight: 0.5
 --- !u!1 &738085437
 GameObject:
   m_ObjectHideFlags: 0
@@ -4260,112 +4143,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 878884698}
   m_CullTransparentMesh: 1
---- !u!1 &942408132
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 942408133}
-  - component: {fileID: 942408134}
-  - component: {fileID: 942408135}
-  m_Layer: 0
-  m_Name: chair/desk
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &942408133
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 942408132}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0.07446069, w: 0.997224}
-  m_LocalPosition: {x: 84.41, y: -2.38, z: 0}
-  m_LocalScale: {x: 0.6366987, y: 0.51825106, z: 0.098413}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1114991320}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -8.54}
---- !u!212 &942408134
-SpriteRenderer:
-  serializedVersion: 2
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 942408132}
-  m_Enabled: 1
-  m_CastShadows: 0
-  m_ReceiveShadows: 0
-  m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 0
-  m_RayTraceProcedural: 0
-  m_RayTracingAccelStructBuildFlagsOverride: 0
-  m_RayTracingAccelStructBuildFlags: 1
-  m_SmallMeshCulling: 1
-  m_ForceMeshLod: -1
-  m_MeshLodSelectionBias: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 2100000, guid: 9dfc825aed78fcd4ba02077103263b40, type: 2}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 0
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_GlobalIlluminationMeshLod: 0
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 2
-  m_MaskInteraction: 0
-  m_Sprite: {fileID: -1995549082, guid: f9e42f28a60d5224f8f3997fb599b062, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 0
-  m_FlipY: 0
-  m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
-  m_AdaptiveModeThreshold: 0.5
-  m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
-  m_SpriteSortPoint: 0
---- !u!114 &942408135
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 942408132}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa3a1c888502fce4faf88357508b3a87, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::chairFloating
-  floatSpeed: 2
-  floatHeight: -0.5
 --- !u!1 &947962111
 GameObject:
   m_ObjectHideFlags: 0
@@ -4983,9 +4760,14 @@ MonoBehaviour:
   schoolBell: {fileID: 1888517383}
   romanticMusic: {fileID: 1371418214}
   hsBGSound: {fileID: 487561224}
+  bufferSound: {fileID: 1251851204}
   followHer: {fileID: 2002170521}
   himDoorAnim: {fileID: 207901546}
   firstDoorAnim: {fileID: 1767337825}
+  teenHerAnim: {fileID: 802971966370260027}
+  himAnim: {fileID: 332683475}
+  sunMoonAnim: {fileID: 802971966370260025}
+  sketchbook: {fileID: 1514463539}
 --- !u!33 &1052750001
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -5219,11 +5001,6 @@ MeshRenderer:
 AudioSource:
   m_CorrespondingSourceObject: {fileID: 9034391808495130564, guid: 0875f2e9085805f4783993c5e7afef72, type: 3}
   m_PrefabInstance: {fileID: 5921737220119870451}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &1114991320 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 7072293504760150252, guid: 60e306dd2e82aeb45ad1f353a44a5ee8, type: 3}
-  m_PrefabInstance: {fileID: 802971966370260023}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1122066319 stripped
 GameObject:
@@ -5462,6 +5239,195 @@ Transform:
 Transform:
   m_CorrespondingSourceObject: {fileID: 2262975095303169113, guid: 1aee29a82f9c9d44ca41d22ed2edda24, type: 3}
   m_PrefabInstance: {fileID: 6871203719129648735}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1232690824
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1232690825}
+  - component: {fileID: 1232690829}
+  - component: {fileID: 1232690827}
+  - component: {fileID: 1232690826}
+  - component: {fileID: 1232690830}
+  m_Layer: 0
+  m_Name: teenDoorOut
+  m_TagString: Door
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1232690825
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1232690824}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 40.57, y: 0.72, z: 1}
+  m_LocalScale: {x: 2.815899, y: 2.5643756, z: 0.83206}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 604231193}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1232690826
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1232690824}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a0b27af78369a5b44beff29dda2a69fa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::teleport
+  targetCharPosition: {x: 0, y: 0}
+  targetCamPosition: {x: 0, y: 1, z: -9}
+  mainCam: {fileID: 330585543}
+  mazeCam: {fileID: 1857271732}
+  toMaze: 0
+  currentlyTping: 0
+  noTransition: 0
+  progressRequiredToStart: 1
+  transition: fade
+  delayTime: 0
+--- !u!61 &1232690827
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1232690824}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.64, y: 1.06}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Size: {x: 0.64, y: 1.06}
+  m_EdgeRadius: 0
+--- !u!212 &1232690829
+SpriteRenderer:
+  serializedVersion: 2
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1232690824}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
+  m_ForceMeshLod: -1
+  m_MeshLodSelectionBias: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 9dfc825aed78fcd4ba02077103263b40, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_GlobalIlluminationMeshLod: 0
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 3
+  m_MaskInteraction: 0
+  m_Sprite: {fileID: 796108040, guid: 11096ee2d6d05b649a6f3a5dd1b1a7ad, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 1, y: 1}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_SpriteSortPoint: 0
+--- !u!95 &1232690830
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1232690824}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: d5bc5d871267f2d44b80a58c15883da4, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
+--- !u!82 &1251851204 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 7093379562637708260, guid: 0875f2e9085805f4783993c5e7afef72, type: 3}
+  m_PrefabInstance: {fileID: 5921737220119870451}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1341231774
 GameObject:
@@ -5924,6 +5890,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1460564412}
   m_CullTransparentMesh: 1
+--- !u!95 &1514463539 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 6349052091940976336, guid: 60e306dd2e82aeb45ad1f353a44a5ee8, type: 3}
+  m_PrefabInstance: {fileID: 802971966370260023}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1515073198
 GameObject:
   m_ObjectHideFlags: 0
@@ -6657,7 +6628,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1655437018
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6845,218 +6816,6 @@ AudioSource:
   m_CorrespondingSourceObject: {fileID: 3452691194489192698, guid: 0875f2e9085805f4783993c5e7afef72, type: 3}
   m_PrefabInstance: {fileID: 5921737220119870451}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1755664685
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1755664686}
-  - component: {fileID: 1755664687}
-  - component: {fileID: 1755664688}
-  m_Layer: 0
-  m_Name: chair/desk
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1755664686
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1755664685}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0.07446069, w: 0.997224}
-  m_LocalPosition: {x: 73.42, y: -0.19, z: 0}
-  m_LocalScale: {x: 0.9912126, y: 0.80681324, z: 0.15320936}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1114991320}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -8.54}
---- !u!212 &1755664687
-SpriteRenderer:
-  serializedVersion: 2
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1755664685}
-  m_Enabled: 1
-  m_CastShadows: 0
-  m_ReceiveShadows: 0
-  m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 0
-  m_RayTraceProcedural: 0
-  m_RayTracingAccelStructBuildFlagsOverride: 0
-  m_RayTracingAccelStructBuildFlags: 1
-  m_SmallMeshCulling: 1
-  m_ForceMeshLod: -1
-  m_MeshLodSelectionBias: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 2100000, guid: 9dfc825aed78fcd4ba02077103263b40, type: 2}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 0
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_GlobalIlluminationMeshLod: 0
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 2
-  m_MaskInteraction: 0
-  m_Sprite: {fileID: -180826925, guid: f9e42f28a60d5224f8f3997fb599b062, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 0
-  m_FlipY: 0
-  m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
-  m_AdaptiveModeThreshold: 0.5
-  m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
-  m_SpriteSortPoint: 0
---- !u!114 &1755664688
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1755664685}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa3a1c888502fce4faf88357508b3a87, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::chairFloating
-  floatSpeed: 0.5
-  floatHeight: -0.5
---- !u!1 &1764198933
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1764198934}
-  - component: {fileID: 1764198935}
-  - component: {fileID: 1764198936}
-  m_Layer: 0
-  m_Name: chair/desk
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1764198934
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1764198933}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: 0.063791655, w: 0.99796325}
-  m_LocalPosition: {x: 86.53, y: -4.01, z: 0}
-  m_LocalScale: {x: 0.8843109, y: 0.7197989, z: 0.13668582}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1114991320}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 7.315}
---- !u!212 &1764198935
-SpriteRenderer:
-  serializedVersion: 2
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1764198933}
-  m_Enabled: 1
-  m_CastShadows: 0
-  m_ReceiveShadows: 0
-  m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 0
-  m_RayTraceProcedural: 0
-  m_RayTracingAccelStructBuildFlagsOverride: 0
-  m_RayTracingAccelStructBuildFlags: 1
-  m_SmallMeshCulling: 1
-  m_ForceMeshLod: -1
-  m_MeshLodSelectionBias: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 2100000, guid: 9dfc825aed78fcd4ba02077103263b40, type: 2}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 0
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_GlobalIlluminationMeshLod: 0
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 2
-  m_MaskInteraction: 0
-  m_Sprite: {fileID: 1822613337, guid: f9e42f28a60d5224f8f3997fb599b062, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 0
-  m_FlipY: 0
-  m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
-  m_AdaptiveModeThreshold: 0.5
-  m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
-  m_SpriteSortPoint: 0
---- !u!114 &1764198936
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1764198933}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa3a1c888502fce4faf88357508b3a87, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::chairFloating
-  floatSpeed: 0.3
-  floatHeight: 1
 --- !u!95 &1767337825 stripped
 Animator:
   m_CorrespondingSourceObject: {fileID: 5686934027661931994, guid: 8d2f493e127b6cf4dbe2564db8690724, type: 3}
@@ -7907,112 +7666,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2132915919}
   m_CullTransparentMesh: 1
---- !u!1 &2133771522
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 2133771523}
-  - component: {fileID: 2133771524}
-  - component: {fileID: 2133771525}
-  m_Layer: 0
-  m_Name: chair/desk
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &2133771523
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2133771522}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: 0.031674854, w: 0.99949825}
-  m_LocalPosition: {x: 87.84, y: -2.08, z: 0}
-  m_LocalScale: {x: 0.5006068, y: 0.44940647, z: 0.08533979}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1114991320}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 3.63}
---- !u!212 &2133771524
-SpriteRenderer:
-  serializedVersion: 2
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2133771522}
-  m_Enabled: 1
-  m_CastShadows: 0
-  m_ReceiveShadows: 0
-  m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 0
-  m_RayTraceProcedural: 0
-  m_RayTracingAccelStructBuildFlagsOverride: 0
-  m_RayTracingAccelStructBuildFlags: 1
-  m_SmallMeshCulling: 1
-  m_ForceMeshLod: -1
-  m_MeshLodSelectionBias: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 2100000, guid: 9dfc825aed78fcd4ba02077103263b40, type: 2}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 0
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_GlobalIlluminationMeshLod: 0
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 2
-  m_MaskInteraction: 0
-  m_Sprite: {fileID: 1510523081, guid: f9e42f28a60d5224f8f3997fb599b062, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 0
-  m_FlipY: 0
-  m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
-  m_AdaptiveModeThreshold: 0.5
-  m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
-  m_SpriteSortPoint: 0
---- !u!114 &2133771525
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2133771522}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa3a1c888502fce4faf88357508b3a87, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::chairFloating
-  floatSpeed: 2
-  floatHeight: 0.5
 --- !u!1001 &329382895800035375
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8160,6 +7813,22 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 604231193}
     m_Modifications:
+    - target: {fileID: 2035738195361719845, guid: 60e306dd2e82aeb45ad1f353a44a5ee8, type: 3}
+      propertyPath: m_Color.b
+      value: 0.7688679
+      objectReference: {fileID: 0}
+    - target: {fileID: 2035738195361719845, guid: 60e306dd2e82aeb45ad1f353a44a5ee8, type: 3}
+      propertyPath: m_Color.g
+      value: 0.7688679
+      objectReference: {fileID: 0}
+    - target: {fileID: 2035738195361719845, guid: 60e306dd2e82aeb45ad1f353a44a5ee8, type: 3}
+      propertyPath: m_Color.r
+      value: 0.7688679
+      objectReference: {fileID: 0}
+    - target: {fileID: 6351893089179650500, guid: 60e306dd2e82aeb45ad1f353a44a5ee8, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7640358751447332967, guid: 60e306dd2e82aeb45ad1f353a44a5ee8, type: 3}
       propertyPath: m_Name
       value: teenhood2
@@ -8206,30 +7875,22 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects:
-    - targetCorrespondingSourceObject: {fileID: 7072293504760150252, guid: 60e306dd2e82aeb45ad1f353a44a5ee8, type: 3}
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 4006346508736056306, guid: 60e306dd2e82aeb45ad1f353a44a5ee8, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 268150418}
-    - targetCorrespondingSourceObject: {fileID: 7072293504760150252, guid: 60e306dd2e82aeb45ad1f353a44a5ee8, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 942408133}
-    - targetCorrespondingSourceObject: {fileID: 7072293504760150252, guid: 60e306dd2e82aeb45ad1f353a44a5ee8, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1764198934}
-    - targetCorrespondingSourceObject: {fileID: 7072293504760150252, guid: 60e306dd2e82aeb45ad1f353a44a5ee8, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 2133771523}
-    - targetCorrespondingSourceObject: {fileID: 7072293504760150252, guid: 60e306dd2e82aeb45ad1f353a44a5ee8, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 718490426}
-    - targetCorrespondingSourceObject: {fileID: 7072293504760150252, guid: 60e306dd2e82aeb45ad1f353a44a5ee8, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1755664686}
-    - targetCorrespondingSourceObject: {fileID: 7072293504760150252, guid: 60e306dd2e82aeb45ad1f353a44a5ee8, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 8938265}
-    m_AddedComponents: []
+      addedObject: {fileID: 332683477}
   m_SourcePrefab: {fileID: 100100000, guid: 60e306dd2e82aeb45ad1f353a44a5ee8, type: 3}
+--- !u!95 &802971966370260025 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 7852049110964703943, guid: 60e306dd2e82aeb45ad1f353a44a5ee8, type: 3}
+  m_PrefabInstance: {fileID: 802971966370260023}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &802971966370260027 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 5625731875677503549, guid: 60e306dd2e82aeb45ad1f353a44a5ee8, type: 3}
+  m_PrefabInstance: {fileID: 802971966370260023}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1670381993058541113 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 9012871646360948348, guid: 2fc5497018136994792ea0f303fc9978, type: 3}
@@ -8541,9 +8202,25 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2739188655768233883, guid: 8d2f493e127b6cf4dbe2564db8690724, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4396972238205479202, guid: 8d2f493e127b6cf4dbe2564db8690724, type: 3}
       propertyPath: m_Name
       value: teenhood1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6746372776228531932, guid: 8d2f493e127b6cf4dbe2564db8690724, type: 3}
+      propertyPath: m_Color.b
+      value: 0.6981132
+      objectReference: {fileID: 0}
+    - target: {fileID: 6746372776228531932, guid: 8d2f493e127b6cf4dbe2564db8690724, type: 3}
+      propertyPath: m_Color.g
+      value: 0.6981132
+      objectReference: {fileID: 0}
+    - target: {fileID: 6746372776228531932, guid: 8d2f493e127b6cf4dbe2564db8690724, type: 3}
+      propertyPath: m_Color.r
+      value: 0.6981132
       objectReference: {fileID: 0}
     - target: {fileID: 8905620453627219457, guid: 8d2f493e127b6cf4dbe2564db8690724, type: 3}
       propertyPath: mainCam
@@ -8883,10 +8560,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 2157330873896249730, guid: 0875f2e9085805f4783993c5e7afef72, type: 3}
-      propertyPath: m_Volume
-      value: 0.405
-      objectReference: {fileID: 0}
     - target: {fileID: 6026616951893184398, guid: 0875f2e9085805f4783993c5e7afef72, type: 3}
       propertyPath: m_Name
       value: sounds
@@ -8930,6 +8603,10 @@ PrefabInstance:
     - target: {fileID: 6167722349279847471, guid: 0875f2e9085805f4783993c5e7afef72, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7267686302634185619, guid: 0875f2e9085805f4783993c5e7afef72, type: 3}
+      propertyPath: m_Volume
+      value: 0.514
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
