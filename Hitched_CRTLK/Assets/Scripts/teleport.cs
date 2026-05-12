@@ -99,6 +99,12 @@ public class teleport : MonoBehaviour
                 {
                     storyProgression.enteredTeenhood2 = true;
                 }
+                if (gameObject.name == "teenDoorOut")
+                {
+                    storyProgression.romanticMusic.Stop(); //fade into mindscape music here
+                    print("BACK AT MINDSCAPE");
+                    storyProgression.endOfDemo = true;
+                }
 
                 if (!noTransition)
                 {

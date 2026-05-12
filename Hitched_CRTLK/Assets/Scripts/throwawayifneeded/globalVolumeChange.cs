@@ -1,5 +1,4 @@
 using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Rendering;
 using UnityEngine.Rendering.Universal;
@@ -31,7 +30,6 @@ void Update()
 
         foreach (Vignette vig in vignette)
         {
-            print("lol");
             vig.intensity.value = Mathf.MoveTowards(vig.intensity.value, 0f, fadeSpeed * Time.deltaTime);
 
             if (vig.intensity.value > 0f)
