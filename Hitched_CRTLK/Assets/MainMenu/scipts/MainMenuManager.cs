@@ -11,7 +11,7 @@ public class MainMenuManager : MonoBehaviour
     public void StartGame()
     {
         // "MainScene" 
-        SceneManager.LoadScene("03_mindscape"); 
+        SceneManager.LoadScene("02_cutscene1"); 
     }
 
     // 2. Credit
