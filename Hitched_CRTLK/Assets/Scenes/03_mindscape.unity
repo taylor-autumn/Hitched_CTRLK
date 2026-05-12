@@ -4424,7 +4424,7 @@ MonoBehaviour:
   noTransition: 0
   progressRequiredToStart: 0
   transition: dream
-  delayTime: 0
+  delayTime: 2
 --- !u!61 &996608254
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -7569,6 +7569,10 @@ PrefabInstance:
       propertyPath: mazeCam
       value: 
       objectReference: {fileID: 1857271732}
+    - target: {fileID: 2147032647327894683, guid: 26bf37c99fe020142901e9800cd19c81, type: 3}
+      propertyPath: delayTime
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 2186545100974942619, guid: 26bf37c99fe020142901e9800cd19c81, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.09444
@@ -7645,6 +7649,10 @@ PrefabInstance:
       propertyPath: mazeCam
       value: 
       objectReference: {fileID: 1857271732}
+    - target: {fileID: 5407682214103027239, guid: 26bf37c99fe020142901e9800cd19c81, type: 3}
+      propertyPath: delayTime
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 6432141721311702115, guid: 26bf37c99fe020142901e9800cd19c81, type: 3}
       propertyPath: m_Name
       value: mindscape
@@ -7696,6 +7704,10 @@ PrefabInstance:
       propertyPath: mazeCam
       value: 
       objectReference: {fileID: 1857271732}
+    - target: {fileID: 4010978222608789912, guid: 60e306dd2e82aeb45ad1f353a44a5ee8, type: 3}
+      propertyPath: delayTime
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 7640358751447332967, guid: 60e306dd2e82aeb45ad1f353a44a5ee8, type: 3}
       propertyPath: m_Name
       value: teenhood2
@@ -8022,6 +8034,10 @@ PrefabInstance:
       propertyPath: mazeCam
       value: 
       objectReference: {fileID: 1857271732}
+    - target: {fileID: 10647097151403637, guid: 8d2f493e127b6cf4dbe2564db8690724, type: 3}
+      propertyPath: delayTime
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 1628603245161852870, guid: 8d2f493e127b6cf4dbe2564db8690724, type: 3}
       propertyPath: mainCam
       value: 
@@ -8121,7 +8137,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4067947808638170655, guid: 4da2cfc478575b540985c3fbb0ee8e97, type: 3}
       propertyPath: m_TagString
-      value: Door
+      value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: 7132191295790473669, guid: 4da2cfc478575b540985c3fbb0ee8e97, type: 3}
       propertyPath: m_LocalPosition.x
@@ -8354,6 +8370,10 @@ PrefabInstance:
       propertyPath: mazeCam
       value: 
       objectReference: {fileID: 1857271732}
+    - target: {fileID: 2563697802391970450, guid: 2fde2fa0cf858f246a4b97c7aca3f6e1, type: 3}
+      propertyPath: delayTime
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 5881969919715579532, guid: 2fde2fa0cf858f246a4b97c7aca3f6e1, type: 3}
       propertyPath: m_Name
       value: adulthoodMap

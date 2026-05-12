@@ -2,15 +2,22 @@ using UnityEngine;
 
 public class choiceCode : MonoBehaviour
 {
-    public bool leaveHim;
     public GameObject ending;
     public Animator panelFade;
+    public GameObject oldcanvas;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void OnTriggerEnter(Collider other)
     {
         if(other.gameObject.CompareTag("Player"))
         {  
-            ending.gameObject.SetActive(true);
+            other.gameObject.GetComponent<threeDmovement>().enabled = false;
+            Invoke("changeed", 3f);
+            panelFade.SetBool("finish", true);
         }
+    }
+    void changeed()
+    {
+        ending.gameObject.SetActive(true);
+        oldcanvas.SetActive(false);
     }
 }
