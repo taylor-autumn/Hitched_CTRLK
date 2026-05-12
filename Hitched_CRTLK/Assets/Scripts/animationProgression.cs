@@ -46,7 +46,7 @@ public class animationProgression : MonoBehaviour
         teenDoorAnim = mapsParent.transform.Find("teenhoodMaps/teenhood1/toHimDoor").GetComponent<Animator>();
         himAnim = mapsParent.transform.Find("teenhoodMaps/teenhood2/cutSceneStuff/Him").GetComponent<Animator>();
         teenDoorOutAnim = mapsParent.transform.Find("teenhoodMaps/teenhood2/teenDoorOut").GetComponent<Animator>();
-        teenDoorAnim.gameObject.SetActive(false);
+        teenDoorOutAnim.gameObject.SetActive(false);
 
     }
 
@@ -106,11 +106,11 @@ public class animationProgression : MonoBehaviour
 
     public void activateTeenDoorOut()
     {
-        teenDoorAnim.gameObject.SetActive(true);
+        teenDoorOutAnim.gameObject.SetActive(true);
     }
 
     public void openTeenDoorOut()
     {
-        teenDoorAnim.SetTrigger("open");
+        teenDoorOutAnim.SetTrigger("open");
     }
 }

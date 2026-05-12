@@ -39,6 +39,7 @@ public class storyProgression : MonoBehaviour
     public AudioSource memorySound;
     public AudioSource scissorSound;
     public AudioSource openDoorSound;
+    public AudioSource fastForwardSound;
 
     [Header("Her Sprites")]
     public GameObject her;
@@ -284,7 +285,6 @@ public class storyProgression : MonoBehaviour
 
         //day1========================
         romanticMusic.Play();
-        romanticMusic.volume = 0.8f;
         yield return new WaitForSeconds(1f);
         //teenHer0 line
         startDialogue(dialogueInfo.TeenHerTeen2Cut0, "Teen Her", dialogueInfo.teenHerSprite, false);
@@ -338,11 +338,12 @@ public class storyProgression : MonoBehaviour
 
         //day2==================
         //day change
+        fastForwardSound.Play();
         sunMoonAnim.SetTrigger("change"); //day change
         teenHerAnim.SetTrigger("go"); //she leaves, he changes back to idle via event in her anim
+        yield return new WaitForSeconds(3f);
         //music change
         romanticMusic.Play();
-        romanticMusic.volume = 0.8f;
         romanticMusic.pitch = 0.7f;
         //Him
         startDialogue(dialogueInfo.HimTeen2Cut5Pt2, "Teen Him", dialogueInfo.himSprite, false);
@@ -352,7 +353,6 @@ public class storyProgression : MonoBehaviour
         yield return new WaitUntil(() => dialogueSystem.dialogueFinished);
         //she moves
         teenHerAnim.SetTrigger("go");
-        yield return new WaitForSeconds(7f);
         //Him
         startDialogue(dialogueInfo.HimTeen2Cut6, "Teen Him", dialogueInfo.himSprite, false);
         yield return new WaitUntil(() => dialogueSystem.dialogueFinished);
@@ -402,19 +402,22 @@ public class storyProgression : MonoBehaviour
         //her line
         startDialogue(dialogueInfo.HerTeen2Cut4, "Her", dialogueInfo.herSprite, false);
         yield return new WaitUntil(() => dialogueSystem.dialogueFinished);
-        yield return new WaitForSeconds(1.5f);
+        //void line
+        startDialogue(dialogueInfo.VoidTeen2Cut3Pt2, "The Void", dialogueInfo.voidSprite, false);
+        yield return new WaitUntil(() => dialogueSystem.dialogueFinished);
         StartCoroutine(teenScene2Pt2());
     }
 
     IEnumerator teenScene2Pt2()
     {
-         //day3==================
+        //day3==================
         //day change
+        fastForwardSound.Play();
         sunMoonAnim.SetTrigger("change"); //day change
         teenHerAnim.SetTrigger("go"); //she leaves, he changes back to idle via event in her anim
+        yield return new WaitForSeconds(3f);
         //music change
         romanticMusic.Play();
-        romanticMusic.volume = 0.6f;
         romanticMusic.pitch = 0.5f;
         //Teen Her
         startDialogue(dialogueInfo.TeenHerScene3Line1, "Teen Her", dialogueInfo.teenHerSprite, false);
@@ -428,32 +431,32 @@ public class storyProgression : MonoBehaviour
         //Teen Her
         startDialogue(dialogueInfo.TeenHerScene3Line2, "Teen Her", dialogueInfo.teenHerSprite, false);
         yield return new WaitUntil(() => dialogueSystem.dialogueFinished);
-        //Teen Her
-        startDialogue(dialogueInfo.TeenHerScene3Line2, "Teen Her", dialogueInfo.teenHerSprite, false);
-        yield return new WaitUntil(() => dialogueSystem.dialogueFinished);
         //Him
-        startDialogue(dialogueInfo.HimScene3Line3, "Teen Him", dialogueInfo.himSprite, false);
+        startDialogue(dialogueInfo.HimScene3Line2, "Teen Him", dialogueInfo.himSprite, false);
         yield return new WaitUntil(() => dialogueSystem.dialogueFinished);
         //Teen Her
         startDialogue(dialogueInfo.TeenHerScene3Line3, "Teen Her", dialogueInfo.teenHerSprite, false);
         yield return new WaitUntil(() => dialogueSystem.dialogueFinished);
         //Him
-        startDialogue(dialogueInfo.HimScene3Line4, "Teen Him", dialogueInfo.himSprite, false);
+        startDialogue(dialogueInfo.HimScene3Line3, "Teen Him", dialogueInfo.himSprite, false);
         yield return new WaitUntil(() => dialogueSystem.dialogueFinished);
         //Teen Her
         startDialogue(dialogueInfo.TeenHerScene3Line4, "Teen Her", dialogueInfo.teenHerSprite, false);
         yield return new WaitUntil(() => dialogueSystem.dialogueFinished);
         //Him
-        startDialogue(dialogueInfo.HimScene3Line5, "Teen Him", dialogueInfo.himSprite, false);
+        startDialogue(dialogueInfo.HimScene3Line4, "Teen Him", dialogueInfo.himSprite, false);
         yield return new WaitUntil(() => dialogueSystem.dialogueFinished);
         //Teen Her
         startDialogue(dialogueInfo.TeenHerScene3Line5, "Teen Her", dialogueInfo.teenHerSprite, false);
         yield return new WaitUntil(() => dialogueSystem.dialogueFinished);
         //Him
-        startDialogue(dialogueInfo.HimScene3Line6, "Teen Him", dialogueInfo.himSprite, false);
+        startDialogue(dialogueInfo.HimScene3Line5, "Teen Him", dialogueInfo.himSprite, false);
         yield return new WaitUntil(() => dialogueSystem.dialogueFinished);
         //Teen Her
         startDialogue(dialogueInfo.TeenHerScene3Line6, "Teen Her", dialogueInfo.teenHerSprite, false);
+        yield return new WaitUntil(() => dialogueSystem.dialogueFinished);
+        //Him
+        startDialogue(dialogueInfo.HimScene3Line6, "Teen Him", dialogueInfo.himSprite, false);
         yield return new WaitUntil(() => dialogueSystem.dialogueFinished);
         //stop music
         romanticMusic.Stop();
@@ -468,22 +471,69 @@ public class storyProgression : MonoBehaviour
         //her line
         startDialogue(dialogueInfo.HerTeen2Cut6, "Her", dialogueInfo.herSprite, false);
         yield return new WaitUntil(() => dialogueSystem.dialogueFinished);
+        //void line
+        startDialogue(dialogueInfo.VoidTeen2Cut5, "The Void", dialogueInfo.voidSprite, false);
+        yield return new WaitUntil(() => dialogueSystem.dialogueFinished);
 
         //day4==================
         //day change
+        fastForwardSound.Play();
         sunMoonAnim.SetTrigger("change"); //day change
         teenHerAnim.SetTrigger("go"); //she leaves, he changes back to idle via event in her anim
-        //her line
-        startDialogue(dialogueInfo.VoidTeen2Cut5, "The Void", dialogueInfo.voidSprite, false);
-        yield return new WaitUntil(() => dialogueSystem.dialogueFinished);
+        yield return new WaitForSeconds(3f);
         //music change
         romanticMusic.Play();
-        romanticMusic.volume = 0.6f;
         romanticMusic.pitch = 0.3f;
-        //she moves
-        //teenHerAnim.SetTrigger("go");
-        //yield return new WaitForSeconds(7f);
-        print("STARTING LAST ONE");
+        //her1 line
+        startDialogue(dialogueInfo.TeenHerScene4Line1, "Teen Her", dialogueInfo.teenHerSprite, false);
+        yield return new WaitUntil(() => dialogueSystem.dialogueFinished);
+        //him
+        startDialogue(dialogueInfo.HimScene4Line1, "Teen Him", dialogueInfo.himSprite, false);
+        yield return new WaitUntil(() => dialogueSystem.dialogueFinished);
+        //her line
+        startDialogue(dialogueInfo.TeenHerScene4Line2, "Teen Her", dialogueInfo.teenHerSprite, false);
+        yield return new WaitUntil(() => dialogueSystem.dialogueFinished);
+        //him
+        startDialogue(dialogueInfo.HimScene4Line2, "Teen Him", dialogueInfo.himSprite, false);
+        yield return new WaitUntil(() => dialogueSystem.dialogueFinished);
+        //her line
+        startDialogue(dialogueInfo.TeenHerScene4Line3, "Teen Her", dialogueInfo.teenHerSprite, false);
+        yield return new WaitUntil(() => dialogueSystem.dialogueFinished);
+        //him
+        startDialogue(dialogueInfo.HimScene4Line03, "Teen Him", dialogueInfo.himSprite, false);
+        yield return new WaitUntil(() => dialogueSystem.dialogueFinished);
+        //she moves and talks
+        teenHerAnim.SetTrigger("go");
+        yield return new WaitForSeconds(7f);
+        //Him line
+        startDialogue(dialogueInfo.HimScene4Line3, "Teen Him", dialogueInfo.himSprite, false);
+        yield return new WaitUntil(() => dialogueSystem.dialogueFinished);
+        //her line
+        startDialogue(dialogueInfo.TeenHerScene4Line4, "Teen Her", dialogueInfo.teenHerSprite, false);
+        yield return new WaitUntil(() => dialogueSystem.dialogueFinished);
+        //Him line
+        startDialogue(dialogueInfo.HimScene4Line4, "Teen Him", dialogueInfo.himSprite, false);
+        yield return new WaitUntil(() => dialogueSystem.dialogueFinished);
+        //her line
+        startDialogue(dialogueInfo.TeenHerScene4Line5, "Teen Her", dialogueInfo.teenHerSprite, false);
+        yield return new WaitUntil(() => dialogueSystem.dialogueFinished);
+        //he turns to the door
+        himAnim.SetTrigger("leave");
+        //Him line
+        startDialogue(dialogueInfo.HimScene4Line5, "Teen Him", dialogueInfo.himSprite, false);
+        yield return new WaitUntil(() => dialogueSystem.dialogueFinished);
+        //her line
+        startDialogue(dialogueInfo.TeenHerScene4Line6, "Teen Her", dialogueInfo.teenHerSprite, false);
+        yield return new WaitUntil(() => dialogueSystem.dialogueFinished);
+        //Him line
+        startDialogue(dialogueInfo.HimScene4Line6, "Teen Him", dialogueInfo.himSprite, false);
+        yield return new WaitUntil(() => dialogueSystem.dialogueFinished);
+        //he leaves
+        himAnim.SetTrigger("leave");
+        yield return new WaitForSeconds(2f);
+        //she leaves
+        teenHerAnim.SetTrigger("leave");
+
     }
 
     IEnumerator teenScene1()
