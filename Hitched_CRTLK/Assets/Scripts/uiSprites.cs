@@ -108,6 +108,34 @@ public class uiSprites : MonoBehaviour
                     }
                 }
                 break;
+            case ("childhood"):
+                foreach (Image img in uiImages)
+                {
+                    Animator imgAnim = img.GetComponent<Animator>();
+
+                    if (imgAnim == null)
+                    {
+                        Debug.LogWarning("No Animator on " + img.name);
+                        continue;
+                    }
+                    int picChoice = Random.Range(0, 2);
+                    switch (picChoice)
+                    {
+                        case 0:
+                            imgAnim.SetInteger("type", 4);
+                            //rose2
+                            break;
+                        case 1:
+                            imgAnim.SetInteger("type", 2);
+                            //rose1
+                            break;
+                        default:
+                            imgAnim.SetInteger("type", 0);
+                            //nothing
+                            break;
+                    }
+                }
+                break;
         }
     }
 }

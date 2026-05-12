@@ -16,9 +16,10 @@ public class animationProgression : MonoBehaviour
     Animator adulthoodDoorAnim;
 
     //teenhood stuff
-    Animator teenDoorAnim;
+    Animator toHimDoor;
     Animator himAnim;
-    Animator teenDoorOutAnim;
+    public Animator teenDoorOutAnim;
+    GameObject boltCutters;
 
     //story progression stuff
     storyProgression storyProgression;
@@ -43,11 +44,20 @@ public class animationProgression : MonoBehaviour
         soundsParent = GameObject.Find("sounds");
         doorSource = soundsParent.transform.Find("adulthood/doorSound").GetComponent<AudioSource>();
 
-        teenDoorAnim = mapsParent.transform.Find("teenhoodMaps/teenhood1/toHimDoor").GetComponent<Animator>();
+        toHimDoor = mapsParent.transform.Find("teenhoodMaps/teenhood1/toHimDoor").GetComponent<Animator>();
         himAnim = mapsParent.transform.Find("teenhoodMaps/teenhood2/cutSceneStuff/Him").GetComponent<Animator>();
-        teenDoorOutAnim = mapsParent.transform.Find("teenhoodMaps/teenhood2/teenDoorOut").GetComponent<Animator>();
-        teenDoorOutAnim.gameObject.SetActive(false);
+        teenDoorOutAnim = GameObject.Find("teenDoorOut").GetComponent<Animator>();
 
+        boltCutters = mapsParent.transform.Find("teenhoodMaps/teenhood2/cutSceneStuff/boltCutters").gameObject;
+        boltCutters.SetActive(false);
+    }
+
+    private void Update()
+    {
+        if (boltCutters == null)
+        {
+            print("THEY NULL");
+        }
     }
 
     public void roseChange()
@@ -72,6 +82,11 @@ public class animationProgression : MonoBehaviour
         scissorAnim.gameObject.SetActive(true);
     }
 
+    public void spawnBoltCutters()
+    {
+        boltCutters.SetActive(true);
+    }
+
     public void doorSound()
     {
         doorSource.Play();
@@ -89,8 +104,7 @@ public class animationProgression : MonoBehaviour
 
     public void openTeenDoor()
     {
-        teenDoorAnim.SetTrigger("open");
-        storyProgression.openDoorSound.Play();
+        toHimDoor.SetTrigger("open");
 
     }
 
@@ -106,7 +120,7 @@ public class animationProgression : MonoBehaviour
 
     public void activateTeenDoorOut()
     {
-        teenDoorOutAnim.gameObject.SetActive(true);
+        teenDoorOutAnim.SetTrigger("in");
     }
 
     public void openTeenDoorOut()

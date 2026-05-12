@@ -21,6 +21,7 @@ public class storyProgression : MonoBehaviour
     uiSprites uiSprites;
     animationProgression animationProgression;
     playerProgress playerProgress;
+    globalVolumeChange globalVolumeChange;
 
     //animators for the ui fade screens
     public Animator blinkAnim;
@@ -62,6 +63,7 @@ public class storyProgression : MonoBehaviour
     public bool enteredTeenhood = false;
     public bool enteredTeenhood2 = false;
     public bool enteredChildhood = false;
+    public bool endOfDemo = false;
 
     [Header("Adulthood Stuff")]
     public GameObject workHer;
@@ -103,6 +105,7 @@ public class storyProgression : MonoBehaviour
         uiSprites = gameObject.GetComponent<uiSprites>();
         animationProgression = gameObject.GetComponent<animationProgression>();
         playerProgress=GameObject.FindAnyObjectByType<playerProgress>();
+        globalVolumeChange = gameObject.GetComponent<globalVolumeChange>();
 
         //sets ui to starting look
         uiSprites.uiType("adulthood");
@@ -151,12 +154,18 @@ public class storyProgression : MonoBehaviour
              hsBGSound.Play();
             enteredTeenhood = false;
             StartCoroutine(teenScene1());
+            //animationProgression.teenDoorOutAnim.gameObject.SetActive(false);
         }
         if (enteredTeenhood2)
         {
             enteredTeenhood2 = false;
             hsBGSound.Stop();
             StartCoroutine(teenScene2());
+        }
+        if (endOfDemo)
+        {
+            endOfDemo = false;
+            StartCoroutine(endDemo());
         }
 
 
@@ -262,6 +271,32 @@ public class storyProgression : MonoBehaviour
 
     //CO ROUTINES FOR DIALOGUE===================================
 
+    IEnumerator endDemo()
+    {
+        yield return new WaitForSeconds(2f);
+        startDialogue(dialogueInfo.demoVoidLine, "The Void", dialogueInfo.voidSprite, true);
+        yield return new WaitUntil(() => dialogueSystem.dialogueFinished);
+    }
+    public IEnumerator endTeenhood()
+    {
+        mode = gameMode.dialogue;
+        //animator stuff for her
+        herAnimator.enabled = false;
+        herSpriteRenderer.sprite = herIdle;
+        vignetteMain.SetActive(true);
+        yield return new WaitForSeconds(1.5f);
+        globalVolumeChange.turnOffFog = true;
+        //void line
+        startDialogue(dialogueInfo.EndTeenVoid1, "The Void", dialogueInfo.voidSprite, false);
+        yield return new WaitUntil(() => dialogueSystem.dialogueFinished);
+        //her line
+        startDialogue(dialogueInfo.EndTeenHer1, "Her", dialogueInfo.herSprite, false);
+        yield return new WaitUntil(() => dialogueSystem.dialogueFinished);
+        //void line
+        startDialogue(dialogueInfo.EndTeenVoid2, "The Void", dialogueInfo.voidSprite, true);
+        yield return new WaitUntil(() => dialogueSystem.dialogueFinished);
+        herAnimator.enabled = true;
+    }
     IEnumerator teenScene2()
     {
 
@@ -353,6 +388,7 @@ public class storyProgression : MonoBehaviour
         yield return new WaitUntil(() => dialogueSystem.dialogueFinished);
         //she moves
         teenHerAnim.SetTrigger("go");
+        yield return new WaitForSeconds(7f);
         //Him
         startDialogue(dialogueInfo.HimTeen2Cut6, "Teen Him", dialogueInfo.himSprite, false);
         yield return new WaitUntil(() => dialogueSystem.dialogueFinished);
@@ -530,9 +566,28 @@ public class storyProgression : MonoBehaviour
         yield return new WaitUntil(() => dialogueSystem.dialogueFinished);
         //he leaves
         himAnim.SetTrigger("leave");
-        yield return new WaitForSeconds(2f);
+        yield return new WaitForSeconds(1f);
+        openDoorSound.Play();
+        yield return new WaitForSeconds(2.5f);
         //she leaves
         teenHerAnim.SetTrigger("leave");
+
+        yield return new WaitForSeconds(3f);
+        //her
+        startDialogue(dialogueInfo.HerTeen2Cut7, "Her", dialogueInfo.herSprite, false);
+        yield return new WaitUntil(() => dialogueSystem.dialogueFinished);
+        //void
+        startDialogue(dialogueInfo.VoidTeen2Cut6, "The Void", dialogueInfo.voidSprite, false);
+        yield return new WaitUntil(() => dialogueSystem.dialogueFinished);
+        //her
+        startDialogue(dialogueInfo.HerTeen2Cut8, "Her", dialogueInfo.herSprite, false);
+        yield return new WaitUntil(() => dialogueSystem.dialogueFinished);
+        //void
+        startDialogue(dialogueInfo.VoidTeen2Cut7, "The Void", dialogueInfo.voidSprite, true);
+        yield return new WaitUntil(() => dialogueSystem.dialogueFinished);
+        //progressBar re-activate
+        progressBar.SetActive(true);
+        herAnimator.enabled = true;
 
     }
 
