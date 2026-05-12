@@ -334,7 +334,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Insert text here.
+  m_text: Insert text here...
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: a66f9e9036c14984a8cafbf4dea4b214, type: 2}
   m_sharedMaterial: {fileID: 6527336647303313699, guid: a66f9e9036c14984a8cafbf4dea4b214, type: 2}
@@ -374,7 +374,7 @@ MonoBehaviour:
   m_characterSpacing: 0
   m_characterHorizontalScale: 1
   m_wordSpacing: 0
-  m_lineSpacing: 17.4
+  m_lineSpacing: 31.25
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
@@ -3272,13 +3272,14 @@ MonoBehaviour:
   - Haha! There's that sense of humor starting to come back!
   - Well, your past self so kindly left us an exit back to your main mindscape, so
     let's follow it out and go backwards in your memories some more...
+  - Go cut through the ropes on the blue door to find your next memory...
   HerTeenMaze1:
-  - Alright Alright, I've got the hang of this now. Maze dissapears, I go through
+  - Alright Alright, I've got the hang of this now. Maze disappears, I go through
     the walls, I find the memory. I've got this.
   VoidTeenMaze1:
   - Yes you do, real quick though, the mazes are a little more complicated the deeper
     you go into your mind.
-  - But you can use your scissors to cut through barriers! Just press "C" to cut.
+  - But you can use your scissors to cut through barriers! Just press "C" to cut
     through!
   - Now come on, let's find that memory!
   HerTeenMaze2:
@@ -3304,7 +3305,7 @@ MonoBehaviour:
   HimTeen2Cut0:
   - Her! Ya know, I was starting to think you weren't going to come.
   TeenHerTeen2Cut1:
-  - You wrote "come alone" like a serial killer. Forgive me if I hesistated for a
+  - You wrote "come alone" like a serial killer. Forgive me if I hesitated for a
     moment before being coaxed to come here by my friends.
   HimTeen2Cut1:
   - Meh, it sounded more romantic in my head.
@@ -3332,7 +3333,7 @@ MonoBehaviour:
   TeenHerTeen2Cut5:
   - How do you know? You barely know me.
   HimTeen2Cut5:
-  - Then let me learn more.
+  - Then let me try.
   HerTeen2Cut2:
   - I mean...he doesn't look so bad here. He's kind of charming.
   VoidTeen2Cut2:
@@ -3415,8 +3416,8 @@ MonoBehaviour:
   HimScene3Line4:
   - I don't know...I just feel like they are trying to rush you out of your artistic
     flow. You do your best work when you don't worry about other people's opinions.
-  - Remember when you applied to that art exhbit and worked for weeks, and when you
-    didn't make it you completely shut down? You didn't talk to anyone for days,
+  - Remember when you applied to that art exhibit and worked for weeks, and when
+    you didn't make it you completely shut down? You didn't talk to anyone for days,
     including me.
   TeenHerScene3Line5:
   - Yes, I guess I was just...bummed. I let it get to me. But, maybe what I need
@@ -3450,17 +3451,17 @@ MonoBehaviour:
     Her.
   TeenHerScene4Line2:
   - Well...I-I figured it would be a fun surprise...and I didn't know if I was going
-    to get it or not so I didn't want to dissapoint you.
+    to get it or not so I didn't want to disappoint you.
   HimScene4Line2:
-  - That's besides the point. It's a big deal, so congrats, but...
+  - That's besides the point. I mean congrats, but...
   TeenHerScene4Line3:
   - How could there possibly be a downside to this? It sounds like an incredible
     opportunity...you're supposed to support me.
   HimScene4Line03:
   - I am...It's just...Look, come here, let's talk about this together.
   HimScene4Line3:
-  - All I'm saying is that...this is a big deal. A residency is going to push extensive
-    deadlines and expectations on you. Do you really want that?
+  - All I'm saying is that...this is a big decision. A residency is going to push
+    extensive deadlines and expectations on you. Do you really want that?
   - I'm saying this because I love you and I'm the only one who is honest enough
     to tell you...but I'm not sure you can handle that.
   TeenHerScene4Line4:
@@ -3473,8 +3474,8 @@ MonoBehaviour:
   TeenHerScene4Line5:
   - But it's your work. None of it is mine. What do I do?
   HimScene4Line5:
-  - You can still create your art, but now you'll have no pressure to deliver to
-    deadlines, fancy executives, or anyone. Let me provide for you.
+  - You can still create your art, but without any pressure to meet deadlines or
+    impress fancy executives. Let me provide for you.
   - You would probably need to help with some of the secretarial duties for a little
     bit...but once we get settled it'll be smooth sailing.
   - Come on. It's time to start settling for our future and you know it. You can't
@@ -3482,13 +3483,15 @@ MonoBehaviour:
   TeenHerScene4Line6:
   - 'And...And what if you''re wrong? '
   HimScene4Line6:
-  - I think we both know whose plan really stands here.
+  - You and I both know I'm never wrong.
   - Now come on, you know what's best for you.
   HerTeen2Cut7:
-  - I mean...at least he's not violent.
+  - Well...I can see now that he's definitely not a good person.
+  - God I can't believe I ever put up witIh him...I mean, at least he's not violent.
+    I probably could've chosen worse.
   VoidTeen2Cut6:
   - It shouldn't matter if he's violent or not, Her. He slowly manipulated you until
-    all you had was him.
+    you were reliant on only him, that doesn't sound very nice to me.
   HerTeen2Cut8:
   - No...you're right.
   - To think of the life I could have had...I could've put myself out there more,
@@ -3502,6 +3505,29 @@ MonoBehaviour:
   - There's no use in rehashing the past. What matters is what you choose to do now.
   - Now look over there, it seems you dropped something again. Damn, you sure are
     clumsy. Go check it out.
+  EndTeenVoid1:
+  - Looks like you've got your own pair of bolt cutters now!
+  - 'And it seems you have gained your awareness back too! That means you will be
+    able to see better, no more annoying clouds blocking your vision. '
+  EndTeenHer1:
+  - That's...That's great.
+  - I'm just struggling to find out how to move on from this. He was my whole life.
+    Who am I without him?
+  EndTeenVoid2:
+  - That's exactly what we are going to find out.
+  - Don't worry Her, there is a way forward.
+  - Now let's get back to your mindscape and enter that last door.
+  demoVoidLine:
+  - Hey Christine. This is where the fancy dialogue ends for now, but go through
+    the pink door, use C on all ropes and chains.
+  - You can go through the basic construction of each scene and then get to the final
+    CHOICE Scene (By leah) after it.
+  - Much more will be added during the summer as we care about this project and did
+    not want to rush it to be fully done prematurely.
+  - 'Enjoy the rest of the game! Until next time :)
+
+    - Taylor, Cathy, Leah, and
+    Kelise'
 --- !u!114 &697990568
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4695,6 +4721,7 @@ GameObject:
   - component: {fileID: 1052750000}
   - component: {fileID: 1052750002}
   - component: {fileID: 1052750003}
+  - component: {fileID: 1052750004}
   m_Layer: 0
   m_Name: gameManager
   m_TagString: Untagged
@@ -4756,6 +4783,7 @@ MonoBehaviour:
   enteredTeenhood: 0
   enteredTeenhood2: 0
   enteredChildhood: 0
+  endOfDemo: 0
   workHer: {fileID: 674952586}
   watchingHer: {fileID: 1122066319}
   paperStack: {fileID: 1178181610}
@@ -4819,6 +4847,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cf0f1f4d2ddbdba439c10daa409f132a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::animationProgression
+  teenDoorOutAnim: {fileID: 0}
+--- !u!114 &1052750004
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1052749997}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3772ed8337145494b8988590f5253afd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::globalVolumeChange
+  globalVolume:
+  - {fileID: 168876913}
+  - {fileID: 1655437018}
+  turnOffFog: 0
+  fadeSpeed: 1
 --- !u!1 &1052965204
 GameObject:
   m_ObjectHideFlags: 0
@@ -5445,8 +5491,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::teleport
   targetCharPosition: {x: 6, y: 21.25}
   targetCamPosition: {x: 0, y: 17, z: -9}
-  mainCam: {fileID: 0}
-  mazeCam: {fileID: 0}
+  mainCam: {fileID: 330585543}
+  mazeCam: {fileID: 1857271732}
   toMaze: 0
   currentlyTping: 0
   noTransition: 0
@@ -5901,6 +5947,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cf0f1f4d2ddbdba439c10daa409f132a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::animationProgression
+  teenDoorOutAnim: {fileID: 0}
 --- !u!1 &1566436651
 GameObject:
   m_ObjectHideFlags: 0
@@ -7445,7 +7492,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -352}
+  m_AnchoredPosition: {x: 0, y: -377}
   m_SizeDelta: {x: 1626.613, y: 741.4713}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2132915921
@@ -7633,19 +7680,19 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 604231193}
     m_Modifications:
-    - target: {fileID: 258105459018797617, guid: 60e306dd2e82aeb45ad1f353a44a5ee8, type: 3}
+    - target: {fileID: 1492485567498066750, guid: 60e306dd2e82aeb45ad1f353a44a5ee8, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 88.04
+      value: -6.82
       objectReference: {fileID: 0}
-    - target: {fileID: 258105459018797617, guid: 60e306dd2e82aeb45ad1f353a44a5ee8, type: 3}
+    - target: {fileID: 1492485567498066750, guid: 60e306dd2e82aeb45ad1f353a44a5ee8, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.92
+      value: 3.21
       objectReference: {fileID: 0}
-    - target: {fileID: 1914874250167461246, guid: 60e306dd2e82aeb45ad1f353a44a5ee8, type: 3}
+    - target: {fileID: 4010978222608789912, guid: 60e306dd2e82aeb45ad1f353a44a5ee8, type: 3}
       propertyPath: mainCam
       value: 
       objectReference: {fileID: 330585543}
-    - target: {fileID: 1914874250167461246, guid: 60e306dd2e82aeb45ad1f353a44a5ee8, type: 3}
+    - target: {fileID: 4010978222608789912, guid: 60e306dd2e82aeb45ad1f353a44a5ee8, type: 3}
       propertyPath: mazeCam
       value: 
       objectReference: {fileID: 1857271732}
@@ -7922,6 +7969,10 @@ PrefabInstance:
       propertyPath: victorySource
       value: 
       objectReference: {fileID: 410031489}
+    - target: {fileID: 7126230279705413157, guid: ad05c19f139ee404d923a11c638db18d, type: 3}
+      propertyPath: globalVolumeChange
+      value: 
+      objectReference: {fileID: 1052750004}
     - target: {fileID: 7792781951742813753, guid: ad05c19f139ee404d923a11c638db18d, type: 3}
       propertyPath: bars
       value: 
@@ -8027,6 +8078,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: teenhood1
       objectReference: {fileID: 0}
+    - target: {fileID: 5686934027661931994, guid: 8d2f493e127b6cf4dbe2564db8690724, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: f39eda2a55dc29a47b098aea078f019c, type: 2}
     - target: {fileID: 6746372776228531932, guid: 8d2f493e127b6cf4dbe2564db8690724, type: 3}
       propertyPath: m_Color.b
       value: 0.6981132
@@ -8064,42 +8119,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: childhood1
       objectReference: {fileID: 0}
-    - target: {fileID: 3556340895604797999, guid: 4da2cfc478575b540985c3fbb0ee8e97, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 0.12949006
+    - target: {fileID: 4067947808638170655, guid: 4da2cfc478575b540985c3fbb0ee8e97, type: 3}
+      propertyPath: m_TagString
+      value: Door
       objectReference: {fileID: 0}
-    - target: {fileID: 3556340895604797999, guid: 4da2cfc478575b540985c3fbb0ee8e97, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0.33099
-      objectReference: {fileID: 0}
-    - target: {fileID: 4442837457028225584, guid: 4da2cfc478575b540985c3fbb0ee8e97, type: 3}
-      propertyPath: m_Size.x
-      value: 0.3590487
-      objectReference: {fileID: 0}
-    - target: {fileID: 4442837457028225584, guid: 4da2cfc478575b540985c3fbb0ee8e97, type: 3}
-      propertyPath: m_Size.y
-      value: 0.9175689
-      objectReference: {fileID: 0}
-    - target: {fileID: 4442837457028225584, guid: 4da2cfc478575b540985c3fbb0ee8e97, type: 3}
-      propertyPath: m_Offset.x
-      value: -0.018851325
-      objectReference: {fileID: 0}
-    - target: {fileID: 4442837457028225584, guid: 4da2cfc478575b540985c3fbb0ee8e97, type: 3}
-      propertyPath: m_Offset.y
-      value: 0.041215524
-      objectReference: {fileID: 0}
-    - target: {fileID: 4442837457028225584, guid: 4da2cfc478575b540985c3fbb0ee8e97, type: 3}
-      propertyPath: m_SpriteTilingProperty.oldSize.x
-      value: 0.64
-      objectReference: {fileID: 0}
-    - target: {fileID: 4442837457028225584, guid: 4da2cfc478575b540985c3fbb0ee8e97, type: 3}
-      propertyPath: m_SpriteTilingProperty.oldSize.y
-      value: 1.06
-      objectReference: {fileID: 0}
-    - target: {fileID: 6655767827764414473, guid: 4da2cfc478575b540985c3fbb0ee8e97, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 796108040, guid: 11096ee2d6d05b649a6f3a5dd1b1a7ad, type: 3}
     - target: {fileID: 7132191295790473669, guid: 4da2cfc478575b540985c3fbb0ee8e97, type: 3}
       propertyPath: m_LocalPosition.x
       value: -48
@@ -8139,18 +8162,6 @@ PrefabInstance:
     - target: {fileID: 7132191295790473669, guid: 4da2cfc478575b540985c3fbb0ee8e97, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7514539294878815212, guid: 4da2cfc478575b540985c3fbb0ee8e97, type: 3}
-      propertyPath: mainCam
-      value: 
-      objectReference: {fileID: 330585543}
-    - target: {fileID: 7514539294878815212, guid: 4da2cfc478575b540985c3fbb0ee8e97, type: 3}
-      propertyPath: mazeCam
-      value: 
-      objectReference: {fileID: 1857271732}
-    - target: {fileID: 7514539294878815212, guid: 4da2cfc478575b540985c3fbb0ee8e97, type: 3}
-      propertyPath: progressRequiredToStart
-      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -8343,18 +8354,6 @@ PrefabInstance:
       propertyPath: mazeCam
       value: 
       objectReference: {fileID: 1857271732}
-    - target: {fileID: 3156488209336795867, guid: 2fde2fa0cf858f246a4b97c7aca3f6e1, type: 3}
-      propertyPath: m_IsTrigger
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4136730774413543798, guid: 2fde2fa0cf858f246a4b97c7aca3f6e1, type: 3}
-      propertyPath: m_Icon
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 4136730774413543798, guid: 2fde2fa0cf858f246a4b97c7aca3f6e1, type: 3}
-      propertyPath: m_TagString
-      value: Door
-      objectReference: {fileID: 0}
     - target: {fileID: 5881969919715579532, guid: 2fde2fa0cf858f246a4b97c7aca3f6e1, type: 3}
       propertyPath: m_Name
       value: adulthoodMap
@@ -8594,7 +8593,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2876189083725590526, guid: 1aee29a82f9c9d44ca41d22ed2edda24, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3340224834738166719, guid: 1aee29a82f9c9d44ca41d22ed2edda24, type: 3}
       propertyPath: m_Name
@@ -8630,7 +8629,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7011475122916524710, guid: 1aee29a82f9c9d44ca41d22ed2edda24, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7080722134272601996, guid: 1aee29a82f9c9d44ca41d22ed2edda24, type: 3}
       propertyPath: m_Name

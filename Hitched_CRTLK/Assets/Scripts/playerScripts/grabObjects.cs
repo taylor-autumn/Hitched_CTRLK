@@ -42,6 +42,27 @@ public class grabObjects : MonoBehaviour
             storyProgression.StartCoroutine(storyProgression.endAdulthood());
 
         }
+
+        if (collision.gameObject.tag == "boltCutters")
+        {
+            //victory sound
+            victorySound();
+            //kills the cutters
+            collision.gameObject.SetActive(false);
+            //this is the reward
+            playerProgress.wonAwareness = true;
+            playerProgress.monitorUI();
+            playerProgress.levelsCompleted = 2;
+            
+            //changes UI
+            uiSprites.uiType("childhood");
+
+            //start the dialogue
+            storyProgression.StartCoroutine(storyProgression.endTeenhood());
+
+        }
+
+
     }
 
     public void victorySound()

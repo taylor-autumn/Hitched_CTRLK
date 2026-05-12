@@ -458,9 +458,9 @@ GameObject:
   - component: {fileID: 3556340895604797999}
   - component: {fileID: 6655767827764414473}
   - component: {fileID: 4442837457028225584}
-  - component: {fileID: 7514539294878815212}
+  - component: {fileID: 8772132445327367373}
   m_Layer: 0
-  m_Name: teleporter
+  m_Name: GOTOCHOICE
   m_TagString: Door
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -475,8 +475,8 @@ Transform:
   m_GameObject: {fileID: 4067947808638170655}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.3094288, y: -0.30664635, z: -1}
-  m_LocalScale: {x: 0.062105842, y: 0.20729652, z: 1}
+  m_LocalPosition: {x: 0.33099, y: -0.30664635, z: -1}
+  m_LocalScale: {x: 0.12949006, y: 0.20729652, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 5292042521613101824}
@@ -530,7 +530,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 1
   m_MaskInteraction: 0
-  m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
+  m_Sprite: {fileID: 796108040, guid: 11096ee2d6d05b649a6f3a5dd1b1a7ad, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -574,19 +574,19 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0, y: 0.26438075}
+  m_Offset: {x: -0.018851325, y: 0.041215524}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
+    oldSize: {x: 0.64, y: 1.06}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 1, y: 0.47123852}
+  m_Size: {x: 0.3590487, y: 0.9175689}
   m_EdgeRadius: 0
---- !u!114 &7514539294878815212
+--- !u!114 &8772132445327367373
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -595,17 +595,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 4067947808638170655}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a0b27af78369a5b44beff29dda2a69fa, type: 3}
+  m_Script: {fileID: 11500000, guid: 8f0302bf0589c6b4d8010d72f4865e42, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::teleport
-  targetCharPosition: {x: -7.6, y: 27.9}
-  targetCamPosition: {x: 0, y: 32, z: -9}
-  mainCam: {fileID: 0}
-  mazeCam: {fileID: 0}
-  toMaze: 0
-  currentlyTping: 0
-  progressRequiredToStart: 0
-  transition: fade
+  m_EditorClassIdentifier: Assembly-CSharp::tempTPChoiceScene
 --- !u!1 &4413427453838117848
 GameObject:
   m_ObjectHideFlags: 0

@@ -270,4 +270,16 @@ public class dialogueInfo : MonoBehaviour
     [TextArea(3, 3)]
     public List<string> VoidTeen2Cut7;
 
+    [Header("End of Teenhood")]
+    [TextArea(3, 3)]
+    public List<string> EndTeenVoid1;
+    [TextArea(3, 3)]
+    public List<string> EndTeenHer1;
+    [TextArea(3, 3)]
+    public List<string> EndTeenVoid2;
+
+    [Header("End of Demo")]
+    [TextArea(3, 3)]
+    public List<string> demoVoidLine;
+
 }
