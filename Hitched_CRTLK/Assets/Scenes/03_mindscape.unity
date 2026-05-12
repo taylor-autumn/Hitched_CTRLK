@@ -3296,7 +3296,7 @@ MonoBehaviour:
   - Well, what are you waiting for?
   - FOLLOW HER. I'm nosy.
   HerTeen2Cut1:
-  - Woah...this place is interesting. Wait, is that Hi-
+  - Woah...this place is interesting. Wait, is that Him? What's he doin-
   VoidTeen2Cut1:
   - SHHH- Pay attention. My show is on.
   TeenHerTeen2Cut0:
@@ -3339,7 +3339,7 @@ MonoBehaviour:
   - Let's not jump on the bandwagon just yet, you just met.
   - Not long after this you guys started officially dating and you hung out with
     him practically every day, spending every hour you could in the art studio with
-    him, teaching him, knowing only him.
+    Him. Teaching Him, loving Him, knowing only Him.
   HimTeen2Cut5Pt2:
   - Ahh, there you are. A little later than usual today, you have another secret
     boyfriend I don't know about?
@@ -3355,7 +3355,7 @@ MonoBehaviour:
   HimTeen2Cut7:
   - Hey, that's not fair of them to get mad just because you're in a relationship.
     We should be able to spend all the time in the world together if we want to.
-  - Maybe they just aren't using to not having your full, undivided attention anymore.
+  - Maybe they just aren't used to not having your full, undivided attention anymore.
   - Think about it like this. Do they support you when it matters?
   TeenHerTeen2Cut8:
   - ...
@@ -3378,8 +3378,8 @@ MonoBehaviour:
   - I like having this side of you all to myself, my little artist.
   HerTeen2Cut3:
   - ...
-  - Alright fine, I'll admit that may not have been the best reaction on his part.
-    But maybe he genuinely just wanted to be there for me, to be the only one there
+  - Fine, I'll admit that may not have been the best way to deal with the situation,
+    but maybe he genuinely just wanted to be there for me, to be the only one there
     for me...
   VoidTeen2Cut3:
   - Being in a relationship is not about having control over the other person, Her,
@@ -3388,8 +3388,11 @@ MonoBehaviour:
     way for his successful future while repressing your own.
   HerTeen2Cut4:
   - Alright alright, enough, just show me the next scene.
+  VoidTeen2Cut3Pt2:
+  - Okay then...This next scene is about a year into your relationship, and the skills
+    you taught Him start to pay off.
   TeenHerScene3Line1:
-  - Well you're certainly looking chipper today. What happened?
+  - Well, you're certainly looking chipper today. What happened?
   HimScene3Line1:
   - I was scouted today...by an executive at a popular gallery! They're going to
     feature my work at a showcase!
@@ -3399,12 +3402,12 @@ MonoBehaviour:
   - Oh my gosh that's amazing! Congrats Him! I knew you could do it. This is huge.
   HimScene3Line2:
   - I told you things were going to start working out, people are just late to recognizing
-    great potential sometimes.
-  - This will be great for us. Something more stable, less risky. You won't have
-    to worry about applying, you can just relax.
+    potential sometimes.
+  - This will be great for us. Something more stable, less risky. And you won't have
+    to worry about applying places anymore, you can just relax.
   TeenHerScene3Line3:
   - Well...about that...I don't know. My teacher's have been encouraging me to start
-    posting my work more, they say I've been keeping it all cooped up for too long.
+    posting my work again, they say I've been keeping it all cooped up for too long.
   HimScene3Line3:
   - Well....I mean that sounds great but...
   TeenHerScene3Line4:
@@ -3416,11 +3419,11 @@ MonoBehaviour:
     didn't make it you completely shut down? You didn't talk to anyone for days,
     including me.
   TeenHerScene3Line5:
-  - Yes...I guess I was just...bummed. I let it get to me. Maybe what I need is to
-    challenge myself to get out there more though.
+  - Yes, I guess I was just...bummed. I let it get to me. But, maybe what I need
+    is to challenge myself to get out there more though.
   HimScene3Line5:
-  - 'I think you shouldn''t have to rush. You''re still refining you voice. '
-  - Besides...who do you trust more. Some random fancy pance executives. Or me?
+  - 'I just think you shouldn''t have to rush. You''re still refining your voice. '
+  - Besides...who do you trust more. Some random fancy pants executives. Or me?
   TeenHerScene3Line6:
   - Well...you.
   HimScene3Line6:
@@ -3429,33 +3432,39 @@ MonoBehaviour:
   - ...
   - ...
   VoidTeen2Cut4:
-  - What? Nothing good to say about that memory? You had a lot to say about our favorite
-    guy earlier.
+  - What? Nothing good to say about that memory? You had a lot to say about your
+    favorite guy earlier.
   HerTeen2Cut6:
-  - Just...show me the next clip. It has to get better in the last clip.
+  - Just...show me the next clip. It has to get better in the next clip.
   VoidTeen2Cut5:
-  - Alright then...here's you guys 2 years later in your senior year, making a...big
-    choice to say the least.
+  - Alright then...here's a memory of you guys 2 years later in your senior year,
+    making a...big choice to say the least.
   TeenHerScene4Line1:
   - Sooo...I wanted to surprise you...
   - But I applied for an artists residency just for kicks to see if I could get it...
-  - And I got in! They're going to provide me funding, housing, everything. isn't
+  - And I got in! They're going to provide me funding, housing, everything. Isn't
     it great?
   HimScene4Line1:
   - ...
-  - You...you applied for a residency and you didn't tell me? That's a big deal Her.
+  - You...you applied for a residency and you didn't tell me? That's a big deal,
+    Her.
   TeenHerScene4Line2:
-  - Well...I- I figured it would be a fun surprise...and I didn't know if I was going
+  - Well...I-I figured it would be a fun surprise...and I didn't know if I was going
     to get it or not so I didn't want to dissapoint you.
   HimScene4Line2:
   - That's besides the point. It's a big deal, so congrats, but...
   TeenHerScene4Line3:
-  - Oh no...another but.
+  - How could there possibly be a downside to this? It sounds like an incredible
+    opportunity...you're supposed to support me.
+  HimScene4Line03:
+  - I am...It's just...Look, come here, let's talk about this together.
   HimScene4Line3:
   - All I'm saying is that...this is a big deal. A residency is going to push extensive
     deadlines and expectations on you. Do you really want that?
+  - I'm saying this because I love you and I'm the only one who is honest enough
+    to tell you...but I'm not sure you can handle that.
   TeenHerScene4Line4:
-  - As opposed to...what? Just staying here and doing nothing.
+  - As opposed to...what? Just staying here and doing nothing?
   HimScene4Line4:
   - No...As opposed to taking what we have here and making something of it.
   - My work has been doing great lately, and people are investing in what I'm building.
@@ -3464,23 +3473,35 @@ MonoBehaviour:
   TeenHerScene4Line5:
   - But it's your work. None of it is mine. What do I do?
   HimScene4Line5:
-  - Of course you can still create, but now you'll have no pressure to deliver to
-    deadlines, fancy executives, or anyone. Anything we make we can push to our company.
-  - Of course you would probably need to help with some of the secretarial duties
-    for a little bit...but once we get settled we're smooth sailing.
-  - This could be the foundation of the rest of our lives. All I'm saying is don't
-    confuse a momentary chance for a solid plan.
-  - Come on. It's time to start settling and you know it. You can't always live on
-    the edge.
+  - You can still create your art, but now you'll have no pressure to deliver to
+    deadlines, fancy executives, or anyone. Let me provide for you.
+  - You would probably need to help with some of the secretarial duties for a little
+    bit...but once we get settled it'll be smooth sailing.
+  - Come on. It's time to start settling for our future and you know it. You can't
+    always chase after a hopeless dream that won't work out.
   TeenHerScene4Line6:
   - 'And...And what if you''re wrong? '
   HimScene4Line6:
   - I think we both know whose plan really stands here.
   - Now come on, you know what's best for you.
-  HerTeen2Cut7: []
-  VoidTeen2Cut6: []
-  HerTeen2Cut8: []
-  VoidTeen2Cut7: []
+  HerTeen2Cut7:
+  - I mean...at least he's not violent.
+  VoidTeen2Cut6:
+  - It shouldn't matter if he's violent or not, Her. He slowly manipulated you until
+    all you had was him.
+  HerTeen2Cut8:
+  - No...you're right.
+  - To think of the life I could have had...I could've put myself out there more,
+    taken that residency, made worthwhile connections...
+  - Hell, I could even be running my OWN business. But instead, I let this excuse
+    of a man manipulate me into being his lifelo ng assistant.
+  VoidTeen2Cut7:
+  - Hey now, don't blame yourself too much. It's easier to become more aware when
+    you're looking from an outsider perspective, but you must've felt quite entranced
+    by Him in the moment.
+  - There's no use in rehashing the past. What matters is what you choose to do now.
+  - Now look over there, it seems you dropped something again. Damn, you sure are
+    clumsy. Go check it out.
 --- !u!114 &697990568
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4720,6 +4741,7 @@ MonoBehaviour:
   memorySound: {fileID: 1138839827}
   scissorSound: {fileID: 1863697820}
   openDoorSound: {fileID: 1057110955}
+  fastForwardSound: {fileID: 5921737220119870452}
   her: {fileID: 278598598}
   herLeft: {fileID: 21300000, guid: 6cb71bdc655ea44cbb5ba5ebb6991651, type: 3}
   herRight: {fileID: 21300000, guid: 2f2d4368554c4408b9fb14e3f6f41bb5, type: 3}
@@ -7611,6 +7633,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 604231193}
     m_Modifications:
+    - target: {fileID: 258105459018797617, guid: 60e306dd2e82aeb45ad1f353a44a5ee8, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 88.04
+      objectReference: {fileID: 0}
+    - target: {fileID: 258105459018797617, guid: 60e306dd2e82aeb45ad1f353a44a5ee8, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.92
+      objectReference: {fileID: 0}
     - target: {fileID: 1914874250167461246, guid: 60e306dd2e82aeb45ad1f353a44a5ee8, type: 3}
       propertyPath: mainCam
       value: 
@@ -8391,15 +8421,20 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7267686302634185619, guid: 0875f2e9085805f4783993c5e7afef72, type: 3}
-      propertyPath: m_Volume
-      value: 0.514
-      objectReference: {fileID: 0}
+    - target: {fileID: 8004622708915113829, guid: 0875f2e9085805f4783993c5e7afef72, type: 3}
+      propertyPath: m_Resource
+      value: 
+      objectReference: {fileID: 8300000, guid: 401852a381f4b5d429467ddb3125c168, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0875f2e9085805f4783993c5e7afef72, type: 3}
+--- !u!82 &5921737220119870452 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 8004622708915113829, guid: 0875f2e9085805f4783993c5e7afef72, type: 3}
+  m_PrefabInstance: {fileID: 5921737220119870451}
+  m_PrefabAsset: {fileID: 0}
 --- !u!82 &5921737220119870453 stripped
 AudioSource:
   m_CorrespondingSourceObject: {fileID: 2957632286740823468, guid: 0875f2e9085805f4783993c5e7afef72, type: 3}

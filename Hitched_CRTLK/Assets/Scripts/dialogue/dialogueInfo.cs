@@ -195,6 +195,8 @@ public class dialogueInfo : MonoBehaviour
     public List<string> VoidTeen2Cut3;
     [TextArea(3, 3)]
     public List<string> HerTeen2Cut4;
+    [TextArea(3, 3)]
+    public List<string> VoidTeen2Cut3Pt2;
 
     [Header("Scene 3")]
     [TextArea(3, 3)]
@@ -242,6 +244,8 @@ public class dialogueInfo : MonoBehaviour
     public List<string> HimScene4Line2;
     [TextArea(3, 3)]
     public List<string> TeenHerScene4Line3;
+    [TextArea(3, 3)]
+    public List<string> HimScene4Line03;
     [TextArea(3, 3)]
     public List<string> HimScene4Line3;
     [TextArea(3, 3)]
